@@ -46,11 +46,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
   <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
   <!-- Header -->
-  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>Quý Lê</b></h1>
-    <p>Website cá nhân không tính phí duy trì hàng năm</p>
-	<p>Thích hợp để trình bày hình ảnh sản phẩm, giá dịch vụ cá nhân</p>
-    <p>Chi phí chỉ với: <b>100.000 vnđ</b></p>
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">    
+    <div id="data"></div>
     <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
     <a href=tel:0972054206 class="w3-button w3-green w3-padding-large w3-margin-top">
@@ -274,7 +271,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
     <a href=#><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
     <a href=#><i class="fa fa-twitter w3-hover-opacity"></i></a>
     <a href=#><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <p class="w3-medium">Dịch vụ làm website cá nhân | Nhanh, gọn, chi phí thấp <a href="https://quylvdsth.github.io/web/" target="_blank" class="w3-hover-text-green">quylvdsth</a></p>
+    <p class="w3-medium">Dịch vụ làm website cá nhân | Nhanh, gọn, chi phí thấp <a href="https://quylvdsth.github.io/web/" target="_blank" class="w3-hover-text-green">quylvdsth</a></p>    
   <!-- End footer -->
   </footer>
   
@@ -282,7 +279,26 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
 </div>
 
 <script>
+// get data
+var spData = null;
+function doData(json) {
+  spData = json.feed.entry;
+  //nếu cần kiểm tra thì thử console.log phát xem dữ liệu đang có dạng như nào nhé
+  //console.log(spData);
+}
+$(document).ready(function() {
+  var data = spData;
+  var strData = '';
+  for (var i = 0; i < data.length; i++) {
+    if (i==0) {
+      strData+= '<h1 class="w3-jumbo"><b>'+data[i]['content']['$t']+"</b></h1>";
+    }else{
+      strData+= "<p>"+data[i]['content']['$t']+"</p>";
+    }    
+  }
 
+  $("#data").after(strData);
+});
 // form 
 function postToGoogle(){
 	//alert('success');
@@ -320,6 +336,6 @@ function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
 </script>
-
+<script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/1/public/values?alt=json-in-script&callback=doData"></script>
 </body>
 </html>
