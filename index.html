@@ -113,7 +113,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
     <hr class="w3-opacity">
 
     <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-row-padding" style="margin:0 -16px" id=myPortfolio>
       <div class="w3-half">
         <img class="w3-border w3-padding-small w3-white" src="https://thietkewebchuanseo.net/wp-content/uploads/2018/11/bao-gia-thiet-ke-logo-chuyen-nghiep.jpg" style="width:100%">
         <img class="w3-border w3-padding-small w3-white" src="https://riamedia.vn/upload/thiet-ke-web-tphcm.png" style="width:100%">        
@@ -134,8 +134,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="nav4">
     <h2></h2>
     <hr class="w3-opacity">
-    <p>Là người có trách nhiệm với công việc và hướng đến sự chuyên nghiệp. Tôi mong muốn nhận được sự tin tưởng của khách hàng. </p>
-    <p><i><a href="https://www.topcv.vn/xem-cv/00dcac60d61a2ce13875c5cb4ca4450f">Xem Cv của tôi </a></i>
+    <div id=vetoi></div>
     </p>
     <h3 class="w3-padding-16">Kỹ năng</h3>
     <p class="w3-wide">Photoshop</p>
@@ -237,8 +236,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
 
     <div class="w3-section">
       <!-- <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p> -->
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 0972 054 206</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: quylv.dsth@gmail.com</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: <span class="my-phone"></span></p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <span class="my-email"></span></p>
     </div>
     
     <!-- Image of location/map -->
@@ -283,6 +282,8 @@ var spData3 = null;
 function doData1(json)   {spData1   = json.feed.entry;}
 function doData2(json)   {spData2   = json.feed.entry;}
 function doData3(json)   {spData3   = json.feed.entry;}
+function doData4(json)   {spData4   = json.feed.entry;}
+function doData5(json)   {spData5   = json.feed.entry;}
 $(document).ready(function() {
   var data1 = spData1;
   var strData1 ="";
@@ -298,6 +299,8 @@ $(document).ready(function() {
   }
   $("#spData1").html(strData1); 
   $(".call-me").html('<a href="tel:'+dataContact['phone']+'" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>');
+  $('.my-phone').html(dataContact['phone']);
+  $('.my-email').html(dataContact['email']);
 })
 $(document).ready(function() {
   var data2 = spData2;
@@ -313,6 +316,29 @@ $(document).ready(function() {
   }
 
   $("#spData2").html(strData2);  
+});
+$(document).ready(function() {
+  var data4= spData4;
+  var strData4='';
+  strData4 +='<div class="w3-half">';
+  for (var i = 0; i < data4.length; i++) {
+    if (data4[i]['gs$cell']['col'] ==1) {
+      strData4+='<a href='+data4[i+1]['content']['$t']+'><img class="w3-border w3-padding-small w3-white" src="'+data4[i]['content']['$t']+'" style="width:100%"></a>';
+    }
+    if (i==Math.round(data4.length/2-1)) {
+      strData4+='</div><div class=w3-half>';
+    }
+  }    
+  strData4 +='</div>';
+  $("#myPortfolio").html(strData4);
+});
+$(document).ready(function() {
+  var data5= spData5;
+  var strData5='';
+  for (var i = 0; i < data5.length; i++) {
+    strData5+='<p>'+data5[i]['content']['$t']+'</p>';
+  }    
+  $("#vetoi").html(strData5);
 });
 // form 
 function postToGoogle(){
@@ -353,5 +379,7 @@ function closeNav() {
 <script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/1/public/values?alt=json-in-script&callback=doData1"></script>
 <script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/2/public/values?alt=json-in-script&callback=doData2"></script>
 <script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/3/public/values?alt=json-in-script&callback=doData3"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/4/public/values?alt=json-in-script&callback=doData4"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/5/public/values?alt=json-in-script&callback=doData5"></script>
 </body>
 </html>
