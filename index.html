@@ -288,7 +288,10 @@ $(document).ready(function() {
     }
   }
   $("#spData1").html(strData1); 
-  $(".call-me").html('<a href="tel:'+dataContact['phone']+'" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>');
+  $(".call-me").html(
+  	'<a target="_blank" href="tel:'+dataContact['phone']+'" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>'+
+  	' <a target="_blank" href="'+dataContact['messenger']+'" class="w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook"></i> Messenger</a>'
+  	);
   $('.my-phone').html(dataContact['phone']);
   $('.my-email').html(dataContact['email']);
 })
