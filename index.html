@@ -19,7 +19,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
 }
 </style>
 <body>
-
+<div id="nav1"></div>
 <!-- Sidebar with image -->
 <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
   <!-- <div class="bgimg w3-grayscale-max"></div> -->
@@ -30,13 +30,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
   <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
     <i class="fa fa-remove"></i>
   </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Trang chính</a>
-    <a href="#demo" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Demo</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Dịch vụ</a>
-    <a href="#about" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Về tôi</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Liên hệ</a>
-  </div>
+  <div id=spData1 class="w3-bar-block w3-center"></div>
 </nav>
 
 <!-- Page Content -->
@@ -47,20 +41,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
 
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">    
-    <div id="data"></div>
+    <div id="spData2"></div>
     <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <a href=tel:0972054206 class="w3-button w3-green w3-padding-large w3-margin-top">
-      <i class="fa fa-phone"></i> Gọi: 0972-054-206
-    </a>
-    <a href="https://m.me/timquen2014" class="w3-button w3-blue w3-padding-large w3-margin-top">
-      <i class="fa fa-facebook-official"></i> Messenger
-    </a>
+    <div class=call-me></div>
   </header>
 
   <!-- demo Section -->
-  <div class="w3-padding-32 w3-content" id="demo">
-    <h2 class="">Demo</h2>
+  <div class="w3-padding-32 w3-content" id="nav2">
+    <h2 class=""></h2>
     <hr class="w3-opacity">
 
     <!-- Grid for photos -->
@@ -119,8 +108,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
   </div>
 
   <!-- Portfolio Section -->
-  <div class="w3-padding-32 w3-content" id="portfolio">
-    <h2 class="">Dịch vụ của tôi</h2>
+  <div class="w3-padding-32 w3-content" id="nav3">
+    <h2 class=""></h2>
     <hr class="w3-opacity">
 
     <!-- Grid for photos -->
@@ -142,8 +131,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
   </div>
 
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2>Về tôi</h2>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="nav4">
+    <h2></h2>
     <hr class="w3-opacity">
     <p>Là người có trách nhiệm với công việc và hướng đến sự chuyên nghiệp. Tôi mong muốn nhận được sự tin tưởng của khách hàng. </p>
     <p><i><a href="https://www.topcv.vn/xem-cv/00dcac60d61a2ce13875c5cb4ca4450f">Xem Cv của tôi </a></i>
@@ -182,9 +171,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
       </div>
     </div>
 
-    <a href=tel:0972054206 class="w3-button w3-green w3-padding-large w3-margin-top">
-      <i class="fa fa-phone"></i> Gọi: 0972-054-206
-    </a>
+    <div class=call-me></div>
 
     <!-- Testimonials -->
     <h3 class="w3-padding-24">Uy tín trong công việc</h3>
@@ -244,8 +231,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
   </div>
 
   <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
-    <h2>Liên hệ với tôi</h2>
+  <div class="w3-padding-32 w3-content w3-text-grey" style="margin-bottom:64px" id="nav5">
+    <h2></h2>
     <hr class="w3-opacity">
 
     <div class="w3-section">
@@ -290,28 +277,45 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
 
 <script>
 // get data
-var spData = null;
-function doData(json) {
-  spData = json.feed.entry;
-  //nếu cần kiểm tra thì thử console.log phát xem dữ liệu đang có dạng như nào nhé
-  //console.log(spData);
-}
+var spData1 = null;
+var spData2 = null;
+var spData3 = null;
+function doData1(json)   {spData1   = json.feed.entry;}
+function doData2(json)   {spData2   = json.feed.entry;}
+function doData3(json)   {spData3   = json.feed.entry;}
 $(document).ready(function() {
-  var data = spData;
-  var strData = '';
-  for (var i = 0; i < data.length; i++) {
-    if (i==0) {
-      strData+= '<h1 class="w3-jumbo"><b>'+data[i]['content']['$t']+"</b></h1>";
-    }else{
-      strData+= "<p>"+data[i]['content']['$t']+"</p>";
-    }    
+  var data1 = spData1;
+  var strData1 ="";
+  var dataContact=[];
+  for (var i = 0; i < data1.length; i++) {
+    if (data1[i]['gs$cell']['col'] ==1) {
+      strData1 += '<a href=#'+"nav"+data1[i]['gs$cell']['row']+' class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">'+data1[i]['content']['$t']+'</a>';
+      $("#nav"+data1[i]['gs$cell']['row']+" h2:first-child").html(data1[i]['content']['$t']);
+    }
+    if (data1[i]['gs$cell']['col'] ==2) {
+      dataContact[data1[i]['content']['$t']] = data1[i+1]['content']['$t'];
+    }
+  }
+  $("#spData1").html(strData1); 
+  $(".call-me").html('<a href="tel:'+dataContact['phone']+'" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>');
+})
+$(document).ready(function() {
+  var data2 = spData2;
+  var strData2 = '';
+  for (var i = 0; i < data2.length; i++) {
+    if (data2[i]['gs$cell']['col'] ==1) {
+      if (i==0) {
+        strData2+= '<h1 class="w3-jumbo"><b>'+data2[i]['content']['$t']+"</b></h1>";
+      }else{
+        strData2+= "<p>"+data2[i]['content']['$t']+"</p>";
+      }
+    }
   }
 
-  $("#data").after(strData);
+  $("#spData2").html(strData2);  
 });
 // form 
 function postToGoogle(){
-	//alert('success');
     var name = $("#nameField").val();
     var email = $("#emailField").val();
     var service = $("#serviceField").val();
@@ -346,6 +350,8 @@ function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
 </script>
-<script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/1/public/values?alt=json-in-script&callback=doData"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/1/public/values?alt=json-in-script&callback=doData1"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/2/public/values?alt=json-in-script&callback=doData2"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1jMMe5zos11PwLLof5SS2Bj14ymm0AibtOKlCH4aBKX4/3/public/values?alt=json-in-script&callback=doData3"></script>
 </body>
 </html>
