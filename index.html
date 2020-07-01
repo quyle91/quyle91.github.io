@@ -248,13 +248,13 @@ $(document).ready(function() {
 	var strData3 = '<div>';
 	var current_row = 1;
 	for (var i = 0; i < data3.length; i++) {
+    if (data3[i]['gs$cell']['row'] >current_row){
+      current_row ++;
+      strData3 +="</div><div>";
+    }
 		if (data3[i]['gs$cell']['col'] %2==1) {			
 			strData3+='<a href="'+data3[i+1]['content']['$t']+'" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> '+data3[i]['content']['$t']+'</a> ';
-		}
-		if (data3[i]['gs$cell']['row'] >current_row){
-			current_row ++;
-			strData3 +="</div><div>";
-		}
+		}		
 	}
 	strData3 +="</div>";
 	$("#my_service").html(strData3);
