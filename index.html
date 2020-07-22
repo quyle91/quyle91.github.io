@@ -13,8 +13,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
 .bgimg {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2');
+  background-size: cover;  
   min-height: 100%;
 }
 </style>
@@ -24,7 +23,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; color: white; }
 <div id="nav1"></div>
 <!-- Sidebar with image -->
 <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-  <div class="bgimg w3-grayscale-max"></div>
+  <div class="bgimg w3-grayscale-max" style="background-image: url('./img/avt.jpg');"></div>
 </nav>
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
@@ -49,8 +48,8 @@ background-image: url(https://i.pinimg.com/originals/cb/00/27/cb00273b6762b14b0f
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">    
     <div id="spData2"></div>
-    <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-    <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
     <div class=call-me></div>
   </header>
 
@@ -161,8 +160,6 @@ background-image: url(https://i.pinimg.com/originals/cb/00/27/cb00273b6762b14b0f
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <span class="my-email"></span></p>
     </div>
     
-    <!-- Image of location/map -->
-    <!-- <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95477618_2658049127801288_4725251823829415102_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=WTzmVAK2EoYAX8ZGa_8&_nc_ht=scontent.fhan2-1.fna&oh=fa5cc47d1ac4de436de6ef1738295b0f&oe=5F16D9F2" class="w3-image w3-greyscale" style="width:100%;margin:32px 0"> -->
    
     <p>Hãy để lại thông tin liên hệ. Tôi sẽ gọi lại cho bạn.</p>
     <form name="cform" id="cform" target="_self" onsubmit="return postToGoogle();" action="">
