@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <title>Dịch vụ làm website cá nhân| Nhanh, gọn, chi phí thấp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif;
+            color: white;
+        }
+        .w3-row-padding img {
+            margin-bottom: 12px;
+        }
+        .bgimg {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100%;
+        }
+    </style>
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=226200314665818&autoLogAppEvents=1" nonce="zYQVlg1P"></script>
+        <div id="nav1"></div>
+        <!-- Sidebar with image -->
+        <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width: 40%;">
+            <div class="bgimg w3-grayscale-max" style="background-image: url('./img/avt.jpg');"></div>
+        </nav>
+
+        <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+        <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display: none; padding-top: 150px; right: 0; z-index: 2;" id="mySidebar">
+            <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding: 0 12px;">
+                <i class="fa fa-remove"></i>
+            </a>
+            <div id="spData1" class="w3-bar-block w3-center">
+                <a href="#nav1" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Trang chính</a>
+                <a href="#nav2" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Demo</a>
+                <a href="#nav3" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Dịch vụ của tôi</a>
+                <a href="#nav4" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Về tôi</a>
+                <a href="#nav5" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">Liên hệ với tôi</a>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div
+            class="w3-main w3-padding-large w3-black"
+            style="
+                margin-left: 40%;
+                background-image: url(https://i.pinimg.com/originals/cb/00/27/cb00273b6762b14b0f9861ff1d22aca3.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: right top;
+                background-attachment: fixed;
+            "
+        >
+            <!-- Menu icon to open sidebar -->
+            <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width: auto; right: 0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+            <!-- Header -->
+            <header class="w3-container w3-center" style="padding: 128px 16px;" id="home">
+                <div id="spData2">
+                    <h1 class="w3-jumbo"><b>Quý Lê</b></h1>
+                    <p>Website cá nhân không tính phí duy trì hàng năm</p>
+                    <p>Thích hợp cho cá nhân và kinh doanh nhỏ lẻ.</p>
+                </div>
+                <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display: block; width: 60%; margin: auto;" />
+                <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333" />
+                <div class="call-me">
+                    <a target="_blank" href="tel:0972054206" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>
+                    <a target="_blank" href="https://m.me/timquen2014" class="w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook"></i> Messenger</a>
+                </div>
+            </header>
+
+            <!-- demo Section -->
+            <div class="w3-padding-32 w3-content" id="nav2">
+                <h2 class="">Demo</h2>
+                <hr class="w3-opacity" />
+
+                <!-- Grid for photos -->
+                <div id="my_service">
+                    <div>
+                        <a href="./resume-cv1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Resume CV 1</a>
+                        <a href="./freelancer1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Freelancer</a>
+                    </div>
+                    <div>
+                        <a href="./profile1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Profile 1</a>
+                        <a href="./profile2" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Profile 2</a>
+                        <a href="./profile3" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Profile 3</a>
+                        <a href="./profile4" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Profile 4</a>
+                        <a href="./profile5" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Profile 5</a>
+                    </div>
+                    <div>
+                        <a href="./team1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Team 1</a>
+                        <a href="./team2" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Team 2</a>
+                    </div>
+                    <div>
+                        <a href="./portfolio1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Portfolio 1</a>
+                        <a href="./portfolio2" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Portfolio 2</a>
+                        <a href="./portfolio3" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Portfolio 3</a>
+                        <a href="./portfolio4" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Portfolio 4</a>
+                    </div>
+                    <div>
+                        <a href="./photographer1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Photographer 1</a>
+                        <a href="./photographer2" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Photographer 2</a>
+                        <a href="./photographer3" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Photographer 3</a>
+                    </div>
+                    <div>
+                        <a href="./shop1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Shop quần áo 1</a>
+                    </div>
+                    <div>
+                        <a href="./restaurant1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Restaurant 1</a>
+                        <a href="./food1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Food 1</a>
+                        <a href="./bar1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Bar 1</a>
+                    </div>
+                    <div>
+                        <a href="./interior1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Thiết kế nội thất 1</a>
+                    </div>
+                    <div>
+                        <a href="./hotel1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Đặt phòng 1</a>
+                    </div>
+                    <div>
+                        <a href="./blog1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Blog 1</a>
+                        <a href="./blog2" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Blog 2</a>
+                        <a href="./blog3" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Blog 3</a>
+                        <a href="./blog4" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Blog 4</a>
+                        <a href="./blog5" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Blog 5</a>
+                    </div>
+                    <div>
+                        <a href="./hospital1" class="w3-button w3-small w3-green w3-padding-large w3-margin-top"><i class="fa fa-flash"></i> Phòng khám</a>
+                    </div>
+                </div>
+                <!-- End demo Section -->
+            </div>
+
+            <div class="w3-padding-32 w3-content" id="nav3">
+                <h2 class="">Dịch vụ của tôi</h2>
+                <hr class="w3-opacity" />
+
+                <!-- Grid for photos -->
+                <div class="w3-row-padding" style="margin: 0 -16px;" id="myPortfolio">
+                    <div class="w3-half">
+                        <a href="https://docs.google.com/spreadsheets/d/1r817b58jNq4CTD9fVjaZxgwppA9LlBsEqHv2iFlntmg/edit?usp=sharing">
+                            <img class="w3-border w3-padding-small w3-white" src="https://riamedia.vn/upload/thiet-ke-web-tphcm.png" style="width: 100%;" />
+                        </a>
+                        <a href="https://docs.google.com/spreadsheets/d/1jsHJFVks59eH8T5CEAh5ynv6lHXkhIGc-IfkPO4asUI/edit?usp=sharing">
+                            <img class="w3-border w3-padding-small w3-white" src="https://i.pinimg.com/originals/b1/3c/4c/b13c4c1e550e6a838a269ba8f6299e13.png" style="width: 100%;" />
+                        </a>
+                        <a href="#"><img class="w3-border w3-padding-small w3-white" src="https://thietkewebchuanseo.net/wp-content/uploads/2018/11/bao-gia-thiet-ke-logo-chuyen-nghiep.jpg" style="width: 100%;" /></a>
+                    </div>
+                    <div class="w3-half">
+                        <a href="#"><img class="w3-border w3-padding-small w3-white" src="https://vnmarketing.net/wp-content/uploads/2020/04/dich-vu-chinh-sua-video-marketing-online.jpg" style="width: 100%;" /></a>
+                        <a href="#"><img class="w3-border w3-padding-small w3-white" src="https://vnmarketing.net/wp-content/uploads/2020/02/dich-vu-chinh-sua-file-scan-pdf.gif" style="width: 100%;" /></a>
+                        <a href="#"><img class="w3-border w3-padding-small w3-white" src="https://solumedia.vn/wp-content/uploads/2019/10/thiet-ke-banner-gia-re-1-1024x683-1024x683.jpg" style="width: 100%;" /></a>
+                    </div>
+                </div>
+                <!-- End Portfolio Section -->
+            </div>
+
+            <!-- About Section -->
+            <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="nav4">
+                <h2>Về tôi</h2>
+                <hr class="w3-opacity" />
+                <div id="vetoi">
+                    <p>Là người có trách nhiệm với công việc và hướng đến sự chuyên nghiệp. Tôi mong muốn nhận được sự tin tưởng của khách hàng.</p>
+                    <p>
+                        <i><a href="https://www.topcv.vn/xem-cv/00dcac60d61a2ce13875c5cb4ca4450f">Xem Cv của tôi </a></i>
+                    </p>
+                </div>
+                <h3 class="w3-padding-16">Kỹ năng</h3>
+                <div id="kynang">
+                    <p class="w3-wide">Photoshop</p>
+                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>
+                    <p class="w3-wide">Illustrator</p>
+                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>
+                    <p class="w3-wide">Premier</p>
+                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 80%;">80%</div></div>
+                    <p class="w3-wide">Indesign</p>
+                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 50%;">50%</div></div>
+                </div>
+                <br />
+
+                <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+                    <div class="w3-third w3-section">
+                        <span class="w3-xlarge">14+</span><br />
+                        Khách hàng
+                    </div>
+                    <div class="w3-third w3-section">
+                        <span class="w3-xlarge">55+</span><br />
+                        Dự án đã hoàn thành
+                    </div>
+                    <div class="w3-third w3-section">
+                        <span class="w3-xlarge">89+</span><br />
+                        Khách hàng có phản hồi tốt
+                    </div>
+                </div>
+
+                <div class="call-me">
+                    <a target="_blank" href="tel:0972054206" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>
+                    <a target="_blank" href="https://m.me/timquen2014" class="w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook"></i> Messenger</a>
+                </div>
+
+                <!-- Testimonials -->
+                <h3 class="w3-padding-24">Uy tín trong công việc</h3>
+                <div id="my_testimonial">
+                    <img src="./img/avt2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width: 80px;" />
+                    <p><span class="w3-large w3-text-white w3-margin-right">Tác giả</span> Freelancer</p>
+                    <p>Xin chào mọi người</p>
+                    <br />
+                </div>
+                <!-- Grid for pricing tables -->
+                <!-- <h3 class="w3-padding-16">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">50GB Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div> -->
+                <!-- End Grid/Pricing tables -->
+
+                <!-- </div> -->
+                <div class="fb-comments" data-href="https://quylvdsth.github.io/web" data-numposts="5" data-width="100%" style="background-color: white;"></div>
+                <!-- End About Section -->
+            </div>
+
+            <!-- Contact Section -->
+            <div class="w3-padding-32 w3-content w3-text-grey" style="margin-bottom: 64px;" id="nav5">
+                <h2>Liên hệ với tôi</h2>
+                <hr class="w3-opacity" />
+
+                <div class="w3-section">
+                    <!-- <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p> -->
+                    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: <span class="my-phone">0972054206</span></p>
+                    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <span class="my-email">quylv.dsth@gmail.com</span></p>
+                </div>
+
+                <p>Hãy để lại thông tin liên hệ. Tôi sẽ gọi lại cho bạn.</p>
+                <form name="cform" id="cform" target="_self" onsubmit="return postToGoogle();" action="">
+                    <p><input id="nameField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Tên của bạn" name="entry.1028036317" /></p>
+                    <p><input id="emailField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email hoặc số liên lạc" name="entry.1449630851" /></p>
+                    <p><input id="serviceField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Dịch vụ mà bạn quan tâm?" name="entry.972403096" /></p>
+                    <p><input id="messField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mô tả cụ thể hơn" name="entry.992019242" /></p>
+                    <p>
+                        <button class="w3-button w3-green w3-padding-large" type="submit" id="send" name="send"><i class="fa fa-paper-plane"></i> Gửi tin nhắn</button>
+                    </p>
+                </form>
+                <div id="success-msg" class="w3-red text-center" style="display: none;">Đã lưu thông tin khách hàng!</div>
+                <!-- End Contact Section -->
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-container w3-padding-64 w3-green w3-center w3-xlarge" style="margin: -24px;">
+                <a href="#"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+                <a href="#"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+                <a href="#"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+                <a href="#"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+                <a href="#"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+                <p class="w3-medium">Dịch vụ làm website cá nhân | Nhanh, gọn, chi phí thấp <a href="https://quylvdsth.github.io/web/" target="_blank" class="w3-hover-text-green">quylvdsth</a></p>
+                <!-- End footer -->
+            </footer>
+
+            <!-- END PAGE CONTENT -->
+        </div>
+        <script>
+            // form
+            function postToGoogle() {
+                var name = $("#nameField").val();
+                var email = $("#emailField").val();
+                var service = $("#serviceField").val();
+                var mess = $("#messField").val();
+
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfePvrY2NJwALb2mzayMmeXvuDln3DSEoEk7KBYNJPFGvONZA/formResponse?",
+                    data: {
+                        "entry.1028036317": name,
+                        "entry.1449630851": email,
+                        "entry.972403096": service,
+                        "entry.992019242": mess,
+                    },
+                    type: "POST",
+                    dataType: "jsonp",
+                    success: function (d) {},
+                    error: function (x, y, z) {
+                        $("#success-msg").show();
+                    },
+                });
+
+                return false;
+            }
+            // Open and close sidebar
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "60%";
+                document.getElementById("mySidebar").style.display = "block";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
