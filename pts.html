@@ -57,45 +57,31 @@
                 <br>
                 <blockquote>Photoshop là một phần mềm phức tạp, và sẽ khó khăn để bắt đầu sử dụng cho người học. Khóa học với 4 buổi cơ bản sẽ giúp bạn làm quen, hiểu và biết cách sử dụng phần mềm này. </blockquote>
                 <blockquote>5 buổi nâng cao dành cho người muốn sử dụng sâu hơn cho mục đích công việc.</blockquote>
-                <div class="w3-content w3-display-container">
+
+                <div class="w3-content w3-display-container" style="padding-top: 64px ">
 
                     <div class="w3-display-container mySlides">
-                      <img src="https://quylvdsth.github.io/web/img/pts3.jpg" style="width:100%">
-                      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-                        French Alps
-                      </div>
+                      <img src="https://quylvdsth.github.io/web/img/pts3.jpg" style="width:100%">                      
                     </div>
 
                     <div class="w3-display-container mySlides">
-                      <img src="https://quylvdsth.github.io/web/img/pts4.jpg" style="width:100%">
-                      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-                        Northern Lights
-                      </div>
+                      <img src="https://quylvdsth.github.io/web/img/pts4.jpg" style="width:100%">                      
                     </div>
 
                     <div class="w3-display-container mySlides">
-                      <img src="https://quylvdsth.github.io/web/img/pts5.jpg" style="width:100%">
-                      <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-                        Beautiful Mountains
-                      </div>
+                      <img src="https://quylvdsth.github.io/web/img/pts5.jpg" style="width:100%">                      
                     </div>
 
                     <div class="w3-display-container mySlides">
-                      <img src="https://quylvdsth.github.io/web/img/pts6.jpg" style="width:100%">
-                      <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
-                        The Rain Forest
-                      </div>
+                      <img src="https://quylvdsth.github.io/web/img/pts6.jpg" style="width:100%">                      
                     </div>
 
                     <div class="w3-display-container mySlides">
-                      <img src="https://quylvdsth.github.io/web/img/pts7.jpg" style="width:100%">
-                      <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-                        Mountains!
-                      </div>
+                      <img src="https://quylvdsth.github.io/web/img/pts7.jpg" style="width:100%">                      
                     </div>
 
-                    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+                    <button class="w3-button w3-display-left w3-blue" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-display-right w3-blue" onclick="plusDivs(1)">&#10095;</button>
 
                 </div>
             </div>
@@ -240,6 +226,25 @@
             </p>
             <!-- End footer -->
         </footer>
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
         <script>
             // form
             function postToGoogle() {
