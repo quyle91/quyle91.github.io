@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Thiết kế Website trọn gói</title>
+<title>Các dự án đã hoàn thành</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,8 +66,62 @@
                     <div class="w3-card">
                         <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
                             <img class="w3-image" src="./img/shimasan-logo.png"/>
-                            <h4 class="">Logo</h4>
-                            Thương hiệu nông nghiệp
+                            <h4 class="">Bộ nhận diện thương hiệu</h4>
+                            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-small">Xem tất cả</button>
+                            <div id="id01" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container">                                    
+                                    <div class="w3-content w3-display-container">
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                            <img src="./img/shimasan/dongphuc.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/shimasan/namecard1.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/shimasan/namecard2.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/shimasan/sanpham1.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/shimasan/sanpham2.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/shimasan/sanpham3.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/shimasan/tag.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/shimasan/thung.jpg" style="width:100%">
+                                        </div>
+                                        <button class="w3-button w3-display-left w3-green" onclick="plusDivs(-1)">&#10094;</button>
+                                        <button class="w3-button w3-display-right w3-green" onclick="plusDivs(1)">&#10095;</button>
+                                        </div>
+                                  </div>
+                                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var slideIndex = 1;
+                                showDivs(slideIndex);
+
+                                function plusDivs(n) {
+                                  showDivs(slideIndex += n);
+                                }
+
+                                function showDivs(n) {
+                                  var i;
+                                  var x = document.getElementsByClassName("mySlides");
+                                  if (n > x.length) {slideIndex = 1}
+                                  if (n < 1) {slideIndex = x.length}
+                                  for (i = 0; i < x.length; i++) {
+                                     x[i].style.display = "none";  
+                                  }
+                                  x[slideIndex-1].style.display = "block";  
+                                }
+                            </script>
                         </div>
                     </div>
                 </div> 
@@ -84,8 +138,56 @@
                     <div class="w3-card">
                         <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
                             <img class="w3-image" src="./img/kamizuko-logo.png"/>
-                            <h4 class="">Logo</h4>
-                            Thương hiệu nông nghiệp
+                            <h4 class="">Bộ nhận diện thương hiệu</h4>
+                            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-green w3-small">Xem tất cả</button>
+                            <div id="id02" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container">                                    
+                                    <div class="w3-content w3-display-container">
+                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
+                                            <img src="./img/kamizuko/dongphuc.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/kamizuko/namecard1.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/kamizuko/namecard2.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/kamizuko/sanpham1.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/kamizuko/sanpham2.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/kamizuko/tag.jpg" style="width:100%">
+                                        </div>                                        
+                                        <button class="w3-button w3-display-left w3-green" onclick="plusDivs2(-1)">&#10094;</button>
+                                        <button class="w3-button w3-display-right w3-green" onclick="plusDivs2(1)">&#10095;</button>
+                                        </div>
+                                  </div>
+                                  <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var slideIndex2 = 1;
+                                showDivs2(slideIndex2);
+
+                                function plusDivs2(n) {
+                                  showDivs2(slideIndex2 += n);
+                                }
+
+                                function showDivs2(n) {
+                                  var i;
+                                  var x = document.getElementsByClassName("mySlides2");
+                                  if (n > x.length) {slideIndex2 = 1}
+                                  if (n < 1) {slideIndex2 = x.length}
+                                  for (i = 0; i < x.length; i++) {
+                                     x[i].style.display = "none";  
+                                  }
+                                  x[slideIndex2-1].style.display = "block";  
+                                }
+                            </script>
                         </div>
                     </div>
                 </div> 
@@ -102,8 +204,74 @@
                     <div class="w3-card">
                         <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
                             <img class="w3-image" src="./img/masinari-logo.png"/>
-                            <h4 class="">Logo</h4>
-                            Thương hiệu nông nghiệp
+                            <h4 class="">Bộ nhận diện thương hiệu</h4>
+                            <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-green w3-small">Xem tất cả</button>
+                            <div id="id03" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container">                                    
+                                    <div class="w3-content w3-display-container">
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                            <img src="./img/masinari/bienbang.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/bienbang2.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/namecard2.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/car.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/dongphuc.jpg" style="width:100%">
+                                        </div>
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/namecard1.jpg" style="width:100%">
+                                        </div>    
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/namecard2.jpg" style="width:100%">
+                                        </div>  
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/sanpham1.jpg" style="width:100%">
+                                        </div>  
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/sanpham2.jpg" style="width:100%">
+                                        </div>  
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/sanpham3.png" style="width:100%">
+                                        </div>  
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/tag.jpg" style="width:100%">
+                                        </div>   
+                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
+                                          <img src="./img/masinari/thung.jpg" style="width:100%">
+                                        </div>                                    
+                                        <button class="w3-button w3-display-left w3-green" onclick="plusDivs3(-1)">&#10094;</button>
+                                        <button class="w3-button w3-display-right w3-green" onclick="plusDivs3(1)">&#10095;</button>
+                                        </div>
+                                  </div>
+                                  <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var slideIndex3 = 1;
+                                showDivs3(slideIndex3);
+
+                                function plusDivs3(n) {
+                                  showDivs3(slideIndex3 += n);
+                                }
+
+                                function showDivs3(n) {
+                                  var i;
+                                  var x = document.getElementsByClassName("mySlides3");
+                                  if (n > x.length) {slideIndex3 = 1}
+                                  if (n < 1) {slideIndex3 = x.length}
+                                  for (i = 0; i < x.length; i++) {
+                                     x[i].style.display = "none";  
+                                  }
+                                  x[slideIndex3-1].style.display = "block";  
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>              
@@ -179,26 +347,7 @@
             <p class="w3-medium">Quý Lê - Freelancer thiết kế website
             </p>
             <!-- End footer -->
-        </footer>
-        <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-          showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          if (n > x.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = x.length}
-          for (i = 0; i < x.length; i++) {
-             x[i].style.display = "none";  
-          }
-          x[slideIndex-1].style.display = "block";  
-        }
-        </script>
+        </footer>        
         <script>
             // form
             function postToGoogle() {
