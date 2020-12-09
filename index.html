@@ -1,271 +1,254 @@
 <!DOCTYPE html>
 <html>
-    <title>Quý Lê - Profile cá nhân </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Montserrat", sans-serif;
-        }
-        .w3-row-padding img {
-            margin-bottom: 12px;
-        }
-        .bgimg {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            min-height: 100%;
-        }
-    </style>
-    <body>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=226200314665818&autoLogAppEvents=1" nonce="zYQVlg1P"></script>
-        <div id="nav1"></div>
-        <!-- Sidebar with image -->
-        <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width: 40%;">
-            <div class="bgimg w3-grayscale-max" style="background-image: url('./img/avt.jpg');"></div>
-        </nav>
+  <title>Quý Lê - Profile cá nhân </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" /> -->
 
-        <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-        <nav class="w3-sidebar w3-animate-right w3-xxlarge" style="display: none; padding-top: 150px; right: 0; z-index: 2;" id="mySidebar">
-            <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-xxxlarge w3-display-topright" style="padding: 0 12px;">
-                <i class="fa fa-remove"></i>
-            </a>
-            <div id="spData1" class="w3-bar-block w3-center">
-                <a href="#nav1" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-light-grey" onclick="closeNav()">Trang chính</a>
-                <a href="#nav3" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-light-grey" onclick="closeNav()">Dịch vụ của tôi</a>
-                <a href="#nav4" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-light-grey" onclick="closeNav()">Về tôi</a>
-                <a href="#nav5" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-light-grey" onclick="closeNav()">Liên hệ với tôi</a>
-            </div>
-        </nav>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-        <!-- Page Content -->
-        <div
-            class="w3-main w3-padding-large"
-            style="
-                margin-left: 40%;                
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: right top;
-                background-attachment: fixed;
-            "
-        >
-            <!-- Menu icon to open sidebar -->
-            <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width: auto; right: 0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=226200314665818&autoLogAppEvents=1" nonce="zYQVlg1P"></script>
+    <div id="nav1"></div>
+    <!-- Sidebar with image -->
+    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width: 40%;">
+      <div class="bgimg w3-grayscale-max" style="background-image: url('./img/avt.jpg');"></div>
+    </nav>
 
-            <!-- Header -->
-            <header class="w3-container w3-center" style="padding: 128px 16px;" id="home">
-                <div id="spData2">
-                    <h1 class="w3-jumbo"><b>Quý Lê</b></h1>
-                    <span class="w3-tag w3-small w3-white w3-border">IT Phần mềm</span>
-                    <p>Mong muốn độc lập tài chính - là con người có trách nhiệm - ham học hỏi. </p>                    
-                </div>
-                <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display: block; width: 60%; margin: auto;" />
-                <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333" />
-                <div class="call-me">
-                    <a target="_blank" href="tel:0972054206" class="w3-hover-shadow w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone-square"></i> Gọi cho tôi</a>
-                    <a target="_blank" href="https://m.me/timquen2014" class="w3-hover-shadow w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook-square"></i> Messenger</a>
-                    <a target="_blank" href="http://zaloapp.com/qr/p/4e7z2lki75rm" class="w3-hover-shadow w3-button w3-blue w3-padding-large w3-margin-top "><img style="background-color: white " src="./img/zalo.svg" width="16px"> Zalo</a>
-                </div>
-            </header>
-            
+    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+    <nav class="w3-sidebar w3-animate-right w3-xxlarge" style="display: none; padding-top: 150px; right: 0; z-index: 2;" id="mySidebar">
+      <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-xxxlarge w3-display-topright" style="padding: 0 12px;">
+        <i class="fa fa-remove"></i>
+      </a>
+      <div id="spData1" class="w3-bar-block w3-center">
+        <a href="#nav1" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Trang chính</a>
+        <!-- <a href="#nav3" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Dịch vụ của tôi</a> -->
+        <a href="#nav4" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Về tôi</a>
+        <a href="#nav5" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Liên hệ với tôi</a>
+        <a href="./duan.html" class="w3-bar-item w3-button w3-large w3-hover-light-grey">Dự án của tôi</a>
+      </div>
+    </nav>
 
-            <!-- End Grid/Pricing tables -->
-            <!-- About Section -->
-            <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="nav4">
-                <h2>Về tôi</h2>
-                <hr>
-                <div id="vetoi">
-                    <p>Là người có trách nhiệm với công việc và hướng đến sự chuyên nghiệp. Tôi mong muốn nhận được sự tin tưởng của khách hàng.</p>
-                    <p>
-                        <i><a href="https://www.topcv.vn/xem-cv/00dcac60d61a2ce13875c5cb4ca4450f">Xem Cv của tôi </a></i>
-                    </p>
-                </div>
-            </div>
+    <!-- Page Content -->
+    <div
+      class="w3-main w3-padding-large w3-text-dark-gray"
+      style="
+        margin-left: 40%;        
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: fixed;
+      "
+    >
+      <!-- Menu icon to open sidebar -->
+      <span class="w3-button w3-top w3-white w3-xxlarge w3-hover-text-black" style="width: auto; right: 0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
-            <div class="w3-padding-32 w3-content" id="nav3">
-                <h2 class="">Dịch vụ của tôi</h2>
-                <hr>
-
-                <!-- Grid for photos -->
-                <div class="w3-row-padding" style="margin: 0 -16px;" id="myPortfolio">
-                    <div class="w3-third w3-center w3-padding">
-                    	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
-                        	<img class="" src="./img/web.png" style="width: 100%;" />                        
-                        	<h6>Thiết kế website</h6>
-                        	<div class="w3-small">
-                        		<span>Mã nguồn: Wordpress</span>
-                        	</div>
-                        	<br>
-                        	<a href="./dvweb.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
-                    	</div>
-                    </div>
-                    <div class="w3-third w3-center w3-padding">
-                    	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
-                        	<img class="" src="./img/thietkegiayto.jpg" style="width: 100%;" />
-                        	<h6>Nhận diện thương hiệu</h6>
-                        	<div class="w3-small">
-                        		<span>Trọn bộ: Logo, profile, brochus, tờ rơi, ..</span>
-                        	</div>
-                        	<br>
-                        	<a href="./nhandienthuonghieu.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
-                    	</div>
-                    </div>
-                    <div class="w3-third w3-center w3-padding">
-                    	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
-                        	<img class="" src="./img/pts.png" style="width: 100%;" />
-                        	<h6>Dạy kèm Photoshop</h6>
-                        	<div class="w3-small">
-                        		<span>Tại nhà, không cố định thời gian</span>
-                        	</div>
-                        	<br>
-                        	<a href="./pts.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
-                    	</div>
-                    </div>
-                </div>
-                <!-- End Portfolio Section -->
-            </div>
-
-
-            <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="nav4">
-                <h2 class="w3-padding-16">Kỹ năng</h2>
-                <div id="kynang">
-                	<p class="w3-wide">Chỉnh sửa hình ảnh - <em><small>Photoshop</small></em></p>
-                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>
-                    <p class="w3-wide">Thiết kế quảng cáo - <em><small>Illustrator</small></em></p>
-                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>
-                    <p class="w3-wide">Cắt ghép video - <em><small>Premier Pro</small></em></p>
-                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 80%;">80%</div></div>
-                    <p class="w3-wide">Hiệu ứng video - <em><small>After Effect</small></em></p>
-                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 50%;">50%</div></div>   
-                    <p class="w3-wide">Thiết kế tài liệu: Profile, catalog - <em><small>Indesign</small></em></p>
-                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 50%;">50%</div></div>                 
-                    <p class="w3-wide">Thiết kế website - <em><small>Wordpress</small></em></p>	                    
-                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>                                        
-                    <p class="w3-wide">Tin học văn phòng - <em><small>Ms Word- Ms Excel</small></em></p>
-                    <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 70%;">70%</div></div>                    
-                </div>
-                <br />
-
-                <div class="w3-row w3-center w3-light-grey w3-padding-16 w3-section">
-                    <div class="w3-third w3-section">
-                        <span class="w3-xxlarge"><b>14+</b></span><br />
-                        Khách hàng
-                    </div>
-                    <div class="w3-third w3-section">
-                        <span class="w3-xxlarge"><b>55+</b></span><br />
-                        Dự án đã hoàn thành
-                        <br>
-                        <br>
-                        <a class="w3-button w3-border w3-small" href="./duan.html">Xem</a>
-                    </div>
-                    <div class="w3-third w3-section">
-                        <span class="w3-xxlarge"><b>89+</b></span><br />
-                        Khách hàng có phản hồi tốt
-                    </div>
-                </div>
-
-                <div class="call-me">
-                    <a target="_blank" href="tel:0972054206" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>
-                    <a target="_blank" href="https://m.me/timquen2014" class="w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook"></i> Messenger</a>
-                </div>
-
-                <!-- Testimonials -->
-                <h3 class="w3-padding-24">Uy tín trong công việc</h3>
-                <div id="my_testimonial">
-                    <img src="./img/avt2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width: 80px;" />
-                    <p><span class="w3-large w3-margin-right">Tác giả</span> Freelancer</p>
-                    <p>Xin chào mọi người</p>
-                    <br />
-                </div>
-                <div style="width: 100%; background-color: white;">
-                    <div class="fb-comments" data-href="https://quyle91.github.io/" data-numposts="99" data-width="100%" data-lazy="true"></div>
-                </div>
-                <!-- End About Section -->
-            </div>
-
-            <!-- Contact Section -->
-            <div class="w3-padding-32 w3-content w3-text-grey" style="margin-bottom: 64px;" id="nav5">
-                <h2>Liên hệ với tôi</h2>
-                <hr>
-
-                <div class="w3-section">
-                    <!-- <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p> -->
-                    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: <span class="my-phone">0972054206</span></p>
-                    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <span class="my-email">quylv.dsth@gmail.com</span></p>
-                </div>
-
-                <p>Hãy để lại thông tin liên hệ. Tôi sẽ gọi lại cho bạn.</p>
-                <form name="cform" id="cform" target="_self" onsubmit="return postToGoogle();" action="">
-                    <p><input required id="nameField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Tên của bạn" name="entry.1028036317" /></p>
-                    <p><input required id="emailField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email hoặc số liên lạc" name="entry.1449630851" /></p>
-                    <p><input required id="serviceField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Dịch vụ mà bạn quan tâm?" name="entry.972403096" /></p>
-                    <p><input required id="messField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mô tả cụ thể hơn" name="entry.992019242" /></p>
-                    <p>
-                        <button class="w3-button w3-green w3-padding-large" type="submit" id="send" name="send"><i class="fa fa-paper-plane"></i> Gửi tin nhắn</button>
-                    </p>
-                </form>
-                <div id="success-msg" class="w3-red text-center" style="display: none;">Đã lưu thông tin khách hàng!</div>
-                <!-- End Contact Section -->
-            </div>
-
-            <!-- Footer -->
-            <footer class="w3-container w3-padding-64 w3-green w3-center w3-xlarge" style="margin: -24px;">            	
-                <a href="https://facebook.com/timquen2014"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-                <a href="https://profiles.wordpress.org/quyle91/"><i class="fa fa-wordpress w3-hover-opacity"></i></a>
-                <a href="https://github.com/quyle91"><i class="fa fa-github w3-hover-opacity"></i></a>
-                <p class="w3-medium">Quý Lê - Profile</p>
-                <p class="w3-medium"><a href="https://paypal.me/quyle91">Donate me</a></p>
-                <!-- End footer -->
-            </footer>
-
-            <!-- END PAGE CONTENT -->
+      <!-- Header -->
+      <header class="w3-container w3-center" style="padding: 128px 16px;" id="home">
+        <div id="spData2">
+          <h1 class="w3-jumbo"><b>Quý Lê</b></h1>
+          <span class="w3-tag w3-small w3-white w3-border">IT Phần mềm</span>
+          <p>Mong muốn độc lập tài chính - là con người có trách nhiệm - ham học hỏi. </p>          
         </div>
-        <script>
-            // form
-            function postToGoogle() {
-                var name = $("#nameField").val();
-                var email = $("#emailField").val();
-                var service = $("#serviceField").val();
-                var mess = $("#messField").val();
+        <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display: block; width: 60%; margin: auto;" />
+        <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333" />
+        <div class="call-me">
+          <a target="_blank" href="tel:0972054206" class="w3-hover-shadow w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone-square"></i> Gọi cho tôi</a>
+          <a target="_blank" href="https://m.me/timquen2014" class="w3-hover-shadow w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook-square"></i> Messenger</a>
+          <a target="_blank" href="http://zaloapp.com/qr/p/4e7z2lki75rm" class="w3-hover-shadow w3-button w3-blue w3-padding-large w3-margin-top "><img style="background-color: white " src="./img/zalo.svg" width="16px"> Zalo</a>
+        </div>
+      </header>
+      
 
-                $.ajax({
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfePvrY2NJwALb2mzayMmeXvuDln3DSEoEk7KBYNJPFGvONZA/formResponse?",
-                    data: {
-                        "entry.1028036317": name,
-                        "entry.1449630851": email,
-                        "entry.972403096": service,
-                        "entry.992019242": mess,
-                    },
-                    type: "POST",
-                    dataType: "jsonp",
-                    success: function (d) {},
-                    error: function (x, y, z) {
-                        $("#success-msg").show();
-                    },
-                });
+      <!-- End Grid/Pricing tables -->
+      <!-- About Section -->
+      <div class="w3-content w3-justify w3-padding-32" id="nav4">
+        <h2>Về tôi</h2>
+        <hr>
+        <div id="vetoi">
+          <p>Là người có trách nhiệm với công việc và hướng đến sự chuyên nghiệp. Tôi mong muốn nhận được sự tin tưởng của đồng nghiệp & khách hàng.</p>
+          <p>
+            <i><a href="https://www.topcv.vn/xem-cv/00dcac60d61a2ce13875c5cb4ca4450f">Xem Cv của tôi </a></i>
+          </p>
+        </div>
+      </div>
 
-                return false;
-            }
-            // Open and close sidebar
-            function openNav() {
-                document.getElementById("mySidebar").style.width = "60%";
-                document.getElementById("mySidebar").style.display = "block";
-            }
+      <!-- <div class="w3-padding-32 w3-content" id="nav3">
+        <h2 class="">Dịch vụ của tôi</h2>
+        <hr>
+        <div class="w3-row-padding" style="margin: 0 -16px;" id="myPortfolio">
+          <div class="w3-third w3-center w3-padding">
+          	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
+            	<img class="" src="./img/web.png" style="width: 100%;" />            
+            	<h6>Thiết kế website</h6>
+            	<div class="w3-small">
+            		<span>Mã nguồn: Wordpress</span>
+            	</div>
+            	<br>
+            	<a href="./dvweb.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
+          	</div>
+          </div>
+          <div class="w3-third w3-center w3-padding">
+          	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
+            	<img class="" src="./img/thietkegiayto.jpg" style="width: 100%;" />
+            	<h6>Nhận diện thương hiệu</h6>
+            	<div class="w3-small">
+            		<span>Trọn bộ: Logo, profile, brochus, tờ rơi, ..</span>
+            	</div>
+            	<br>
+            	<a href="./nhandienthuonghieu.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
+          	</div>
+          </div>
+          <div class="w3-third w3-center w3-padding">
+          	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
+            	<img class="" src="./img/pts.png" style="width: 100%;" />
+            	<h6>Dạy kèm Photoshop</h6>
+            	<div class="w3-small">
+            		<span>Tại nhà, không cố định thời gian</span>
+            	</div>
+            	<br>
+            	<a href="./pts.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
+          	</div>
+          </div>
+        </div>
+      </div> -->
 
-            function closeNav() {
-                document.getElementById("mySidebar").style.display = "none";
-            }
-        </script>
-    </body>
+
+      <div class="w3-content w3-justify w3-padding-32" id="nav4">
+        <h2 class="w3-padding-16">Kỹ năng</h2>
+        <div id="kynang">
+        	<p class="w3-wide">Chỉnh sửa hình ảnh - <em><small>Photoshop</small></em></p>
+          <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>
+          <p class="w3-wide">Thiết kế quảng cáo - <em><small>Illustrator</small></em></p>
+          <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>
+          <p class="w3-wide">Cắt ghép video - <em><small>Premier Pro</small></em></p>
+          <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 80%;">80%</div></div>
+          <p class="w3-wide">Hiệu ứng video - <em><small>After Effect</small></em></p>
+          <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 50%;">50%</div></div>  
+          <p class="w3-wide">Thiết kế tài liệu: Profile, catalog - <em><small>Indesign</small></em></p>
+          <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 50%;">50%</div></div>         
+          <p class="w3-wide">Thiết kế website - <em><small>Wordpress</small></em></p>	          
+          <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 85%;">85%</div></div>                    
+          <p class="w3-wide">Tin học văn phòng - <em><small>Ms Word- Ms Excel</small></em></p>
+          <div class="w3-light-grey"><div class="w3-container w3-center w3-padding-small w3-green" style="width: 70%;">70%</div></div>          
+        </div>
+        <br />
+
+        <div class="w3-row w3-center w3-light-grey w3-padding-16 w3-section">
+          <div class="w3-third w3-section">
+            <span class="w3-xxlarge"><b>14+</b></span><br />
+            Khách hàng
+          </div>
+          <div class="w3-third w3-section">
+            <span class="w3-xxlarge"><b>55+</b></span><br />
+            Dự án đã hoàn thành
+            <br>
+            <br>
+            <a class="w3-button w3-border w3-small" href="./duan.html">Xem</a>
+          </div>
+          <div class="w3-third w3-section">
+            <span class="w3-xxlarge"><b>89+</b></span><br />
+            Khách hàng có phản hồi tốt
+          </div>
+        </div>
+
+        <div class="call-me">
+          <a target="_blank" href="tel:0972054206" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>
+          <a target="_blank" href="https://m.me/timquen2014" class="w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook"></i> Messenger</a>
+        </div>
+
+        <!-- Testimonials -->
+        <h3 class="w3-padding-24">Uy tín trong công việc</h3>
+        <div id="my_testimonial">
+          <img src="./img/avt2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width: 80px;" />
+          <p><span class="w3-large w3-margin-right">Tác giả</span> Freelancer</p>
+          <p>Xin chào mọi người</p>
+          <br />
+        </div>
+        <div style="width: 100%; background-color: white;">
+          <div class="fb-comments" data-href="https://quyle91.github.io/" data-numposts="99" data-width="100%" data-lazy="true"></div>
+        </div>
+        <!-- End About Section -->
+      </div>
+
+      <!-- Contact Section -->
+      <div class="w3-padding-32 w3-content " style="margin-bottom: 64px;" id="nav5">
+        <h2>Liên hệ với tôi</h2>
+        <hr>
+
+        <div class="w3-section">
+          <!-- <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p> -->
+          <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: <span class="my-phone">0972054206</span></p>
+          <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <span class="my-email">quylv.dsth@gmail.com</span></p>
+        </div>
+
+        <p>Hãy để lại thông tin liên hệ. Tôi sẽ gọi lại cho bạn.</p>
+        <form name="cform" id="cform" target="_self" onsubmit="return postToGoogle();" action="">
+          <p><input required id="nameField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Tên của bạn" name="entry.1028036317" /></p>
+          <p><input required id="emailField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email hoặc số liên lạc" name="entry.1449630851" /></p>
+          <p><input required id="serviceField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Dịch vụ mà bạn quan tâm?" name="entry.972403096" /></p>
+          <p><input required id="messField" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mô tả cụ thể hơn" name="entry.992019242" /></p>
+          <p>
+            <button class="w3-button w3-green w3-padding-large" type="submit" id="send" name="send"><i class="fa fa-paper-plane"></i> Gửi tin nhắn</button>
+          </p>
+        </form>
+        <div id="success-msg" class="w3-red text-center" style="display: none;">Đã lưu thông tin khách hàng!</div>
+        <!-- End Contact Section -->
+      </div>
+
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-64 w3-green w3-center w3-xlarge" style="margin: -24px;">      	
+        <a href="https://facebook.com/timquen2014"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://profiles.wordpress.org/quyle91/"><i class="fa fa-wordpress w3-hover-opacity"></i></a>
+        <a href="https://github.com/quyle91"><i class="fa fa-github w3-hover-opacity"></i></a>
+        <p class="w3-medium">Quý Lê - Profile</p>
+        <p class="w3-medium"><a href="https://paypal.me/quyle91">Donate me</a></p>
+        <!-- End footer -->
+      </footer>
+
+      <!-- END PAGE CONTENT -->
+    </div>
+    <script>
+      // form
+      function postToGoogle() {
+        var name = $("#nameField").val();
+        var email = $("#emailField").val();
+        var service = $("#serviceField").val();
+        var mess = $("#messField").val();
+
+        $.ajax({
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSfePvrY2NJwALb2mzayMmeXvuDln3DSEoEk7KBYNJPFGvONZA/formResponse?",
+          data: {
+            "entry.1028036317": name,
+            "entry.1449630851": email,
+            "entry.972403096": service,
+            "entry.992019242": mess,
+          },
+          type: "POST",
+          dataType: "jsonp",
+          success: function (d) {},
+          error: function (x, y, z) {
+            $("#success-msg").show();
+          },
+        });
+
+        return false;
+      }
+      // Open and close sidebar
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "60%";
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
 </html>

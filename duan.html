@@ -5,39 +5,19 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" /> -->
+    
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .w3-row-padding .w3-col {
-        margin-bottom: 16px;
-    }
-
-    .bgimg {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100%;
-    }
-    img.w3-image{border: 5px solid lightgray;}
-</style>
-
+<link rel="stylesheet" type="text/css" href="./style.css" />
 <body>
     <!-- Sidebar with image -->
     <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width: 40%;">
         <div class="bgimg w3-grayscale-max" style="background-image: url('./img/avt.jpg');"></div>
     </nav>
     <!-- Page Content -->
-    <div class="w3-main w3-padding-large" style="margin-left: 40%;">
+    <div class="w3-main w3-padding-large w3-text-dark-gray" style="margin-left: 40%;">
         <!-- Menu icon to open sidebar -->
         <a href="."class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width: auto; right: 0;">
             <i class="fa fa-home"></i>
@@ -47,13 +27,95 @@
             <div class="w3-padding-32 ">
                 <h1 class="w3-jumbo">
                     <b>Các dự án đã hoàn thành</b>
-                </h1>                
-                <p>Một số dự án bao gồm cả logo - bộ nhận diện thương hiệu và website </p>
+                </h1>
             </div>
         </header>
         <!-- demo Section -->
         <div class="w3-content">
             <div class="w3-row-padding" style="margin: 0 -16px;">
+                <div class="w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
+                                <img class="w3-image" src="./img/phugiagroup.png"/>
+                                                                
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                         
+                            <h4 class="">Website Phú Gia group</h4>
+                            <a target=_blank href="https://phugiagroup.com.vn/" class="">https://phugiagroup.com.vn/</a>
+                            </br>
+                            <small>
+                                Làm việc tại:
+                                <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a>
+                            </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
+                                <img class="w3-image" src="./img/nuocmamcot36.png"/>
+                                                                
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                         
+                            <h4 class="">Website thương hiệu nước mắm</h4>                            
+                            <a target=_blank href="https://nuocmamcot36.com/" class="">https://nuocmamcot36.com/</a>
+                            </br>
+                            <small>
+                                Làm việc tại:
+                                <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a>
+                            </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">     
+                                <img class="w3-image" src="./img/lavina.png"/>
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                            
+                            <h4 class="">Video Motion graphic Lavina Food</h4>
+                            
+                            <small>
+                                Làm việc tại:
+                                <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a>
+                            </small>
+                            </br>
+                            <button onclick="document.getElementById('lavinaframe').style.display='block'" class="w3-button w3-border w3-small">Xem video</button>
+                            <div id="lavinaframe" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container">                                    
+                                    <div class="w3-content w3-display-container">
+                                        <!-- content -->
+                                        <div style="padding-top:16px; padding-bottom: 16px;">
+                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F868165830381693%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F663534554270706%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F2705360216348897%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F714193539304919%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F701051810790858%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F373387100417040%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F196220752087797%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+
+                                        </div>                                 
+                                    </div>
+                                  </div>
+                                  <span onclick="document.getElementById('lavinaframe').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div> 
                 <div class="w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
@@ -72,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-            	<div class="w3-content" style="margin-top: 16px; ">
+            	<!-- <div class="w3-content" style="margin-top: 16px; ">
             		<div class="w3-row w3-card">
             			<div class="w3-third">
             				<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -87,7 +149,7 @@
             				</div>
             			</div>
             		</div>
-                </div>
+                </div> -->
             	<div class="w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
@@ -98,7 +160,7 @@
                         <div class="w3-twothird">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                            
                             <h4 class="">Video cover facebook Shop mỹ phẩm</h4>
-                            <button onclick="document.getElementById('coverfb2').style.display='block'" class="w3-button w3-green w3-small">Xem video</button>
+                            <button onclick="document.getElementById('coverfb2').style.display='block'" class="w3-button w3-border w3-small">Xem video</button>
                             <div id="coverfb2" class="w3-modal">
                                 <div class="w3-modal-content">
                                   <div class="w3-container">                                    
@@ -131,7 +193,7 @@
                     	<div class="w3-twothird">
                     		<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px">                    			
 	                            <h4 class="">Video cover facebook spa</h4>
-	                            <button onclick="document.getElementById('coverfb1').style.display='block'" class="w3-button w3-green w3-small">Xem video</button>
+	                            <button onclick="document.getElementById('coverfb1').style.display='block'" class="w3-button w3-border w3-small">Xem video</button>
 	                            <div id="coverfb1" class="w3-modal">
 	                                <div class="w3-modal-content">
 	                                  <div class="w3-container">                                    
@@ -160,7 +222,7 @@
                     	<div class="w3-twothird">
                     		<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
 	                            <h4 class="">Website giới thiệu sản phẩm.</h4>
-	                            https://shimasan.vn/ <a target=_blank href="https://shimasan.vn/" class=""><i class="fa fa-external-link"></i></a>
+	                            <a target=_blank href="https://shimasan.vn/" class="">https://shimasan.vn/</a>
 	                        </div>
                     	</div>
                         
@@ -176,7 +238,7 @@
                         <div class="w3-twothird">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">	                            
 	                            <h4 class="">Bộ nhận diện thương hiệu</h4>
-	                            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-small">Xem tất cả</button>
+	                            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-border w3-small">Xem tất cả</button>
 	                            <div id="id01" class="w3-modal">
 	                                <div class="w3-modal-content">
 	                                  <div class="w3-container">                                    
@@ -245,7 +307,7 @@
                         <div class="w3-twothird">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                            
 	                            <h4 class="">Website giới thiệu sản phẩm.</h4>
-	                            https://kamizuko.com/ <a target=_blank href="https://kamizuko.com/" class=""><i class="fa fa-external-link"></i></a>
+	                            <a target=_blank href="https://kamizuko.com/" class="">https://kamizuko.com/</a>
 	                        </div>
                         </div>
                     </div>
@@ -260,7 +322,7 @@
                         <div class="w3-twothird">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">	                            
 	                            <h4 class="">Bộ nhận diện thương hiệu</h4>
-	                            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-green w3-small">Xem tất cả</button>
+	                            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-border w3-small">Xem tất cả</button>
 	                            <div id="id02" class="w3-modal">
 	                                <div class="w3-modal-content">
 	                                  <div class="w3-container">                                    
@@ -323,7 +385,7 @@
                     	<div class="w3-twothird">
                     		<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
 	                            <h4 class="">Website giới thiệu sản phẩm.</h4>
-	                            https://masinari.com.vn/ <a target=_blank href="https://masinari.com.vn/" class=""><i class="fa fa-external-link"></i></a>
+	                            <a target=_blank href="https://masinari.com.vn/" class="">https://masinari.com.vn/</a>
 	                        </div>
                     	</div>                        
                     </div>
@@ -338,7 +400,7 @@
                         <div class="w3-twothird">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">	                            
 	                            <h4 class="">Bộ nhận diện thương hiệu</h4>
-	                            <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-green w3-small">Xem tất cả</button>
+	                            <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-border w3-small">Xem tất cả</button>
 	                            <div id="id03" class="w3-modal">
 	                                <div class="w3-modal-content">
 	                                  <div class="w3-container">                                    
@@ -422,7 +484,7 @@
                     	<div class="w3-twothird">
                     		<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
 	                            <h4 class="">Tool chèn ảnh excel bằng PHP</h4>
-	                            http://choibacbip.com/tool/ <a target=_blank href="http://choibacbip.com/tool/" class=""><i class="fa fa-external-link"></i></a>
+	                            <a target=_blank href="http://choibacbip.com/tool/" class="">http://choibacbip.com/tool/</a>
 	                        </div>
                     	</div>
                         
