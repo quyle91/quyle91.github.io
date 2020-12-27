@@ -23,21 +23,21 @@
 
     <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
     <nav class="w3-sidebar w3-animate-right w3-xxlarge" style="display: none; padding-top: 150px; right: 0; z-index: 2;" id="mySidebar">
-      <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-xxxlarge w3-display-topright" style="padding: 0 12px;">
+      <span href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-xxxlarge w3-display-topright" style="padding: 0 12px;">
         <i class="fa fa-remove"></i>
-      </a>
+      </span>
       <div id="spData1" class="w3-bar-block w3-center">
-        <a href="#nav1" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Trang chính</a>
-        <!-- <a href="#nav3" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Dịch vụ của tôi</a> -->
-        <a href="#nav4" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Về tôi</a>
-        <a href="#nav5" class="w3-bar-item w3-button w3-large w3-hover-light-grey" onclick="closeNav()">Liên hệ với tôi</a>
-        <a href="./duan.html" class="w3-bar-item w3-button w3-large w3-hover-light-grey">Dự án của tôi</a>
+        <a href="#nav1" class="w3-bar-item w3-button w3-large" onclick="closeNav()">Trang chính</a>        
+        <a href="#nav4" class="w3-bar-item w3-button w3-large" onclick="closeNav()">Về tôi</a>
+        <a href="#nav5" class="w3-bar-item w3-button w3-large" onclick="closeNav()">Liên hệ với tôi</a>
+        <a href="./duan.html" class="w3-bar-item w3-button w3-large">Dự án của tôi</a>
       </div>
     </nav>
 
     <!-- Page Content -->
+    <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333" />
     <div
-      class="w3-main w3-padding-large w3-text-dark-gray"
+      class="w3-main w3-padding-large"
       style="
         margin-left: 40%;        
         background-size: contain;
@@ -50,18 +50,17 @@
       <span class="w3-button w3-top w3-white w3-xxlarge w3-hover-text-black" style="width: auto; right: 0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
       <!-- Header -->
-      <header class="w3-container w3-center" style="padding: 128px 16px;" id="home">
+      <header class="w3-container w3-center" style="padding: 64px 16px;" id="home">        
         <div id="spData2">
           <h1 class="w3-jumbo"><b>Quý Lê</b></h1>
-          <span class="w3-tag w3-small w3-white w3-border">IT Phần mềm</span>
+          <span class="w3-tag w3-small w3-white w3-border">Website Developer</span>
           <p>Mong muốn độc lập tài chính - là con người có trách nhiệm - ham học hỏi. </p>          
         </div>
-        <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display: block; width: 60%; margin: auto;" />
-        <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333" />
+        <img src="./img/avt.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display: block; width: 60%; margin: auto;" />        
         <div class="call-me">
-          <a target="_blank" href="tel:0972054206" class="w3-hover-shadow w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone-square"></i> Gọi cho tôi</a>
-          <a target="_blank" href="https://m.me/timquen2014" class="w3-hover-shadow w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook-square"></i> Messenger</a>
-          <a target="_blank" href="http://zaloapp.com/qr/p/4e7z2lki75rm" class="w3-hover-shadow w3-button w3-blue w3-padding-large w3-margin-top "><img style="background-color: white " src="./img/zalo.svg" width="16px"> Zalo</a>
+          <a target="_blank" href="tel:0972054206" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone-square"></i> Gọi cho tôi</a>
+          <a target="_blank" href="https://m.me/timquen2014" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-facebook-square"></i> Messenger</a>
+          <a target="_blank" href="http://zaloapp.com/qr/p/4e7z2lki75rm" class="w3-button w3-green w3-padding-large w3-margin-top "><img style="background-color: white " src="./img/zalo.svg" width="16px"> Zalo</a>
         </div>
       </header>
       
@@ -78,46 +77,6 @@
           </p>
         </div>
       </div>
-
-      <!-- <div class="w3-padding-32 w3-content" id="nav3">
-        <h2 class="">Dịch vụ của tôi</h2>
-        <hr>
-        <div class="w3-row-padding" style="margin: 0 -16px;" id="myPortfolio">
-          <div class="w3-third w3-center w3-padding">
-          	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
-            	<img class="" src="./img/web.png" style="width: 100%;" />            
-            	<h6>Thiết kế website</h6>
-            	<div class="w3-small">
-            		<span>Mã nguồn: Wordpress</span>
-            	</div>
-            	<br>
-            	<a href="./dvweb.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
-          	</div>
-          </div>
-          <div class="w3-third w3-center w3-padding">
-          	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
-            	<img class="" src="./img/thietkegiayto.jpg" style="width: 100%;" />
-            	<h6>Nhận diện thương hiệu</h6>
-            	<div class="w3-small">
-            		<span>Trọn bộ: Logo, profile, brochus, tờ rơi, ..</span>
-            	</div>
-            	<br>
-            	<a href="./nhandienthuonghieu.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
-          	</div>
-          </div>
-          <div class="w3-third w3-center w3-padding">
-          	<div style="border: 1px dashed #ccc;" class="w3-padding-small">
-            	<img class="" src="./img/pts.png" style="width: 100%;" />
-            	<h6>Dạy kèm Photoshop</h6>
-            	<div class="w3-small">
-            		<span>Tại nhà, không cố định thời gian</span>
-            	</div>
-            	<br>
-            	<a href="./pts.html" class="w3-center w3-border w3-button w3-hover-green">Chi tiết</a>
-          	</div>
-          </div>
-        </div>
-      </div> -->
 
 
       <div class="w3-content w3-justify w3-padding-32" id="nav4">
@@ -160,21 +119,8 @@
 
         <div class="call-me">
           <a target="_blank" href="tel:0972054206" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-phone"></i> Gọi cho tôi</a>
-          <a target="_blank" href="https://m.me/timquen2014" class="w3-button w3-blue w3-padding-large w3-margin-top"><i class="fa fa-facebook"></i> Messenger</a>
+          <a target="_blank" href="https://m.me/timquen2014" class="w3-button w3-green w3-padding-large w3-margin-top"><i class="fa fa-facebook"></i> Messenger</a>
         </div>
-
-        <!-- Testimonials -->
-        <h3 class="w3-padding-24">Uy tín trong công việc</h3>
-        <div id="my_testimonial">
-          <img src="./img/avt2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width: 80px;" />
-          <p><span class="w3-large w3-margin-right">Tác giả</span> Freelancer</p>
-          <p>Xin chào mọi người</p>
-          <br />
-        </div>
-        <div style="width: 100%; background-color: white;">
-          <div class="fb-comments" data-href="https://quyle91.github.io/" data-numposts="99" data-width="100%" data-lazy="true"></div>
-        </div>
-        <!-- End About Section -->
       </div>
 
       <!-- Contact Section -->
