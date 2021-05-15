@@ -43,3 +43,6 @@ a.w3-button:hover{
 .w3-wide {
     letter-spacing: 1px;
 }
+.w3-modal-content img{
+    max-width: 100%;
+}

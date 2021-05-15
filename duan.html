@@ -34,9 +34,131 @@
         <div class="w3-content">
             <div class="w3-row-padding" style="margin: 0 -16px;">
                 <div class="w3-container">
+                    <strong>Lọc: </strong>
+                    <button onclick="show_item('web');" class="w3-button w3-border w3-small">Website</button>
+                    <button onclick="show_item('vid');" class="w3-button w3-border w3-small">Video</button>
+                    <button onclick="show_item('des');" class="w3-button w3-border w3-small">Design</button>
+                    <script type="text/javascript">
+                        function hide_all_items(){
+                            var items = document.getElementsByClassName('item');
+                            for (var i = items.length - 1; i >= 0; i--) {
+                                items[i].style.display='none';
+                            }
+                        }
+                        function show_item(item){                            
+                            hide_all_items();
+                            var items = document.getElementsByClassName(item);
+                            console.log(items);
+                            for (var i = items.length - 1; i >= 0; i--) {
+                                items[i].style.display='block';
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="w3-container">
                     <h4><b> Từ năm 2021</b></h4>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item plu w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
+                                <img class="w3-image" src="https://ps.w.org/administrator-z/assets/icon.svg?rev=2451301"/>
+                                                                
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                         
+                            <h4 class="">Plugin wordpress</h4>
+                            <h3>Administrator Z</h3>
+                            <p>Sometimes website installation gets boring with repetitive tasks, so I wrote this plugin to free up time on those things.</p>
+                            <a target=_blank href="https://wordpress.org/plugins/administrator-z/" class="">
+                                <span>https://wordpress.org/plugins/administrator-z/</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item vid w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">     
+                                <img class="w3-image" src="./img/mobifone 3c.png"/>
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                            
+                            <h4 class="">Giải pháp Công nghệ Thông tin MobiFone</h4>
+                            <small>
+                                Làm việc tại:
+                                <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a>
+                            </small>
+                            </br>
+                            <button onclick="document.getElementById('mobifone3c').style.display='block'" class="w3-button w3-border w3-small">Xem video</button>
+                            <div id="mobifone3c" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container">                                    
+                                    <div class="w3-content w3-display-container">
+                                        <!-- content -->
+                                        <div style="padding-top:16px; padding-bottom: 16px;">
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/mobifone 3c (1).mp4" type="video/mp4"> 
+                                            </video>
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/mobifone 3c (2).mp4" type="video/mp4"> 
+                                            </video>
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/mobifone 3c (3).mp4" type="video/mp4"> 
+                                            </video>
+                                        </div>                                 
+                                    </div>
+                                  </div>
+                                  <span onclick="document.getElementById('mobifone3c').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item web w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
+                                <img class="w3-image" src="./img/ttcon.png"/>
+                                                                
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;"> <h4 class="">Website công ty TNHH TMXD Thăng Tiến</h4>
+                            <a target=_blank href="https://ttcon.com.vn/" class="">https://ttcon.com.vn</a>
+                            </br>
+                            <small>
+                                Làm việc tại:
+                                <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a>
+                            </small>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="item web w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
+                                <img class="w3-image" src="./img/musichouse.png"/>
+                                                                
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;"> <h4 class="">Website shop âm nhạc</h4>
+                            <a target=_blank href="https://musichouse.vn/" class="">https://musichouse.vn</a>
+                            </br>
+                            <small>
+                                Làm việc tại:
+                                <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a>
+                            </small>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -56,7 +178,7 @@
                         </div>
                     </div>
                 </div> 
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -76,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -96,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -116,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -136,7 +258,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -159,7 +281,7 @@
                 <div class="w3-container">
                     <h4><b> Từ năm 2020</b></h4>
                 </div> 
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -179,7 +301,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -199,7 +321,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -220,7 +342,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
+                    <div class="w3-row w3-card">
+                        <div class="w3-third">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
+                                <img class="w3-image" src="./img/otominhtuyet.png"/>
+                                                                
+                            </div>
+                        </div>
+                        <div class="w3-twothird">
+                            <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                         
+                            <h4 class="">Website ô tô tải</h4>                            
+                            <a target=_blank href="http://otominhtuyet.minhkhang.net" class="">http://otominhtuyet.minhkhang.net/</a>
+                            </br>
+                            <small>
+                                Làm việc tại:
+                                <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a>
+                            </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -241,7 +384,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item vid w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">     
@@ -264,17 +407,24 @@
                                     <div class="w3-content w3-display-container">
                                         <!-- content -->
                                         <div style="padding-top:16px; padding-bottom: 16px;">
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Flavinafood%2Fvideos%2F3556236747800213%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Flavinafood%2Fvideos%2F1314265728928963%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Flavinafood%2Fvideos%2F3592398277507313%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F868165830381693%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F663534554270706%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F2705360216348897%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F714193539304919%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F701051810790858%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F373387100417040%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FLavinaFood.vn%2Fvideos%2F196220752087797%2F&show_text=false&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/lavina (1).mp4" type="video/mp4"> 
+                                            </video>
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/lavina (2).mp4" type="video/mp4"> 
+                                            </video>
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/lavina (3).mp4" type="video/mp4"> 
+                                            </video>
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/lavina (4).mp4" type="video/mp4"> 
+                                            </video>
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/lavina (5).mp4" type="video/mp4"> 
+                                            </video>
+                                            <video width="100%" height="auto" controls> 
+                                                <source src="./img/video/lavina (6).mp4" type="video/mp4"> 
+                                            </video>
                                         </div>                                 
                                     </div>
                                   </div>
@@ -285,7 +435,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -300,8 +450,8 @@
                             </div>
                         </div>
                     </div>
-                </div> 
-                <div class="w3-content" style="margin-top: 16px; ">
+                </div>
+                <div class="item plug w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                             <div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -314,31 +464,15 @@
                             <h4 class="">Plugin wordpress</h4>
                             <h3>Auto Product After Upload Image</h3>
                             <p>When you will upload an image from wordpress media gallery then a product will be created automatically with that image as featured image.</p>
-                            <span>https://wordpress.org/plugins/auto-product-after-upload-image/ <a target=_blank href="https://wordpress.org/plugins/auto-product-after-upload-image/" class=""><i class="fa fa-external-link"></i></a></span>
+                            <a target=_blank href="https://wordpress.org/plugins/auto-product-after-upload-image/" class=""><span>https://wordpress.org/plugins/auto-product-after-upload-image/ </span></a>
                             </div>
                         </div>
                     </div>
-                </div>
-            	<!-- <div class="w3-content" style="margin-top: 16px; ">
-            		<div class="w3-row w3-card">
-            			<div class="w3-third">
-            				<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
-	                            <img class="w3-image" src="./img/khotranha2z.jpg"/>
-	                            	                            
-	                        </div>
-            			</div>
-            			<div class="w3-twothird">
-            				<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">            				
-            				<h4 class="">Website bán tranh canvas</h4>
-            				<span>https://khotranha2z.com/ <a target=_blank href="https://khotranha2z.com/" class=""><i class="fa fa-external-link"></i></a></span>
-            				</div>
-            			</div>
-            		</div>
-                </div> -->
+                </div>            	
                 <div class="w3-container">
                     <h4><b> Từ năm 2019</b></h4>
                 </div> 
-            	<div class="w3-content" style="margin-top: 16px; ">
+            	<div class="item vid w3-content" style="margin-top: 16px; ">
                     <div class="w3-row w3-card">
                         <div class="w3-third">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">     
@@ -372,7 +506,7 @@
                         </div>
                     </div>
                 </div>             	
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-card w3-row">
                     	<div class="w3-third">
                     		<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -388,7 +522,7 @@
                         
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item des w3-content" style="margin-top: 16px; ">
                     <div class="w3-card w3-row">
                         <div class="w3-third">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -403,61 +537,26 @@
 	                                <div class="w3-modal-content">
 	                                  <div class="w3-container">                                    
 	                                    <div class="w3-content w3-display-container">
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                            <img src="./img/shimasan/dongphuc.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/shimasan/namecard1.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/shimasan/namecard2.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/shimasan/sanpham1.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/shimasan/sanpham2.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/shimasan/sanpham3.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/shimasan/tag.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/shimasan/thung.jpg">
-	                                        </div>
-	                                        <button class="w3-button w3-display-left w3-green" onclick="plusDivs(-1)">&#10094;</button>
-	                                        <button class="w3-button w3-display-right w3-green" onclick="plusDivs(1)">&#10095;</button>
+	                                        <div style="padding-top: 16px; padding-bottom: 16px;">
+                                                <img src="./img/shimasan/dongphuc.jpg">
+                                                <img src="./img/shimasan/namecard1.jpg">
+                                                <img src="./img/shimasan/namecard2.jpg">
+                                                <img src="./img/shimasan/sanpham1.jpg">
+                                                <img src="./img/shimasan/sanpham2.jpg">
+                                                <img src="./img/shimasan/sanpham3.jpg">
+                                                <img src="./img/shimasan/tag.jpg">
+                                                <img src="./img/shimasan/thung.jpg">   
+                                            </div>
 	                                        </div>
 	                                  </div>
 	                                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
 	                                </div>
 	                            </div>
-	                            <script>
-	                                var slideIndex = 1;
-	                                showDivs(slideIndex);
-
-	                                function plusDivs(n) {
-	                                  showDivs(slideIndex += n);
-	                                }
-
-	                                function showDivs(n) {
-	                                  var i;
-	                                  var x = document.getElementsByClassName("mySlides");
-	                                  if (n > x.length) {slideIndex = 1}
-	                                  if (n < 1) {slideIndex = x.length}
-	                                  for (i = 0; i < x.length; i++) {
-	                                     x[i].style.display = "none";  
-	                                  }
-	                                  x[slideIndex-1].style.display = "block";  
-	                                }
-	                            </script>
 	                        </div>
 	                        </div>
                     </div>
                 </div> 
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-card w3-row">
                         <div class="w3-third">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -472,7 +571,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item des w3-content" style="margin-top: 16px; ">
                     <div class="w3-card w3-row">
                         <div class="w3-third">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -487,55 +586,24 @@
 	                                <div class="w3-modal-content">
 	                                  <div class="w3-container">                                    
 	                                    <div class="w3-content w3-display-container">
-	                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
-	                                            <img src="./img/kamizuko/dongphuc.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/kamizuko/namecard1.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/kamizuko/namecard2.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/kamizuko/sanpham1.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/kamizuko/sanpham2.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides2" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/kamizuko/tag.jpg">
-	                                        </div>                                        
-	                                        <button class="w3-button w3-display-left w3-green" onclick="plusDivs2(-1)">&#10094;</button>
-	                                        <button class="w3-button w3-display-right w3-green" onclick="plusDivs2(1)">&#10095;</button>
-	                                        </div>
+	                                        <div style="padding-top: 16px; padding-bottom: 16px; ">
+                                                <img src="./img/kamizuko/dongphuc.jpg">
+                                                <img src="./img/kamizuko/namecard1.jpg">
+                                                <img src="./img/kamizuko/namecard2.jpg">
+                                                <img src="./img/kamizuko/sanpham1.jpg">
+                                                <img src="./img/kamizuko/sanpham2.jpg">
+                                                <img src="./img/kamizuko/tag.jpg">   
+                                            </div>
+                                        </div>
 	                                  </div>
 	                                  <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
 	                                </div>
 	                            </div>
-	                            <script>
-	                                var slideIndex2 = 1;
-	                                showDivs2(slideIndex2);
-
-	                                function plusDivs2(n) {
-	                                  showDivs2(slideIndex2 += n);
-	                                }
-
-	                                function showDivs2(n) {
-	                                  var i;
-	                                  var x = document.getElementsByClassName("mySlides2");
-	                                  if (n > x.length) {slideIndex2 = 1}
-	                                  if (n < 1) {slideIndex2 = x.length}
-	                                  for (i = 0; i < x.length; i++) {
-	                                     x[i].style.display = "none";  
-	                                  }
-	                                  x[slideIndex2-1].style.display = "block";  
-	                                }
-	                            </script>
 	                        </div>
                         </div>	
                     </div>
                 </div> 
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item web w3-content" style="margin-top: 16px; ">
                     <div class="w3-card w3-row">
                     	<div class="w3-third">
                     		<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -550,7 +618,7 @@
                     	</div>                        
                     </div>
                 </div>  
-                <div class="w3-content" style="margin-top: 16px; ">
+                <div class="item des w3-content" style="margin-top: 16px; ">
                     <div class="w3-card w3-row">
                         <div class="w3-third">
                         	<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">
@@ -565,68 +633,25 @@
 	                                <div class="w3-modal-content">
 	                                  <div class="w3-container">                                    
 	                                    <div class="w3-content w3-display-container">
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                            <img src="./img/masinari/bienbang.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/bienbang2.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/namecard2.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/car.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/dongphuc.jpg">
-	                                        </div>
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/namecard1.jpg">
-	                                        </div>    
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/namecard2.jpg">
-	                                        </div>  
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/sanpham1.jpg">
-	                                        </div>  
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/sanpham2.jpg">
-	                                        </div>  
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/sanpham3.png">
-	                                        </div>  
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/tag.jpg">
-	                                        </div>   
-	                                        <div class="w3-display-container mySlides3" style="padding-top:16px; padding-bottom: 16px;">
-	                                          <img src="./img/masinari/thung.jpg">
-	                                        </div>                                    
-	                                        <button class="w3-button w3-display-left w3-green" onclick="plusDivs3(-1)">&#10094;</button>
-	                                        <button class="w3-button w3-display-right w3-green" onclick="plusDivs3(1)">&#10095;</button>
+                                            <div style="padding-top: 16px; padding-bottom: 16px;">
+    	                                        <img src="./img/masinari/bienbang.jpg">
+                                                <img src="./img/masinari/bienbang2.jpg">
+                                                <img src="./img/masinari/namecard2.jpg">
+                                                <img src="./img/masinari/car.jpg">
+                                                <img src="./img/masinari/dongphuc.jpg">
+                                                <img src="./img/masinari/namecard1.jpg">
+                                                <img src="./img/masinari/namecard2.jpg">
+                                                <img src="./img/masinari/sanpham1.jpg">
+                                                <img src="./img/masinari/sanpham2.jpg">
+                                                <img src="./img/masinari/sanpham3.png">
+                                                <img src="./img/masinari/tag.jpg">
+                                                <img src="./img/masinari/thung.jpg">
 	                                        </div>
 	                                  </div>
 	                                  <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>
 	                                </div>
 	                            </div>
-	                            <script>
-	                                var slideIndex3 = 1;
-	                                showDivs3(slideIndex3);
-
-	                                function plusDivs3(n) {
-	                                  showDivs3(slideIndex3 += n);
-	                                }
-
-	                                function showDivs3(n) {
-	                                  var i;
-	                                  var x = document.getElementsByClassName("mySlides3");
-	                                  if (n > x.length) {slideIndex3 = 1}
-	                                  if (n < 1) {slideIndex3 = x.length}
-	                                  for (i = 0; i < x.length; i++) {
-	                                     x[i].style.display = "none";  
-	                                  }
-	                                  x[slideIndex3-1].style.display = "block";  
-	                                }
-	                            </script>
+	                            
 	                        </div>
 	                        </div>
                     </div>
