@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <title>Administrator Z - Hướng dẫn sử dụng plugin </title>
+  <title>Nhóm nút gọi trong Administrator Z </title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,35 +52,79 @@
       <div id="content">
       <header class="w3-container w3-content w3-center" style="padding: 64px 16px;" id="home">        
         <div id="spData2">
-          <h1 class=""><b>Hướng dẫn sử dụng plugin Administrator Z</b></h1>
+          <h1 class=""><b>Hướng dẫn sử dụng Nhóm nút gọi trong Administrator Z</b></h1>
           <span class="w3-tag w3-small w3-white w3-border">Wordpress plugin</span>
-          <p><a target="_blank" href="https://wordpress.org/plugins/administrator-z/">https://wordpress.org/plugins/administrator-z/</a></p>                
+          <p><a target="_blank" href="https://wordpress.org/plugins/administrator-z/">https://wordpress.org/plugins/administrator-z/</a></p>      
+          <p>Phần này nói về chức năng nhóm nút gọi trong tab <strong>Contact group</strong></p>    
         </div>
       </header>
-      
-
-      
-        <div class="w3-content w3-justify w3-padding-32">
-          <div class="w3-panel w3-leftbar w3-light-grey">
-            <p class="w3-large">
-              <i>"Xin chào các bạn.</i>
-              <p>Trong quá trình làm việc trong nghề thiết kế website (cài website cho khách hàng). Mình nhận thấy có một số thao tác phải thực hiện <strong>lặp lại nhiều lần</strong> như chèn font, css, nút gọi, cài đặt email, nhập liệu, bảo mật cơ bản, ... bắt buộc chúng ta phải cài nhiều plugin hoặc là custom code nhiều lần như nhau.</p>
-              <p>Vì vậy, mình viết plugin này mới mục đích là để <strong>rút ngắn thời gian</strong> để làm những công việc đó.</p>
-              <p>Plugin là hoàn toàn <strong class="w3-text-green" style="">MIỄN PHÍ</strong>.</p>
-              <p>Rất mong nhận được những lượt cài đặt plugin từ các bạn."</p>
-            </p>
-            <p><em>Thanh Hóa 01/08/2021</em></p>
-          </div>
-        </div>
         <div class="w3-content w3-justify w3-padding-32">     
-          <ul class="w3-ul w3-border">
-            <li class="w3-padding-large w3-hover-green"><a href="./contact-group.html">Hướng dẫn sử dụng Nhóm nút gọi </a></li>
-            <li class="w3-padding-large w3-hover-green"><a href="./enqueue.html">Hướng dẫn cài đặt font tùy chỉnh và nhúng mã CSS, Javascript</a></li>
-            <li class="w3-padding-large w3-hover-green"><a href="./import-data.html">Hướng dẫn crawl data - lấy dữ liệu từ website khác</a></li>
-            <li class="w3-padding-large w3-hover-green"><a href="./mailer.html">Hướng dẫn sử dụng chức năng mailer</a></li>
-            <li class="w3-padding-large w3-hover-green"><a href="./flatsome.html">Một số chức năng được thêm vào cho Flatsome</a></li>
-            <li class="w3-padding-large w3-hover-green"><a href="./woocommerce.html">Một số chức năng được thêm vào cho Woocommerce</a></li>
-          </ul>   
+          <div class="w3-padding-32">
+            <h3 class="w3-padding-32"><span class="w3-tag w3-green w3-large">Bước 1:</span> Tạo một Menu</h3>
+            <a href="./img/contactgroup-b1.png"><img class="w3-image w3-border" src="./img/contactgroup-b1.png"></a>
+            <ul class="w3-ul">
+              <li>1. Vào bảng điều khiển của wordpress</li>
+              <li>2. Giao diện -> Menu</li>
+              <li>3. Tạo một menu mới với tên tùy ý</li>
+              <li>4. Thêm Item vào Menu
+                <div class="w3-border w3-padding w3-margin">
+                    <p>Một số link thường dùng:</p>
+                    <p>Link đến số điện thoại: <code>tel:0123456789</code></p>
+                    <p>Link đến email: <code>mailto:abc@gmail.com</code></p>
+                    <p>Link đến zalo: <code>https://zalo.me/0123456789</code></p>
+                    <p>Link đến facebook: <code>https://facebook.com/ten_fanpage</code></p>
+                    <p>Link đến messenger: <code>https://m.me/ten_fanpage</code></p>
+                </div>
+              </li>
+              <li>5. Nhấn lưu lại Menu</li>
+            </ul>
+            <h3 class="w3-padding-32"><span class="w3-tag w3-green w3-large">Bước 2:</span> Chọn style contact group cho Menu</h3>
+            <a href="./img/contactgroup-b2.png"><img class="w3-image w3-border" src="./img/contactgroup-b2.png"></a>
+            <ul class="w3-ul">
+              <li>1. Vào Công cụ-> Administrator Z</li>
+              <li>2. Chuyển sang tab Contact group</li>
+              <li>3. Chọn style cho menu
+                <div class="w3-border w3-padding w3-margin">
+                  Administrator Z hỗ trợ 4 style cho nhóm nút gọi và cho phép đồng thời cả 4 style bật cùng lúc nhé. Tuy nhiên mỗi style chỉ được gọi một lần.
+                </div>
+              </li>
+              <li>4. Lưu lại và ra ngoài kiểm tra</li>              
+            </ul>
+            <h3 class="w3-padding-32"><span class="w3-tag w3-green w3-large">Bước 3:</span> Chọn icon cho Menu item</h3>            
+            <ul class="w3-ul">
+              <li>1. Vào Công cụ-> Administrator Z</li>
+              <li>2. Chuyển sang tab Icons</li>
+              <li>3. Nhấn click vào icon để copy mã icon
+                <div class="w3-border w3-padding w3-margin">
+                  Bộ icon trong plugin chủ yếu lấy từ font awesome. Ngoài ra mình có đưa thêm một số icon của mạng xã hội và nút gọi phổ biến tại Việt Nam.
+                </div>
+              </li>
+              <li>4. Quay lại trang quản lý Menu item (bước 1)</li>
+              <li>5. Mở tùy chọn hiển thị "Thuộc tính tiêu đề" và "Quan hệ XFN" nếu chưa có
+                <div class="w3-margin">
+                  <a href="./img/contactgroup-b3-1.png"><img class="w3-image w3-border" src="./img/contactgroup-b3-1.png"></a>
+                </div>
+              </li>
+              <li>6. Đưa mã Icon vào item
+                <a href="./img/contactgroup-b3-2.png"><img class="w3-image w3-border" src="./img/contactgroup-b3-2.png"></a>
+                <p>Mã icon: đưa vào ô "Thuộc tính tiêu đề"</p>
+                <p>Màu sắc: đưa vào ô "Quan hệ XFN"</p>
+              </li>
+              <li>7. Lưu lại và ra ngoài kiểm tra xem được chưa nhé.</li>
+            </ul>
+          </div>
+
+
+          
+          <div class="w3-panel w3-leftbar w3-light-grey w3-padding">
+            Nếu thích Administrator Z - Hãy <a href="#donate"><strong class="w3-text-green">Donate</strong></a> một ly cafe để mình có thêm động lực làm việc nhé.
+          </div>
+          <div class="w3-panel w3-leftbar w3-light-grey w3-padding">
+            Mọi ý kiến đóng góp, báo lỗi vui lòng gửi tại <a href="https://wordpress.org/support/plugin/administrator-z/">diễn đàn của plugin </a>
+          </div>
+          <div class="w3-panel w3-leftbar w3-light-grey w3-padding">
+            <i class="fa fa-chevron-left"></i> <a href="./index.html">Quay lại trang trước</a>
+          </div>
         </div> 
 
 
@@ -94,7 +138,7 @@
             <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <span class="my-email"><a href="mailto:quylv.dsth@gmail.com">quylv.dsth@gmail.com</a></span></p>
         </div>
       </div>
-      <div class="w3-padding-32 w3-content w3-justify" id="nav5">
+      <div class="w3-padding-32 w3-content w3-justify" id="donate">
         <h2>Thông tin donate</h2>
         <hr>
         <div class="w3-section">

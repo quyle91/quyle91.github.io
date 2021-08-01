@@ -49,3 +49,6 @@ a.w3-button:hover{
 .w3-modal-content img{
     max-width: 100%;
 }
+ul li{
+    text-align: left;
+}
