@@ -21,11 +21,14 @@ h6 {
 w3-content img.w3-image{
     border: 5px solid lightgray;
 }
+a{
+    word-break: break-all;
+}
 a:hover{
     text-decoration: underline;
     font-weight: bold;
 }
-.w3-content a::after{
+#content a::after{
     content: "\f08e";
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
