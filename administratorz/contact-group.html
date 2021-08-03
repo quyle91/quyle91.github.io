@@ -54,11 +54,11 @@
         <div id="spData2">
           <h1 class=""><b>Hướng dẫn sử dụng Nhóm nút gọi trong Administrator Z</b></h1>
           <span class="w3-tag w3-small w3-white w3-border">Wordpress plugin</span>
-          <p><a target="_blank" href="https://wordpress.org/plugins/administrator-z/">https://wordpress.org/plugins/administrator-z/</a></p>      
+          <p><a class="word-break" target="_blank" href="https://wordpress.org/plugins/administrator-z/">https://wordpress.org/plugins/administrator-z/</a></p>      
           <p>Phần này nói về chức năng nhóm nút gọi trong tab <strong>Contact group</strong></p>    
         </div>
       </header>
-        <div class="w3-content w3-justify w3-padding-32">     
+        <div class="w3-content w3-padding-32">     
           <div class="w3-padding-32">
             <h3 class="w3-padding-32"><span class="w3-tag w3-green w3-large">Bước 1:</span> Tạo một Menu</h3>
             <a href="./img/contactgroup-b1.png"><img class="w3-image w3-border" src="./img/contactgroup-b1.png"></a>
@@ -106,9 +106,11 @@
                 </div>
               </li>
               <li>6. Đưa mã Icon vào item
-                <a href="./img/contactgroup-b3-2.png"><img class="w3-image w3-border" src="./img/contactgroup-b3-2.png"></a>
-                <p>Mã icon: đưa vào ô "Thuộc tính tiêu đề"</p>
-                <p>Màu sắc: đưa vào ô "Quan hệ XFN"</p>
+                <div class="w3-margin">
+                  <a href="./img/contactgroup-b3-2.png"><img class="w3-image w3-border" src="./img/contactgroup-b3-2.png"></a>
+                  <p>Mã icon: đưa vào ô "Thuộc tính tiêu đề"</p>
+                  <p>Màu sắc: đưa vào ô "Quan hệ XFN"</p>
+                </div>
               </li>
               <li>7. Lưu lại và ra ngoài kiểm tra xem được chưa nhé.</li>
             </ul>
@@ -116,6 +118,20 @@
             <hr>
             <p class="w3-text-green w3-xxlarge" style="text-shadow:1px 1px 0 #444"><b>Kết quả</b></p>
             <img src="./img/contactgroup-ketqua.jpg" class="w3-image w3-border">
+            <h3 class="w3-padding-32"><span class="w3-tag w3-yellow w3-large">Fix lỗi:</span> Một số lỗi khi sử dụng chức năng contact group</h3>  
+            <ul class="w3-ul">
+              <li>1. Các icon cái hiện, cái không
+                <div class="w3-border w3-padding w3-margin">
+                  Bạn bật SSL cho web lên nhé
+                </div>
+              </li>
+              <li>2. Không hiện toàn bộ icon
+                <div class="w3-border w3-padding w3-margin">
+                  Icon được lấy bằng lệnh php <code>file_get_content</code>. Một số máy chủ mặc định tắt chức năng <code>allow_url_fopen</code>. Bạn cần liên hệ với dịch vụ hosting của web hoặc vào Cpanel -> PHP version -> all options để bật lên nhé
+                </div>
+              </li>
+            </ul>          
+            
             <h3 class="w3-padding-32"><span class="w3-tag w3-large">Còn nữa:</span> Tích hợp Icon vào menu</h3> 
             <div>Như các bạn thấy, nhóm nút gọi là dạng menu. Vì vậy mình đã tích hợp luôn icon vào menu luôn rồi nhé. Link demo mình để ở trang plugin trên wordpress</div>
           </div>

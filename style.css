@@ -21,7 +21,10 @@ h6 {
 w3-content img.w3-image{
     border: 5px solid lightgray;
 }
-a{
+code{
+    background-color:  #f0f0f1;
+}
+a.word-break{
     word-break: break-all;
 }
 a:hover{
