@@ -55,3 +55,6 @@ a.w3-button:hover{
 ul li{
     text-align: left;
 }
+*{
+    letter-spacing: -1px;
+}
