@@ -68,6 +68,54 @@
                             "description" : ''
                         },
                         {
+                            "title" : 'Website Bảo vệ Lư Ngọc',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/lnsc.png',
+                            "link" : "https://lnsc.vn/",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Website bệnh viện Tâm An',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/benhtri.png',
+                            "link" : "https://benhtri.vn/",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Website thương hiệu Bia Thanh Hoa',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/biathanhhoa.png',
+                            "link" : "https://thb.minhkhang.net/",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Website bán hàng máy thể dục',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/yunmai.png',
+                            "link" : "https://yunmai.vn/",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Website bán hàng máy thể dục',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/amazfit.png',
+                            "link" : "https://amazfitvietnam.vn/",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Website bán hàng máy tập chạy bộ',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/yesoul.png',
+                            "link" : "https://yesoul.com.vn/",
+                            "description" : mka
+                        },
+                        {
                             "title" : 'Landing page dự án BDS Sai Mai',
                             "subtitle" : "",
                             "type": "web",
@@ -391,12 +439,12 @@
                             }else if(items[i].type == "web" || items[i].type == "plu" ){
                                 html +='<div class="item '+items[i].type+' w3-content" style="margin-top: 16px; ">';
                                     html +='<div class="w3-row w3-card">';
-                                        html +='<div class="w3-third">';
+                                        html +='<div class="w3-quarter">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">';
                                                 html +='<img class="w3-image" src="'+items[i].image+'"/>';
                                             html +='</div>';
                                         html +='</div>';
-                                        html +='<div class="w3-twothird">';
+                                        html +='<div class="w3-threequarter ">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;"> <h4 class="">'+items[i].title+'</h4>';
                                             html +='<a target=_blank href="'+items[i].link+'" class="">'+items[i].link+'</a>';
                                             html +='</br>';
@@ -408,12 +456,12 @@
                             }else if(items[i].type == "vid"){
                                 html +='<div class="item '+items[i].type+' w3-content" style="margin-top: 16px; ">';
                                     html +='<div class="w3-row w3-card">';
-                                        html +='<div class="w3-third">';
+                                        html +='<div class="w3-quarter">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">';
                                                 html +='<img class="w3-image" src="'+items[i].image+'"/>';
                                             html +='</div>';
                                         html +='</div>';
-                                        html +='<div class="w3-twothird">';
+                                        html +='<div class="w3-threequarter ">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">';
                                             html +='<h4 class="">'+items[i].title+'</h4>';
                                             html += items[i].description;
@@ -445,12 +493,12 @@
                             }else if(items[i].type == "des"){
                                 html +='<div class="item '+items[i].type+' w3-content" style="margin-top: 16px; ">';
                                     html +='<div class="w3-card w3-row">';
-                                        html +='<div class="w3-third">';
+                                        html +='<div class="w3-quarter ">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">';
                                                 html +='<img class="w3-image" src="'+items[i].image+'"/>';
                                             html +='</div>';
                                         html +='</div>';
-                                        html +='<div class="w3-twothird">';
+                                        html +='<div class="w3-threequarter ">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                             ';
                                                 html +='<h4 class="">'+items[i].title+'</h4>';
                                                 html +='<p>'+ items[i].description +'</p>';
