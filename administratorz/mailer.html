@@ -60,12 +60,76 @@
       </header>
         <div class="w3-content w3-padding-32">     
           <div class="w3-padding-32">
-            <i class="fa fa-refresh w3-spin"></i>
-            Đang cập nhật...
-          </div>
+            <p>Mailer là chức năng gửi email đến email của khách hàng, của thành viên thông qua bộ điều khiển là website. Để sử dụng chức năng này, bạn cần chuẩn bị một tài khoản email dùng để gửi. Có thể là gmail, email hosting hoặc các nguồn email khác. Hầu hết các nhà cung cấp email đều cung cấp mã smtp để dùng cho website. Ở đây mình có ví dụ cho trường hợp Gmail.</p> 
+            </div>
+            <div class="w3-padding-32">
+              <div class="w3-padding-32"> 
+                <span class="w3-tag w3-green">Bước 1:</span> Chuẩn bị gmail
+                <p></p>
+                <ul class="w3-ol">
+                  <li> Bật xác minh 2 bước cho tài khoản gmail </li>
+                  <li> Lấy mật khẩu ứng dụng </li>                  
+                  <li> Các bạn lên google search sẽ có nhiều tài liệu cho phần này nhé.</li>
+                </ul>
 
 
-          
+
+
+
+              </div>
+              <div class="w3-padding-32"> 
+                <span class="w3-tag w3-green">Bước 2:</span> Cài đặt plugin
+                <ul class="w3-ol">
+                  <li> vào tool-> administrtor z -> mailer tìm đến phần SMTP config</li>
+                  <li> 
+                    <code>Host:</code> smtp.gmail.com</br>
+                    <code>username:</code> là email của bạn - email vừa được dùng để lấy mật khẩu ứng dụng</br>
+                    <code>password:</code> nhập mật khẩu ứng dụng vào đây</br>
+                    <code>From:</code> Email gửi ra ngoài có địa chỉ thư gửi đi</br>
+                    <code>From name:</code> name của email from</br>
+                    <code>Port:</code> nếu là gmail thì nhập 587 - tuỳ nhà cung cấp</br>
+                    <code>SMTP auth:</code> Check vào nhé</br>
+                    <code>SMTP secure:</code> TLS</br>
+                  </li>
+                  <li>Lưu lại</li>
+                </ul>
+
+
+
+
+
+              </div>
+              <div class="w3-padding-32"> 
+                <span class="w3-tag w3-green">Bước 3:</span> Kiểm tra
+                <ul class="w3-ol">
+                  <li>Nhập email nhận tin nhắn test vào <code>Your email checker</code> rồi nhấn nút <code>Test email</code> nhé.</li>
+                  <li>Ngoài ra, các bạn có thể cài plugin contact form 7, cấu hình lại form rồi test xem dc chưa nhé</li>
+                </ul>
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>          
           <div class="w3-panel w3-leftbar w3-light-grey w3-padding">
             Nếu thích Administrator Z - Hãy <a href="#donate"><strong class="w3-text-green">Donate</strong></a> một ly cafe để mình có thêm động lực làm việc nhé.
           </div>

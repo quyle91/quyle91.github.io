@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <title>Hướng dẫn crawl data - lấy dữ liệu từ website khác</title>
+  <title>Hướng dẫn Import data - lấy dữ liệu từ website khác</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,7 +52,7 @@
       <div id="content">
       <header class="w3-container w3-content w3-center" style="padding: 64px 16px;" id="home">        
         <div id="spData2">
-          <h1 class=""><b>Hướng dẫn crawl data - lấy dữ liệu từ website khác</b></h1>
+          <h1 class=""><b>Hướng dẫn Import data - lấy dữ liệu từ website khác</b></h1>
           <span class="w3-tag w3-small w3-white w3-border">Wordpress plugin</span>
           <p><a class="word-break" target="_blank" href="https://wordpress.org/plugins/administrator-z/">https://wordpress.org/plugins/administrator-z/</a></p>        
           <!-- <p>Phần này nói về chức năng nhóm nút gọi trong tab <strong>Contact group</strong></p>     -->
@@ -60,17 +60,11 @@
       </header>
         <div class="w3-content w3-padding-32">     
           <div class="w3-padding-32">
-            <p>              
-              Sau khi cài xong website cho khách, anh em phát hiện ra một vấn đề: "Em ơi, nhập cho chị mấy bài viết giống trang này, trang này để cho nó đẹp, chị chưa có thời gian đăng bài", hoặc "Toàn là dữ liệu chữ gì chị đọc không hiểu, sao ảnh bài viết giống nhau thế em?".               
-            </p>
-            <p>Lúc đó anh em định giải thích sao?</p>
-            <p><strong>Đó là lúc cần dùng đến tool này.</strong></p>
-            <hr>
             <h3 class="w3-padding-32"><span class="w3-tag w3-green w3-large">Bước 1:</span> Chuẩn bị</h3>
-            <p>Anh em lên mạng tìm kiếm các trang web có nội dung liên quan đến website hiện tại. Thường mình sẽ lấy ở các trang báo và search theo danh mục của trang đó. <strong>Mẹo:</strong> search google với từ khóa: "Archives + từ khóa " để ra kết quả ngon nhé.</p>
+            <p>Bạn lên mạng tìm kiếm các trang web có nội dung liên quan đến website hiện tại. Thường mình sẽ lấy ở các trang báo và search theo danh mục của trang đó. <strong>Mẹo:</strong> search google với từ khóa: "Archives + từ khóa " để ra kết quả ngon nhé.</p>
             <h3 class="w3-padding-32"><span class="w3-tag w3-green w3-large">Bước 2:</span> Thực hiện</h3>
-            <p>Sau khi có các bài viết cần tìm, anh em vào tool bằng Dashboard-> Tool-> Administrator Z-> Import</p>
-            <h5><strong>Nhập link vào phần đầu tiên. trong đó có 4 sự lựa chọn</strong></h5>
+            <p>Sau khi có các bài viết cần tìm, bạn vào tool bằng Dashboard-> Tool-> Administrator Z-> Import</p>
+            <h5><strong>1. Nhập link vào phần đầu tiên. trong đó có 4 sự lựa chọn</strong></h5>
             <ul class="w3-ul">
                 <li>1. <strong>From Post</strong>: Nhập một bài viết cụ thể </li>
                 <li>2. <strong>From category</strong>: Nhập tất cả các bài viết được gọi trong một link danh mục </li>
@@ -78,8 +72,44 @@
                 <li>4. <strong>From Product category</strong>: Nhập tất cả sản phẩm woocommerce từ một danh mục sản phẩm (yêu cầu cài plugin Woocommerce) </li>
             </ul> 
             <p>Chú ý*: Nếu là sản phẩm, Plugin hiện tại chỉ hỗ trợ nhập vào woocommerce. Còn website nguồn là mã nguồn nào ko quan trọng, miễn sao nó ko <strong>chặn</strong> là được.</p>   
-            <i class="fa fa-refresh w3-spin"></i>
-            Đang cập nhật...        
+            <hr>
+            <h5><strong>2. Nhập bộ chọn theo cấu trúc Css selector  </strong></h5>  
+            <p>Ví dụ về tiêu đề bài viết, khi các bạn viết CSS để chọn tiêu đề bài viết như thế nào thì nhập trong này như vậy </p>
+            <p>Một số trường có dấu <code>↳</code> có nghĩa là nó sẽ dùng lại css selector của cái trên. mục đích là chọn nhiều cái con trong cái selector cha.</p>
+            <p>Trong plugin có mẫu cho theme flatsome và selector của nó. các bạn có thể tham khảo và check cho trang mẫu</p>
+            <hr>
+            <h5><strong>3. Tiến hành import  </strong></h5>  
+            <p>1. Test trước một bài</p>
+            <p>2. Test cả danh mục </p>
+            <p>3. Nhấn nút Import cả danh mục</p>
+            <p>4. Các bạn check với dữ liệu mẫu nhé</p>
+
+            <h3 class="w3-padding-32"><span class="w3-tag w3-green w3-large">Note:</span> Cài đặt khác</h3>
+            <strong>Import mode</strong>
+            <ul class="w3-ul">
+              <li><code>one by one</code>: Khi bấm nút import theo danh mục, plugin sẽ chạy lần lượt từng cái một cho đến khi xong thì mới nhảy sang cái tiếp theo.</li>
+            </ul>
+            <strong>Content fix</strong>
+            <ul class="w3-ul">
+              <li><code>Save images to library</code> Ảnh tự động lưu lại gallery website</li>
+              <li><code>Use exits images in library to post content</code> Trước khi lưu lại gallery, ảnh sẽ được check xem có chưa, nếu có rồi thì lấy luôn ảnh đó và ko lưu thêm vào nữa</li>
+              <li><code>Rewrite image name</code> Lưu ảnh vào gallery với tên ảnh cấu trúc cố định: tên bài viết + số thứ tự của ảnh</li>
+              <li><code>Small thumbnail url fix</code> Một số trang web dùng CDN, hoặc sửa lại size ảnh, dùng cái này để bỏ bớt phần thừa trong tên ảnh và tìm kiếm ảnh gốc. Bạn cần phải check một số ảnh trong web nguồn cho chắc chắn. </li>
+              <li><code>Content fix</code> Phần này mục đích để bỏ một số phần mang tính bản quyền trong nội dung như link, video hoặc mô tả dưới cùng cố định của các bài nội dung</li>
+              <li><code>Search and replace content</code> Thay đổi nội dung của web nguồn như số điện thoại, tên cửa hàng, địa chỉ, vvv... hoặc có thể remove luôn bằng cách để trống vào phần replace.</li>              
+            </ul>
+            <strong>Product</strong>
+            <ul class="w3-ul">
+              <li><code>Include entry content images to gallery</code> Nhập luôn ảnh trong bài viết vào gallery của sản phẩm</li>
+              <li><code>Include variations images to gallery</code> nhập ảnh đại diện của biến thể vào gallery sản phẩm</li>
+              <li><code>price</code> lấy định dạng tiền tệ gốc. ví dụ trong cách hiển thị của USD là 99.00 $ thì cần phải nhập 2 vào đây để lấy  mình số 99. nếu ko nó sẽ lấy 9900 $</li>
+            </ul>
+
+
+
+
+
+
           </div>
 
 
