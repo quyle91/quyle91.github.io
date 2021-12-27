@@ -458,6 +458,22 @@
                             "link" : "",
                             "description" : ''
                         },
+                        {
+                            "title" : 'Theme wordpress: Traveler ',
+                            "subtitle" : "",
+                            "type": "plu",
+                            "image" : './img/traveler.jpg',
+                            "link" : "https://wordpress.org/plugins/auto-product-after-upload-image/",
+                            "description" : ''
+                        },
+                        {
+                            "title" : 'Từ năm 2016',
+                            "subtitle" : "",
+                            "type": "sec",
+                            "image" : '',
+                            "link" : "",
+                            "description" : ''
+                        },
                     ];                  
 
                     jQuery( document ).ready(function($) {
@@ -537,15 +553,16 @@
                                                 html +='<button onclick="document.getElementById(\'id'+i+'\').style.display=\'block\'" class="w3-button w3-border w3-small">Xem tất cả</button>';                                                
                                                 html +='<div id="id'+i+'" class="w3-modal">';
                                                     html +='<div class="w3-modal-content">';
-                                                      html +='<div class="w3-container">';
-                                                        html +='<div class="w3-content w3-display-container">';
-                                                            html +='<div style="padding-top: 16px; padding-bottom: 16px;">';
+                                                        html +='<div class="w3-container">';
+                                                            html +='<div class="w3-content w3-display-container">';
+                                                                html +='<div style="padding-top: 16px; padding-bottom: 16px;">';
                                                                 var item_images = items[i].images;                                                                
                                                                 for (var z = 0; z < item_images.length; z++) {
                                                                     html +='<img style="margin-bottom: 15px" class="w3-image w3-card-2" src="'+item_images[z]+'"/>';
                                                                 }
+                                                                html +='</div>';
                                                             html +='</div>';
-                                                      html +='</div>';
+                                                        html +='</div>';
                                                       html +='<span onclick="document.getElementById(\'id'+i+'\').style.display=\'none\'" class="w3-button w3-display-topright w3-xlarge fa fa-remove"></span>';
                                                     html +='</div>';
                                                 html +='</div>';                                                
@@ -569,49 +586,14 @@
         </div>
         <!-- Footer -->
         <footer class="w3-container w3-padding-64 w3-green w3-center w3-xlarge" style="margin: -24px;">
-                <a href="https://facebook.com/timquen2014"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-                <a href="https://profiles.wordpress.org/quyle91/"><i class="fa fa-wordpress w3-hover-opacity"></i></a>
-                <a href="https://github.com/quyle91"><i class="fa fa-github w3-hover-opacity"></i></a>
-                <p class="w3-medium">Quý Lê - Profile</p>
-                
-                <!-- End footer -->
-            </footer>      
-        <script>
-            // form
-            function postToGoogle() {
-                var name = $("#nameField").val();
-                var email = $("#emailField").val();
-                var service = $("#serviceField").val();
-                var mess = $("#messField").val();
-
-                $.ajax({
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfePvrY2NJwALb2mzayMmeXvuDln3DSEoEk7KBYNJPFGvONZA/formResponse?",
-                    data: {
-                        "entry.1028036317": name,
-                        "entry.1449630851": email,
-                        "entry.972403096": service,
-                        "entry.992019242": mess,
-                    },
-                    type: "POST",
-                    dataType: "jsonp",
-                    success: function(d) {},
-                    error: function(x, y, z) {
-                        $("#success-msg").show();
-                    },
-                });
-
-                return false;
-            }
-            // Open and close sidebar
-            function openNav() {
-                document.getElementById("mySidebar").style.width = "60%";
-                document.getElementById("mySidebar").style.display = "block";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidebar").style.display = "none";
-            }
-        </script>
+            <a href="https://facebook.com/timquen2014"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a href="https://profiles.wordpress.org/quyle91/"><i class="fa fa-wordpress w3-hover-opacity"></i></a>
+            <a href="https://github.com/quyle91"><i class="fa fa-github w3-hover-opacity"></i></a>
+            <p class="w3-medium">Quý Lê - Profile</p>
+            
+            <!-- End footer -->
+        </footer>      
+        
 </body>
 
 </html>

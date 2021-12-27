@@ -76,7 +76,7 @@
               <i><a href="https://www.google.com/search?q=l%C3%AA+v%C4%83n+qu%C3%BD+fpt+polytechnic&rlz=1C1CHBF_enVN925VN925&oq=l%C3%AA+v%C4%83n+qu%C3%BD+fpt+polyte&aqs=chrome.1.69i57j33i10i160.8056j0j7&sourceid=chrome&ie=UTF-8">Lịch sử học tập </a></i>
             </p>
             <p>
-              <i><a href="https://www.topcv.vn/xem-cv/00dcac60d61a2ce13875c5cb4ca4450f">Xem Cv của tôi </a></i>
+              <i><a href="./cv.html">Xem Cv của tôi </a></i>
             </p>
           </div>
         </div>
@@ -232,41 +232,6 @@
 
       <!-- END PAGE CONTENT -->
     </div>
-    <script>
-      // form
-      function postToGoogle() {
-        var name = $("#nameField").val();
-        var email = $("#emailField").val();
-        var service = $("#serviceField").val();
-        var mess = $("#messField").val();
-
-        $.ajax({
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSfePvrY2NJwALb2mzayMmeXvuDln3DSEoEk7KBYNJPFGvONZA/formResponse?",
-          data: {
-            "entry.1028036317": name,
-            "entry.1449630851": email,
-            "entry.972403096": service,
-            "entry.992019242": mess,
-          },
-          type: "POST",
-          dataType: "jsonp",
-          success: function (d) {},
-          error: function (x, y, z) {
-            $("#success-msg").show();
-          },
-        });
-
-        return false;
-      }
-      // Open and close sidebar
-      function openNav() {
-        document.getElementById("mySidebar").style.width = "60%";
-        document.getElementById("mySidebar").style.display = "block";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
-    </script>
+    
   </body>
 </html>
