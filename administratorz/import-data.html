@@ -13,26 +13,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="../style.css" />
   <body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=226200314665818&autoLogAppEvents=1" nonce="zYQVlg1P"></script>
-    <div id="nav1"></div>
+    
     <!-- Sidebar with image -->
     <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width: 15%; right: 0px;">
       <div class="bgimg w3-grayscale-max" style="background-image: url('../img/avt.jpg');"></div>
     </nav>
 
-    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-    <nav class="w3-sidebar w3-animate-right w3-xxlarge" style="display: none; padding-top: 150px; right: 0; z-index: 2;" id="mySidebar">
-      <span href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-xxxlarge w3-display-topright" style="padding: 0 12px;">
-        <i class="fa fa-remove"></i>
-      </span>
-      <div id="spData1" class="w3-bar-block w3-center">
-        <a href="../#nav1" class="w3-bar-item w3-button w3-large" onclick="closeNav()">Trang chính</a>        
-        <a href="../#nav4" class="w3-bar-item w3-button w3-large" onclick="closeNav()">Về tôi</a>
-        <a href="../#nav5" class="w3-bar-item w3-button w3-large" onclick="closeNav()">Liên hệ với tôi</a>
-        <a href="../duan.html" class="w3-bar-item w3-button w3-large">Dự án của tôi</a>
-      </div>
-    </nav>
+    
 
     <!-- Page Content -->    
     <div
@@ -45,8 +32,9 @@
         background-attachment: fixed;
       "
     >
-      <!-- Menu icon to open sidebar -->
-      <span class="w3-button w3-top w3-white w3-xxlarge w3-hover-text-black" style="width: auto; right: 0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+      <a href="."class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width: auto; right: 0;">
+            <i class="fa fa-home"></i>
+        </a>
 
       <!-- Header -->
       <div id="content">
@@ -224,41 +212,5 @@
 
       <!-- END PAGE CONTENT -->
     </div>
-    <script>
-      // form
-      function postToGoogle() {
-        var name = $("#nameField").val();
-        var email = $("#emailField").val();
-        var service = $("#serviceField").val();
-        var mess = $("#messField").val();
-
-        $.ajax({
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSfePvrY2NJwALb2mzayMmeXvuDln3DSEoEk7KBYNJPFGvONZA/formResponse?",
-          data: {
-            "entry.1028036317": name,
-            "entry.1449630851": email,
-            "entry.972403096": service,
-            "entry.992019242": mess,
-          },
-          type: "POST",
-          dataType: "jsonp",
-          success: function (d) {},
-          error: function (x, y, z) {
-            $("#success-msg").show();
-          },
-        });
-
-        return false;
-      }
-      // Open and close sidebar
-      function openNav() {
-        document.getElementById("mySidebar").style.width = "60%";
-        document.getElementById("mySidebar").style.display = "block";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
-    </script>
   </body>
 </html>
