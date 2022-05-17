@@ -24,7 +24,8 @@ w3-content img.w3-image{
 code{
     background-color:  #f0f0f1;
 }
-a.word-break{
+a.word-break, 
+a.link{
     word-break: break-all;
 }
 a:hover{

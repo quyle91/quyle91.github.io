@@ -32,7 +32,7 @@
         </header>
         <!-- demo Section -->
         <div class="w3-content">
-            <div class="w3-row-padding" style="margin: 0 -16px;">
+            <div class="w3-row" style="margin: 0 -16px;">
                 <div class="w3-container">
                     <strong>Lọc: </strong>
                     <button onclick="show_item('web');" class="w3-button w3-border w3-small">Website</button>
@@ -57,7 +57,8 @@
                     </script>
                 </div>
                 <script type="text/javascript">
-                    var mka = '<small> Làm việc tại: <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a> </small>';
+                    var mka = '<small> Working on: <a href="https://mka.com.vn"> <img width="100px" src="https://mka.com.vn/wp-content/uploads/2019/11/minh-khang-logo.png"/></a> </small>';
+                    var sentius = '<small> Working on: <a href="https://sentius.com.au"> <img width="50px" src="./img/sentius.svg"/></a> </small>';
                     var items = [
                         {
                             "title" : 'Từ năm 2022',
@@ -66,6 +67,46 @@
                             "image" : '',
                             "link" : "",
                             "description" : ''
+                        },
+                        {
+                            "title" : 'Website TMĐT Himo bike Việt Nam',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/himobike.vn.png',
+                            "link" : "https://himobike.vn",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Website TMĐT Escooter Việt Nam',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/escooter.vn.png',
+                            "link" : "https://escooter.vn",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Website TMĐT Segway Việt Nam',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/segway.vn.png',
+                            "link" : "https://segway.vn",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'BĐS An Lands',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/anlands.vn.png',
+                            "link" : "https://anlands.vn",
+                            "description" : mka
+                        },
+                        {
+                            "title" : 'Nhà hàng vịt Một Thanh',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/nhahangvitmotthanh.com.png',
+                            "link" : "https://nhahangvitmotthanh.com/",
+                            "description" : mka
                         },
                         {
                             "title" : 'Website bán hàng thiết bị thông minh Joypal',
@@ -284,22 +325,6 @@
                             "description" : mka
                         },
                         {
-                            "title" : 'Landing page đăng ký thẻ ngân hàng',
-                            "subtitle" : "",
-                            "type": "web",
-                            "image" : './img/thevaytieudung.jpg',
-                            "link" : "https://thevaytieudung.vn",
-                            "description" : ''
-                        },
-                        {
-                            "title" : 'Landing Page FLc Grand villa Sầm Sơn',
-                            "subtitle" : "",
-                            "type": "web",
-                            "image" : './img/grandvillaflc.png',
-                            "link" : "https://flcgrandvilla.com",
-                            "description" : ''
-                        },
-                        {
                             "title" : 'Plugin wordpress: Administrator Z',
                             "subtitle" : "Sometimes website installation gets boring with repetitive tasks, so I wrote this plugin to free up time on those things.",
                             "type": "plu",
@@ -391,14 +416,6 @@
                             "type": "web",
                             "image" : './img/hhdlaw.jpg',
                             "link" : "https://hhdlawfirm.vn",
-                            "description" : mka
-                        },
-                        {
-                            "title" : 'Website Phú Gia group',
-                            "subtitle" : "",
-                            "type": "web",
-                            "image" : './img/phugiagroup.png',
-                            "link" : "https://phugiagroup.com.vn/",
                             "description" : mka
                         },
                         {
@@ -557,7 +574,7 @@
                                     html +='<h4><b>'+items[i].title+'</b></h4>';
                                 html +='</div>';
                             }else if(items[i].type == "web" || items[i].type == "plu" ){
-                                html +='<div class="item '+items[i].type+' w3-content" style="margin-top: 16px; ">';
+                                html +='<div class="item '+items[i].type+' w3-container w3-half" style="margin-top: 16px; ">';
                                     html +='<div class="w3-row w3-card">';
                                         html +='<div class="w3-quarter">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">';
@@ -566,7 +583,7 @@
                                         html +='</div>';
                                         html +='<div class="w3-threequarter ">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;"> <h4 class="">'+items[i].title+'</h4>';
-                                            html +='<a target=_blank href="'+items[i].link+'" class="">'+items[i].link+'</a>';
+                                            html +='<a target=_blank href="'+items[i].link+'" class="link">'+items[i].link+'</a>';
                                             html +='</br>';
                                             html +=items[i].description;
                                             html +='</div>';
@@ -574,7 +591,7 @@
                                     html +='</div>';
                                 html +='</div>';
                             }else if(items[i].type == "vid"){
-                                html +='<div class="item '+items[i].type+' w3-content" style="margin-top: 16px; ">';
+                                html +='<div class="item '+items[i].type+' w3-container w3-half" style="margin-top: 16px; ">';
                                     html +='<div class="w3-row w3-card">';
                                         html +='<div class="w3-quarter">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">';
@@ -611,7 +628,7 @@
                                 html +='</div>';
 
                             }else if(items[i].type == "des"){
-                                html +='<div class="item '+items[i].type+' w3-content" style="margin-top: 16px; ">';
+                                html +='<div class="item '+items[i].type+' w3-container w3-half" style="margin-top: 16px; ">';
                                     html +='<div class="w3-card w3-row">';
                                         html +='<div class="w3-quarter ">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">';
