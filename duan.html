@@ -69,6 +69,22 @@
                             "description" : ''
                         },
                         {
+                            "title" : 'U-boku（ユーボク） - 新しい働き方や暮らし方を提案する情報メディア',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/u-boku.png',
+                            "link" : "https://u-boku.com/media",
+                            "description" : ''
+                        },
+                        {
+                            "title" : 'Dầu đậu phộng Tamico ',
+                            "subtitle" : "",
+                            "type": "web",
+                            "image" : './img/tamico.png',
+                            "link" : "https://tamicovietnam.com",
+                            "description" : mka
+                        },
+                        {
                             "title" : 'Website TMĐT Himo bike Việt Nam',
                             "subtitle" : "",
                             "type": "web",
@@ -249,7 +265,7 @@
                             "subtitle" : "",
                             "type": "web",
                             "image" : './img/biathanhhoa.png',
-                            "link" : "https://thb.minhkhang.net/",
+                            "link" : "https://biathanhhoa.com.vn/",
                             "description" : mka
                         },
                         {
@@ -662,6 +678,11 @@
                             }
                         }
                         $("#content").html(html);
+                        var item_height = 0;
+                        $(".item").each(function(){
+                            item_height = Math.max(item_height,$(this).height());
+                        });
+                        $(".item").height(item_height);
                     });
                 </script>
                 <div id="content"></div>                              
