@@ -678,11 +678,15 @@
                             }
                         }
                         $("#content").html(html);
-                        var item_height = 0;
-                        $(".item").each(function(){
-                            item_height = Math.max(item_height,$(this).height());
-                        });
-                        $(".item").height(item_height);
+
+                        // set item height
+                        if($(document).width()>600){
+                            var item_height = 0;
+                            $(".item").each(function(){
+                                item_height = Math.max(item_height,$(this).height());
+                            });
+                            $(".item").height(item_height);
+                        }
                     });
                 </script>
                 <div id="content"></div>                              
