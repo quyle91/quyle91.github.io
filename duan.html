@@ -254,6 +254,43 @@
                             "description" : ''
                         },
                         {
+                            "title" : 'Design web Uniteam',
+                            "subtitle" : "",
+                            "type": "des",
+                            "image" : './img/uniteam.png',
+                            "images": [],
+                            "pdf" : [
+                                './pdf/uniteam/1.pdf',
+                                './pdf/uniteam/2.pdf',
+                                './pdf/uniteam/3.pdf'
+                            ],
+                            "description" : ''
+                        },
+                        {
+                            "title" : 'Design web công ty bảo vệ lnsc.vn',
+                            "subtitle" : "",
+                            "type": "des",
+                            "image" : './img/lnsc.png',
+                            "images": [],
+                            "pdf" : [
+                                './pdf/lungoc/1.pdf',
+                                './pdf/lungoc/2.pdf',
+                            ],
+                            "description" : ''
+                        },
+                        {
+                            "title" : 'Design web phòng khám benhtri.vn',
+                            "subtitle" : "",
+                            "type": "des",
+                            "image" : './img/benhtri.png',
+                            "images": [],
+                            "pdf" : [
+                                './pdf/taman/1.pdf',
+                                './pdf/taman/2.pdf',
+                            ],
+                            "description" : ''
+                        },
+                        {
                             "title" : 'Website khoá thông minh Xiaomi',
                             "subtitle" : "",
                             "type": "web",
@@ -718,10 +755,21 @@
                                                         html +='<div class="w3-container">';
                                                             html +='<div class="w3-content w3-display-container">';
                                                                 html +='<div style="padding-top: 16px; padding-bottom: 16px;">';
-                                                                var item_images = items[i].images;                                                                
-                                                                for (var z = 0; z < item_images.length; z++) {
-                                                                    html +='<img style="margin-bottom: 15px" class="w3-image w3-card-2" src="'+item_images[z]+'"/>';
+
+                                                                if(typeof items[i].images == 'object'){
+                                                                    var item_images = items[i].images;
+                                                                    for (var z = 0; z < item_images.length; z++) {
+                                                                        html +='<img style="margin-bottom: 15px" class="w3-image w3-card-2" src="'+item_images[z]+'"/>';
+                                                                    }
                                                                 }
+                                                                if(typeof items[i].pdf == 'object'){
+                                                                    var item_pdf = items[i].pdf;
+                                                                    for (var z = 0; z < item_pdf.length; z++) {
+                                                                        /*html +='<img style="margin-bottom: 15px" class="w3-image w3-card-2" src="'+item_pdf[z]+'"/>';*/
+                                                                        html += '<p><a href="'+item_pdf[z]+'" target="_blank">Xem File</a></p>';
+                                                                    }
+                                                                }
+
                                                                 html +='</div>';
                                                             html +='</div>';
                                                         html +='</div>';
