@@ -258,6 +258,7 @@
                             "subtitle" : "",
                             "type": "des",
                             "image" : './img/uniteam.png',
+                            "link" : "#",
                             "images": [],
                             "pdf" : [
                                 './pdf/uniteam/1.pdf',
@@ -271,6 +272,7 @@
                             "subtitle" : "",
                             "type": "des",
                             "image" : './img/lnsc.png',
+                            "link" : "https://lnsc.vn/",
                             "images": [],
                             "pdf" : [
                                 './pdf/lungoc/1.pdf',
@@ -283,6 +285,7 @@
                             "subtitle" : "",
                             "type": "des",
                             "image" : './img/benhtri.png',
+                            "link" : "http://benhtri.vn/",
                             "images": [],
                             "pdf" : [
                                 './pdf/taman/1.pdf',
@@ -662,15 +665,7 @@
                             "subtitle" : "",
                             "type": "plu",
                             "image" : './img/traveler.jpg',
-                            "link" : "https://wordpress.org/plugins/auto-product-after-upload-image/",
-                            "description" : ''
-                        },
-                        {
-                            "title" : 'Từ năm 2016',
-                            "subtitle" : "",
-                            "type": "sec",
-                            "image" : '',
-                            "link" : "",
+                            "link" : "https://themeforest.net/item/traveler-traveltourbooking-wordpress-theme/10822683",
                             "description" : ''
                         },
                     ];                  
@@ -748,8 +743,9 @@
                                         html +='<div class="w3-threequarter ">';
                                             html +='<div class="w3-container" style="padding-top: 16px; padding-bottom: 16px;">                             ';
                                                 html +='<h4 class="">'+items[i].title+'</h4>';
+                                                html +='<a target="_blank" href="'+items[i].link+'" class="link">'+items[i].link+'</a>';
                                                 html +='<p>'+ items[i].description +'</p>';
-                                                html +='<button onclick="document.getElementById(\'id'+i+'\').style.display=\'block\'" class="w3-button w3-border w3-small">Xem tất cả</button>';                                                
+                                                html +='<button onclick="document.getElementById(\'id'+i+'\').style.display=\'block\'" class="w3-button w3-border w3-small">Xem file design</button>';                                                
                                                 html +='<div id="id'+i+'" class="w3-modal">';
                                                     html +='<div class="w3-modal-content">';
                                                         html +='<div class="w3-container">';
@@ -807,6 +803,7 @@
         <footer class=" w3-padding-large w3-green w3-xlarge">
             <div class="">
               <a href="https://facebook.com/timquen2014"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+              <a href="https://www.linkedin.com/in/quyle91/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
               <a href="https://profiles.wordpress.org/quyle91/"><i class="fa fa-wordpress w3-hover-opacity"></i></a>
               <a href="https://github.com/quyle91"><i class="fa fa-github w3-hover-opacity"></i></a>
               <span class="w3-medium">Tìm tôi trên mạng xã hội</span>        
