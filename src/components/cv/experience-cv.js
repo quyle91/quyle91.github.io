@@ -1,11 +1,34 @@
-import * as React from 'react'
+import React, { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next";
 import Fetching from "../templates/fetching";
+import {data_blog} from "../../data/datas"
+
 
 const ExperienceCv = ({data}) => {
     const { t } = useTranslation();
+
+
+    const [dataCongty,setDataCongty] = useState([]);
+
+    useEffect(() => {
+        fetchDataCongty(); // lần load đầu tiên là 9
+    }, []);
+    const fetchDataCongty = async ()=>{
+        try {
+            const request = await fetch(data_blog.test_url+'/wp-json/wp/v2/congty');
+            const response = await request.json();
+            setDataCongty(response);
+
+        } catch (error) {
+            console.log('Error fetching data:', error);
+        }
+    }
+
     const getCongtyName = (value)=>{
-        return value;
+        const result = dataCongty.map((item,key)=>
+            item.id === value ? item.name : ""
+        )
+        return result;
     }
 
     return (
