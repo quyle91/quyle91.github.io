@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { data_interest } from '../../data/datas'
 import { useTranslation } from "react-i18next";
-const InterestsCv = () => {
+import Fetching from "../templates/fetching";
+const InterestsCv = ({data}) => {
     const { t } = useTranslation();
     return ( 
         <>
@@ -13,11 +13,15 @@ const InterestsCv = () => {
             <div className="w3-small">
                 <p>
                     {
-                        data_interest.map((item,key) => (
+                        data?
+                        data.map((item,key)=>(
                             <React.Fragment key={key}>
-                                <button className="w3-white w3-hover-green w3-padding-small w3-small w3-button w3-border w3-round" style={{margin: "0 5px 5px 0px"}}>{item}</button>
+                                <button className="w3-padding-small w3-small w3-button w3-border w3-round" style={{margin: "0 5px 5px 0px"}}>
+                                    {item.text}
+                                </button>
                             </React.Fragment>
                         ))
+                        :<Fetching/>
                     }
                 </p>
             </div>

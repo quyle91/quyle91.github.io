@@ -21,30 +21,26 @@ const ContentDuan = () => {
         fetchDataFromJSON(99); // lần load đầu tiên là 9
     }, []); // Mảng rỗng sẽ đảm bảo hàm useEffect chỉ được gọi một lần khi component được tải lần đầu
 
-    const fetchDataFromJSON = async (param) => {
-        // console.log("Fetching data from json param:", param);
+    const fetchDataFromJSON = async (param) => {        
         try {
+            // promise
+            const urls = [
+                data_blog.test_url+'/wp-json/wp/v2/featured_item?per_page='+param,
+                data_blog.test_url+'/wp-json/wp/v2/congty',
+                data_blog.test_url+'/wp-json/wp/v2/loaiduan',
+                data_blog.test_url+'/wp-json/wp/v2/nam'
+            ];
+            const fetchRequests = urls.map(url => fetch(url));
+            const responses = await Promise.all(fetchRequests);
+            const dataPromises = responses.map(response => response.json());
+            const jsonData = await Promise.all(dataPromises);
 
-            // du an
-            const response_duan = await fetch(data_blog.test_url+'/wp-json/wp/v2/featured_item?per_page='+param);
-            const jsonData_duan = await response_duan.json();
-            setDuan(jsonData_duan);
-
-            // cong ty
-            const response_congty = await fetch(data_blog.test_url+'/wp-json/wp/v2/congty');            
-            const jsonData_congty = await response_congty.json();            
-            setCongty(jsonData_congty);
-
-            // Danh mục dự án
-            const response_loaiduan = await fetch(data_blog.test_url+'/wp-json/wp/v2/loaiduan');            
-            const jsonData_loaiduan = await response_loaiduan.json();            
-            setLoaiduan(jsonData_loaiduan);
-            // Năm dự án
-            const response_namduan = await fetch(data_blog.test_url+'/wp-json/wp/v2/nam');            
-            const jsonData_namduan = await response_namduan.json();            
-            setNamduan(jsonData_namduan);
-
+            setDuan(jsonData[0]);
+            setCongty(jsonData[1]);
+            setLoaiduan(jsonData[2]);
+            setNamduan(jsonData[3]);
             setLoading(false);
+
         } catch (error) {
             console.log('Error fetching data:', error);
         }

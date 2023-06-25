@@ -1,14 +1,12 @@
 import * as React from 'react'
 import { useTranslation } from "react-i18next";
-import { data_skill } from '../../data/datas'
 import SingleSkill from "../templates/single-skill"
+import Fetching from "../templates/fetching";
 
 
 
 
-
-const SkillCv = () => {
-
+const SkillCv = ({data}) => {
     const { t } = useTranslation();
     return ( 
         <>
@@ -17,11 +15,13 @@ const SkillCv = () => {
             <hr/>
             <div id="kynang">
                 {
-                    data_skill.map((item,key)=> (
+                    data?
+                    data.map((item,key)=>(
                         <React.Fragment key={key}>
                             <SingleSkill item={item}/>
                         </React.Fragment>
                     ))
+                    :<Fetching/>
                 }
             </div>
         </div>

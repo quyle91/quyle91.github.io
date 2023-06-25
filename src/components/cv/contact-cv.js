@@ -1,15 +1,14 @@
-import { data_me } from '../../data/datas'
-
-
-const ContactCv = () => {
+const ContactCv = ({data}) => {
     return ( 
         <>
         <ul id="contact-cv" className="w3-ul" style={{width: "220px"}}>
-            <li>{data_me.phone}</li>
-            <li>{data_me.birth}</li>
-            <li>{data_me.mail}</li>
-            <li>{data_me.country}</li>
-            <li>{data_me.website}</li>
+            {
+                (data)?
+                data.map((item,key)=>(
+                    <li key={key}>{item.text}</li>
+                )):
+                ""
+            }
         </ul>  
         </>
     )

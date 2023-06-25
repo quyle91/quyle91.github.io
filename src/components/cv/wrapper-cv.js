@@ -1,22 +1,18 @@
-
-
+import { useEffect, useState } from "react"
 import HeadingCv from "./heading-cv"
-
 import AvatarCv from "./avatar-cv"
-
 import ContactCv from "./contact-cv"
 import SkillCv from "./skill-cv"
 import InterestsCv from "./interests-cv"
-
 import TargetCv from "./target-cv"
 import ProjectsCv from "./projects-cv"
 import ExperienceCv from "./experience-cv"
 import EducationCv from "./education-cv"
 import PersonalityCv from "./personality-cv"
 import ReferenceCv from "./reference-cv"
-
 import FooterCv from "./footer-cv"
 
+import {data_blog} from "../../data/datas"
 
 
 const WrapperCv = () => {
@@ -28,6 +24,23 @@ const WrapperCv = () => {
 		margin: "auto"
 	}
 
+	const [data,setData] = useState([]);
+	useEffect(() => {
+        fetchDataFromJSON();
+    }, []);
+
+    const fetchDataFromJSON = async () => {        
+        try {
+        	const response = await fetch(data_blog.test_url+'/wp-json/options/cv?field=avatar,info,kynang,sothich,muctieu,kinhnghiemlamviec,hocvan,tinhcach,nguoithamchieu');
+        	const data = await response.json();
+        	setData(data);
+
+
+    	} catch (error) {
+        console.log('Error fetching data:', error);
+        }
+    };
+
 
 	return (
 		<>
@@ -35,20 +48,19 @@ const WrapperCv = () => {
 				<HeadingCv/>
 				<div id="cvcontent" className="w3-row">
 					<div className="w3-third w3-padding-large w3-blue-gray">
-						<AvatarCv/>
-
-						<ContactCv/>
-						<SkillCv/>
-						<InterestsCv/>
+						<AvatarCv data={data.avatar}/>
+						<ContactCv data={data.info}/>
+						<SkillCv data={data.kynang}/>
+						<InterestsCv data={data.sothich}/>
 						
 					</div>
 					<div className="w3-twothird w3-padding-large">
-						<TargetCv/>
+						<TargetCv data={data.muctieu}/>
 						<ProjectsCv/>
-		          		<ExperienceCv/>
-			          	<EducationCv />
-			          	<PersonalityCv/>
-			          	<ReferenceCv/>
+		          		<ExperienceCv data={data.kinhnghiemlamviec}/>
+			          	<EducationCv data={data.hocvan}/>
+			          	<PersonalityCv data={data.tinhcach}/>
+			          	<ReferenceCv data={data.nguoithamchieu}/>
 					</div>
 				</div>
 				<FooterCv/>

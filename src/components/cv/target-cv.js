@@ -1,17 +1,20 @@
-import { useTranslation } from "react-i18next";
-const TargetCv = () => {
-    const { t } = useTranslation();
+import * as React from 'react'
+import Fetching from "../templates/fetching";
+const TargetCv = ({data}) => {        
     return ( 
         <>
         <div id="target-cv">
             <blockquote>
-                {t("Có nhiều năm kinh nghiệm với Wordpress như: phát triển theme/ plugin/ custom")}
-                <br/>
-                {t("Mục tiêu dài hạn: Full stack developer.")}
-                <br/>
-                {t("Mong muốn: Được làm việc trong môi trường chuyên nghiệp.")}
-                <br/>
-                {t("Mức lương mong muốn: 15tr - 20tr/ tháng.")}
+                {
+                    data?
+                    data.map((item,key)=>(
+                        <React.Fragment key={key}>
+                            {item.text}
+                            <br/>
+                        </React.Fragment>
+                    ))
+                    :<Fetching/>
+                }
             </blockquote>
         </div>
         </>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom"
 import {data_blog} from "../../data/datas"
-// import { projectsDataItems} from '../../data/projects'
+import Fetching from "../templates/fetching";
 
 const ProjectsCv = () => {
 
@@ -27,8 +27,7 @@ const ProjectsCv = () => {
         } catch (error) {
             console.log('Error fetching data:', error);
         }
-    };
-    console.log(duan);
+    };    
 
 
     // let project_web = [];
@@ -48,7 +47,7 @@ const ProjectsCv = () => {
                     { 
                         loading?
 
-                        <li>{t("Đang fetch dữ liệu. Chờ tý nha...")}</li>:
+                        <li><Fetching/></li>:
                         duan.map((item,key)=>(
                             <li key={key}>
                                 <a className="link" target="_blank" rel="noreferrer" href={item.acf.link}>{item.title.rendered}</a>
