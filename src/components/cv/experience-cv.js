@@ -4,6 +4,9 @@ import Fetching from "../templates/fetching";
 
 const ExperienceCv = ({data}) => {
     const { t } = useTranslation();
+    const getCongtyName = (value)=>{
+        return value;
+    }
 
     return (
         <>
@@ -17,7 +20,7 @@ const ExperienceCv = ({data}) => {
                                 <div className="w3-twothird">
                                     <h6>
                                         <strong style={{textTransform:"uppercase"}}>
-                                            <span className="w3-uppercase">{item.congty}</span>
+                                            <span className="w3-uppercase">{getCongtyName(item.congty)}</span>
                                         </strong>
                                     </h6>
                                     <i>{item.vitri}</i>
