@@ -1,16 +1,15 @@
 import NavIcon from "../components/nav-icon"
 import BannerRight from "../components/banner-right"
-import Wrapper from "../components/adminz/wrapper"
+import WrapperBlog from "../components/blog/wrapper-blog"
 
-
-const AdministratorZ = ()=> {
+const Blog = ()=> {
     return (
         <>
         <NavIcon/>
         <BannerRight/>
-        <Wrapper/>
+        <WrapperBlog/>
         
         </>
     )
 }
-export default AdministratorZ
+export default Blog

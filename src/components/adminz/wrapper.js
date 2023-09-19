@@ -1,13 +1,13 @@
 import Contact from "../contact"
 import Donate from "./donate"
-import FooterAdministratorz from "./footer-administratorz"
+import Footer from "./footer"
 
 /*Content*/
-import AdminzHeading from "./heading";
-import AdminzQuote from "./quote";
+import Heading from "./heading";
+import Quote from "./quote";
 
 
-const WrapperAdministratorz = () => {
+const Wrapper = () => {
 	document.body.classList.remove(...document.body.classList)
 	document.body.classList.add("administrator-z")
 	
@@ -25,15 +25,15 @@ const WrapperAdministratorz = () => {
 			}}
 			>
 				<div className="content w3-content">
-					<AdminzHeading/>
-					<AdminzQuote/>
+					<Heading/>
+					<Quote/>
 					<h1>Đang cập nhật.</h1>
 				</div>
 				<Contact/>
 				<Donate/>
-				<FooterAdministratorz/>
+				<Footer/>
 			</div>
 		</>
 	)
 }
-export default WrapperAdministratorz
+export default Wrapper

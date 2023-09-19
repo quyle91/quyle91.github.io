@@ -1,9 +1,11 @@
-import Gmap from "./gmap"
-import LanguagesSwitcher from "../languages-switcher"
+import Footer from "./footer"
+import Heading from "./heading";
+import Content from "./content";
 
-const WrapperjsTest = () => {
+
+const WrapperBlog = () => {
 	document.body.classList.remove(...document.body.classList)
-	document.body.classList.add("reactjs-test")
+	document.body.classList.add("administrator-z")
 	
 	return (
 		<>
@@ -18,14 +20,12 @@ const WrapperjsTest = () => {
 				backgroundAttachment: "fixed"
 			}}
 			>
-				<Gmap/>
-				<footer id="footer" className="w3-xlarge">
-            		<div className="w3-content">
-						<LanguagesSwitcher/>
-					</div>
-				</footer>
+				
+				<Heading/>
+				<Content/>
+				<Footer/>
 			</div>
 		</>
 	)
 }
-export default WrapperjsTest
+export default WrapperBlog
