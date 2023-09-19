@@ -1,4 +1,4 @@
-const FooterAdministratorz = () => {
+const Footer = () => {
     return (
     <>
         <footer id="footer-administratorz" className="w3-container w3-padding-64 w3-green w3-xlarge" style={{margin: "-24px"}}>   
@@ -12,4 +12,4 @@ const FooterAdministratorz = () => {
     </>
     )
 }
-export default FooterAdministratorz
+export default Footer

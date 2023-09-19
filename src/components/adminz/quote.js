@@ -1,4 +1,4 @@
-const AdminzQuote = () => {
+const Quote = () => {
 	return (
 		<>
 			<div className="w3-content w3-padding-32">
@@ -16,4 +16,4 @@ const AdminzQuote = () => {
 		</>
 	)
 }
-export default AdminzQuote
+export default Quote

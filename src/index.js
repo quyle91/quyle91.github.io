@@ -8,6 +8,7 @@ import Home from "./pages/Home"
 import Cv from "./pages/Cv"
 import ReactjsTest from "./pages/ReactjsTest"
 import Duan from "./pages/Duan"
+import Blog from "./pages/Blog"
 import AdministratorZ from "./pages/AdministratorZ"
 import NoPage from "./pages/NoPage"
 
@@ -22,6 +23,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>                
                 <Route path="/duan" element={<Duan/>}/>
+                <Route path="/blog" element={<Blog/>}/>
                 <Route path="/cv" element={<Cv/>}/>
                 <Route path="/reactjstest" element={<ReactjsTest/>}/>
                 <Route path="/administratorz" element={<AdministratorZ/>}/>

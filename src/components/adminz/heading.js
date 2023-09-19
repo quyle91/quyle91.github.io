@@ -1,4 +1,4 @@
-const AdminzHeading = (prop) => {
+const Heading = (prop) => {
 	return (
 		<>
 
@@ -17,4 +17,4 @@ const AdminzHeading = (prop) => {
 		</>
 	)
 }
-export default AdminzHeading
+export default Heading
