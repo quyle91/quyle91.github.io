@@ -5,12 +5,12 @@ import Content from "./content";
 
 const WrapperBlog = () => {
 	document.body.classList.remove(...document.body.classList)
-	document.body.classList.add("administrator-z")
+	document.body.classList.add("blog")
 	
 	return (
 		<>
 			<div 
-			id="wrapper-administratorz"
+			id="wrapper-blog"
 			className="w3-main w3-padding-large"
 			style={{
 				marginRight: "15%",

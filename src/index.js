@@ -32,7 +32,8 @@ export default function App() {
                 <Route path="/" element={<MetaTitle title="Trang chủ"> <Home /> </MetaTitle> } /> 
                 <Route path="/duan" element={<MetaTitle title="Dự án"> <Duan /> </MetaTitle> } /> 
                 <Route path="/cv" element={<MetaTitle title="Lê Văn Quý - Wordpress Dev CV"> <Cv /> </MetaTitle> } />
-                <Route path="/blog" element={<MetaTitle title="Blog"><Blog/></MetaTitle>}/> 
+                <Route path="/blog/" element={<MetaTitle title="Blog"><Blog/></MetaTitle>}/> 
+                <Route path="/blog/:postName" element={<MetaTitle title="Blog"><Blog/></MetaTitle>}/> 
                 <Route path="/reactjstest" element={<MetaTitle title="ReactJS Test"> <ReactjsTest /> </MetaTitle> } /> 
                 <Route path="/administratorz" element={<MetaTitle title="AdministratorZ"> <AdministratorZ /> </MetaTitle> } /> 
                 <Route path="*" element={<MetaTitle title="Không tìm thấy trang"> <NoPage /> </MetaTitle> } /> 
