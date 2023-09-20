@@ -97,25 +97,29 @@ const ContentDuan = () => {
                         </div>
                     </div>
                     <hr/>
-                    <div className="col-container row-fix-margin">
-                        { 
-                            loading?
-                            <SingleLoading/>:
-                            duan.map((post,key)=>(
-                                (filterLoaiduan==='' && filterNamduan==='' && filterCongty==='') ?
-                                    <SingleDuan key={key} post={post} congty={congty}/>
-                                :
-                                    (
-                                        (filterLoaiduan ==='' || post.loaiduan.includes(Number(filterLoaiduan))) && 
-                                        (filterNamduan ==='' || post.nam.includes(Number(filterNamduan))) &&
-                                        (filterCongty ==='' || post.congty.includes(Number(filterCongty)))
-                                    )?
-                                    <SingleDuan key={key} post={post} congty={congty}/>
+                    { 
+                        loading?
+                        <SingleLoading/>:
+                        (
+                            <div className="col-container row-fix-margin">
+                            {
+                                duan.map((post,key)=>(
+                                    (filterLoaiduan==='' && filterNamduan==='' && filterCongty==='') ?
+                                        <SingleDuan key={key} post={post} congty={congty}/>
                                     :
-                                        ""
-                            ))
-                        }
-                    </div>
+                                        (
+                                            (filterLoaiduan ==='' || post.loaiduan.includes(Number(filterLoaiduan))) && 
+                                            (filterNamduan ==='' || post.nam.includes(Number(filterNamduan))) &&
+                                            (filterCongty ==='' || post.congty.includes(Number(filterCongty)))
+                                        )?
+                                        <SingleDuan key={key} post={post} congty={congty}/>
+                                        :
+                                            ""
+                                ))
+                            }
+                            </div>
+                        )
+                    }
                 </div>
             </div>
             <div className="w3-padding-32 w3-content w3-text-grey" style={{marginBottom: "64px"}}></div>
