@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {data_blog} from "../../data/datas"
 import BlogItem from "../templates/blog-item"
+import SingleLoading from '../duan/single-loading'
 
 const Content = ()=>{
 	const { t } = useTranslation();
-
+	const [loading, setLoading] = useState(true);
 
 
 	// 1. Cho lần chạy đầu tiên.
@@ -21,6 +22,7 @@ const Content = ()=>{
 			const response = await fetch(data_blog.test_url+'/wp-json/wp/v2/posts?per_page='+param);
 			const jsonData = await response.json();
 			setData(jsonData);
+			setLoading(false);
 			console.log("Fetched data from json:", jsonData);
 		} catch (error) {
 	  		console.log('Error fetching data:', error);
@@ -53,7 +55,7 @@ const Content = ()=>{
 
 	return(
 		<>
-			<div className="w3-content w3-padding-32 content">
+			<div className="w3-content content">
 				{/*<EffectDemo/>*/}
 				{/*<hr/>*/}
 				{/*<div className="filter">
@@ -74,9 +76,13 @@ const Content = ()=>{
                     </button>
 				</div>*/}
 				<div className="posts col-container row-fix-margin">
-					{data.map((post, index) => (
-						<BlogItem key={index} post={post} />
-			     	))}
+					{ 
+                        loading?
+                        <SingleLoading/>:
+                        data.map((post, index) => (
+							<BlogItem key={index} post={post} />
+				     	))
+                    }
 						
 				</div>
 				<div className="more w3-center w3-margin-top">

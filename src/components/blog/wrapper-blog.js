@@ -22,7 +22,6 @@ const WrapperBlog = () => {
 			>
 				
 				<Heading/>
-				<hr/>
 				<Content/>
 				<Footer/>
 			</div>
