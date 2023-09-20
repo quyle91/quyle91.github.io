@@ -34,7 +34,7 @@ const ContentBlog = ()=>{
 			if (Array.isArray(jsonData)) {
 		      	setData((prevData) => [...prevData, ...jsonData]);
 		    } else {
-		      	alert(jsonData.message);
+		      	console.log(jsonData.message);
 		    }
 		    setLoaded(true);
 			console.log("Fetched data from json:", fetchUrl, jsonData);
@@ -112,13 +112,6 @@ const ContentBlog = ()=>{
 
 		return catText;
 	};
-
-	// link cho single category
-	useEffect(() => {
-		if (categoryParam) {
-			console.log(categories);
-		}
-	}, [categoryParam]);
 
 
 	return(
