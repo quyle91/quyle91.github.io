@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import ReactDOM from "react-dom/client"
 import { HashRouter, Routes, Route } from "react-router-dom"
-import { Helmet } from 'react-helmet'
+// import { Helmet } from 'react-helmet'
 import "./data/i18n"
 import "./assets/style.css"
 
@@ -34,6 +34,7 @@ export default function App() {
                 <Route path="/duan" element={<MetaTitle title="Dự án"> <Duan /> </MetaTitle> } /> 
                 <Route path="/cv" element={<MetaTitle title="Lê Văn Quý - Wordpress Dev CV"> <Cv /> </MetaTitle> } />
                 <Route path="/blog/" element={<MetaTitle title="Blog"><Blog/></MetaTitle>}/> 
+                <Route path="/blog/:categoryParam" element={<MetaTitle title="Blog"><Blog/></MetaTitle>}/> 
                 <Route path="/post/:postName" element={<MetaTitle title=""><Post/></MetaTitle>}/> 
                 <Route path="/reactjstest" element={<MetaTitle title="ReactJS Test"> <ReactjsTest /> </MetaTitle> } /> 
                 <Route path="/administratorz" element={<MetaTitle title="AdministratorZ"> <AdministratorZ /> </MetaTitle> } /> 

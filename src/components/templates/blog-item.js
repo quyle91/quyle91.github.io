@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
-const BlogItem = ({post}) => {
+const BlogItem = ({post,cat}) => {
     const { t } = useTranslation();
 
     const limitText = (text, limit) =>{
@@ -29,7 +29,12 @@ const BlogItem = ({post}) => {
                 </div>
                 <div className="w3-threequarter ">
                     <div className="w3-container">
-                    	<h6>{post.title.rendered}</h6>
+                    	<h4>{post.title.rendered}</h4>
+                        <span className="w3-tag w3-small w3-white w3-border">
+                            {
+                                cat
+                            }
+                        </span>
                         <div>
                             <small>{limitText(post.excerpt.rendered, 80)}</small>
                         </div>

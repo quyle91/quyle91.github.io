@@ -5,7 +5,7 @@ const PostItem = ({post}) => {
     const postHtml = () => ({ __html: post.content.rendered });
 
     document.title = post.title.rendered;
-    const zblogtitle = document.querySelector('.zblogtitle');
+    const zblogtitle = document.querySelector('.zblogtitle').querySelector('b');
     if (zblogtitle) {
         zblogtitle.innerHTML = post.title.rendered;
     }
@@ -27,7 +27,7 @@ const PostItem = ({post}) => {
             </div>
             <div className="w3-col">
                 <div dangerouslySetInnerHTML={postHtml()} />
-                <div className="w3-padding-16">
+                <div className="w3-padding-16 w3-right-align">
                     <a target="_blank" rel="noreferrer" href={post.link} className="link">
                        {t("Xem bài viết gốc")}
                    </a>
