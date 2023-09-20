@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
 
 const BlogItem = ({post}) => {
     const { t } = useTranslation();
@@ -32,9 +33,7 @@ const BlogItem = ({post}) => {
                         <div>
                             <small>{limitText(post.excerpt.rendered, 80)}</small>
                         </div>
-                        <a target="_blank" rel="noreferrer" href="/blog/{post.link}" className="link">
-                            {t("Xem thêm")}
-                        </a>
+                        <Link className="link w3-button w3-border w3-small w3-margin-top" to={"/post/" + post.slug}>{t("Xem thêm")}</Link>
                     </div>
                 </div>
             </div>

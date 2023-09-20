@@ -6,7 +6,7 @@ import PostItem from "../templates/post-item"
 import SingleLoading from '../duan/single-loading'
 import { useParams } from 'react-router-dom';
 
-const Content = ()=>{
+const ContentBlog = ()=>{
 	const { t } = useTranslation();
 	const [loading, setLoading] = useState(true);
 	const { postName } = useParams();
@@ -94,4 +94,4 @@ const Content = ()=>{
 		</>
 	)
 }
-export default Content
+export default ContentBlog

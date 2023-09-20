@@ -1,9 +1,9 @@
 import Footer from "./footer"
 import Heading from "./heading";
-import ContentBlog from "./content-blog";
+import ContentPost from "./content-post";
 
 
-const WrapperBlog = () => {
+const WrapperPost = () => {
 	document.body.classList.remove(...document.body.classList)
 	document.body.classList.add("blog")
 	
@@ -22,10 +22,10 @@ const WrapperBlog = () => {
 			>
 				
 				<Heading/>
-				<ContentBlog/>
+				<ContentPost/>
 				<Footer/>
 			</div>
 		</>
 	)
 }
-export default WrapperBlog
+export default WrapperPost
