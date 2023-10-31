@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {data_blog} from "../../data/datas"
 // import BlogItem from "../templates/blog-item"
@@ -31,7 +31,10 @@ const ContentPost = ()=>{
 		}
 	};
 	
-	fetchDataFromJSON(30);
+	useEffect(() => {
+		fetchDataFromJSON(1);
+	}, []);
+	
 
 	return(
 		<>
