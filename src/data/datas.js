@@ -11,5 +11,5 @@ export const data_me = {
 }
 
 export const data_blog = {
-    'test_url': "https://test.khoancatbetongdanangvn.com",
+    'test_url': "https://test1.khoancatbetongdanangvn.com",
 }
