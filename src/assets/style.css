@@ -125,13 +125,12 @@ body.page-404{
 #nav-icon{
     z-index: 2;
 }
-.link{
+.link:not(.w3-button){
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
     overflow: hidden;
 }
-
 @media (max-width: 600px){
     .project-title{
         font-size: 16px;
