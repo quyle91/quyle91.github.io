@@ -1,6 +1,6 @@
 import React from 'react';
 // import { useState, useEffect } from 'react';
-import {data_blog} from "../../data/datas"
+// import {data_blog} from "../../data/datas"
 const SingleDuan = ({post,congty}) => {
     // const [zthumbnail, setZThumbnail] = useState(null);
     // useEffect(() => {
