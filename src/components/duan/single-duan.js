@@ -1,29 +1,29 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import {data_blog} from "../../data/datas"
 const SingleDuan = ({post,congty}) => {
-    const [zthumbnail, setZThumbnail] = useState(null);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                let fetchUrl = data_blog.test_url + '/wp-json/wp/v2/media/';
-                fetchUrl += post.featured_media;
-                const response = await fetch(fetchUrl);
+    // const [zthumbnail, setZThumbnail] = useState(null);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             let fetchUrl = data_blog.test_url + '/wp-json/wp/v2/media/';
+    //             fetchUrl += post.featured_media;
+    //             const response = await fetch(fetchUrl);
 
-                if (response.ok) {
-                    const jsonData = await response.json();
-                    setZThumbnail(jsonData.media_details.sizes.thumbnail.source_url);
-                    console.log('Fetched data from:', fetchUrl);
-                } else {
-                    console.error('Fetch không thành công:', response.status, response.statusText);
-                }
-            } catch (error) {
-                console.error('Lỗi trong quá trình fetch:', error);
-            }
-        };
+    //             if (response.ok) {
+    //                 const jsonData = await response.json();
+    //                 setZThumbnail(jsonData.media_details.sizes.thumbnail.source_url);
+    //                 console.log('Fetched data from:', fetchUrl);
+    //             } else {
+    //                 console.error('Fetch không thành công:', response.status, response.statusText);
+    //             }
+    //         } catch (error) {
+    //             console.error('Lỗi trong quá trình fetch:', error);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
     
     return (
@@ -32,18 +32,21 @@ const SingleDuan = ({post,congty}) => {
             <div className="w3-row w3-card  w3-padding-16">
                 <div className="w3-quarter">
                     <div className="w3-container w3-padding-small">
-                        {/*{
+                        {
+                            (typeof post.thumbnail_url !== 'undefined') ?
+                                <img src={post.thumbnail_url} alt="z" className="w3-image zthumbnail" />
+                            :
                             (typeof post.yoast_head_json.og_image !== 'undefined') ?
-                                <img src={post.yoast_head_json.og_image[0].url} alt="z" className="w3-image" />
+                                <img src={post.yoast_head_json.og_image[0].url} alt="z" className="w3-image zthumbnail" />
                             :
                             (typeof post.yoast_head_json.twitter_image) ?
-                                <img src={post.yoast_head_json.twitter_image} alt="z" className="w3-image" />
+                                <img src={post.yoast_head_json.twitter_image} alt="z" className="w3-image zthumbnail" />
                             :
                             false
-                        }*/}
-                        {zthumbnail && (
+                        }
+                        {/*{zthumbnail && (
                             <img src={zthumbnail} alt="Thumbnail" />
-                        )}
+                        )}*/}
                     </div>
                 </div>
                 <div className="w3-threequarter">

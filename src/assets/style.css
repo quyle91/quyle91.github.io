@@ -152,3 +152,7 @@ a.link::after,
 img{
     max-width: 100%;
 }
+.zthumbnail{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
