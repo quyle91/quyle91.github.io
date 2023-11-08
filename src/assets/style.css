@@ -125,7 +125,7 @@ body.page-404{
 #nav-icon{
     z-index: 2;
 }
-.link:not(.w3-button){
+#content-project .link{
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
