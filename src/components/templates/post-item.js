@@ -37,6 +37,9 @@ const PostItem = ({post}) => {
         <div id={"post-"+post.id} className="w3-margin-top w3-col">
             <div className="w3-col">
                 {
+                    (typeof post.featured_url !== 'undefined') ?
+                        <img height="auto" src={post.featured_url} alt="z" className="w3-image zthumbnail" />
+                    :
                     (typeof post.yoast_head_json.og_image !== 'undefined') ?
                         <img height="auto" src={post.yoast_head_json.og_image[0].url} alt="z" className="w3-image" />
                     : ""
