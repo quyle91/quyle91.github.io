@@ -150,7 +150,6 @@ a.link::after,
 }
 img{
     max-width: 100%;
-    height: auto;
 }
 .zthumbnail{
     aspect-ratio: 1/1;
@@ -168,9 +167,11 @@ blockquote{
 .post-content img{
     border: 1px solid lightgray;
     margin-bottom: 1em;
+    height: auto;
 }
 @media (min-width: 1024px){
     .post-content img{
         max-width: 800px;
+
     }
 }
