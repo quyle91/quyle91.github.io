@@ -16,9 +16,10 @@ const PostItem = ({post}) => {
 
     // excerpt
     const zblogexcerpt = document.querySelector('.zblogexcerpt');
-    if (zblogexcerpt) {
-        zblogexcerpt.innerHTML = post.excerpt.rendered;
-    }
+    zblogexcerpt.innerHTML = "";
+    // if (zblogexcerpt) {
+    //     zblogexcerpt.innerHTML = post.excerpt.rendered;
+    // }
 
     // Cách khai báo biến với hàm ko tên
     const zdate = (() => {
@@ -34,17 +35,7 @@ const PostItem = ({post}) => {
 
     return (
         <>
-        <div id={"post-"+post.id} className="w3-margin-top w3-col">
-            <div className="w3-col">
-                {
-                    (typeof post.featured_url !== 'undefined') ?
-                        <img height="auto" src={post.featured_url} alt="z" className="w3-image zthumbnail" />
-                    :
-                    (typeof post.yoast_head_json.og_image !== 'undefined') ?
-                        <img height="auto" src={post.yoast_head_json.og_image[0].url} alt="z" className="w3-image" />
-                    : ""
-                }
-            </div>
+        <div id={"post-"+post.id} className="post-content w3-margin-top w3-col">
             <div className="w3-col">
                 <div dangerouslySetInnerHTML={postHtml()} />
                 <div className="w3-padding-16 w3-right-left">

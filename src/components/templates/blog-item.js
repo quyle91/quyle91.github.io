@@ -72,7 +72,7 @@ const BlogItem = ({post,cat}) => {
                         <div>
                             <small>{limitText(post.excerpt.rendered, 80)}</small>
                         </div>
-                        <Link className="link w3-button w3-border w3-small w3-margin-top" to={"/post/" + post.slug}>{t("Xem thêm")}</Link>
+                        <Link className="link w3-button w3-border w3-small w3-margin-top" to={"/post/" + post.slug}>{t("Xem")}</Link>
                     </div>
                 </div>
             </div>

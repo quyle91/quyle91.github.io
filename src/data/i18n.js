@@ -52,6 +52,7 @@ i18n.use(initReactI18next).init(
 					"Đôi chút về tính cách": "A little bit about personality",
 					"Dự án gần đây": "Recent Projects",
 					"Xem thêm" : "View more",
+					"Xem" : "View",
 					"Xem bài viết gốc" : "See original article",
 					"Quay lại Blog" : "Back to blog",
 					"Plugin wordpress Administrator Z": "Wp plugin Administrator Z",
