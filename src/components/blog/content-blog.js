@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react"
 import { useTranslation } from "react-i18next"
 import {data_blog} from "../../data/datas"
-import BlogItem from "../templates/blog-item"
+import BlogItem from "./blog-item"
 import SingleLoading from '../duan/single-loading'
 import { useParams } from 'react-router-dom';
 
@@ -70,7 +70,7 @@ const ContentBlog = ()=>{
 
 	
 	useEffect(() => {
-		fetchDataPosts({"per_page": 6, "page": 1});
+		fetchDataPosts({"per_page": 12, "page": 1});
 	}, [fetchDataPosts]);
 
 	useEffect(() => {
@@ -89,7 +89,7 @@ const ContentBlog = ()=>{
 	const loadMore = () => {
 		setLoaded(false);
 		setCurrentPage(currentPage + 1);
-		fetchDataPosts({ "per_page": 6, "page": currentPage + 1 });
+		fetchDataPosts({ "per_page": 12, "page": currentPage + 1 });
 	};
 
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {data_blog} from "../../data/datas"
-// import BlogItem from "../templates/blog-item"
 import PostItem from "../templates/post-item"
 import SingleLoading from '../duan/single-loading'
 import { useParams } from 'react-router-dom';

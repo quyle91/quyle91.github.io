@@ -1,5 +1,4 @@
 import Footer from "./footer"
-import Heading from "./heading";
 import ContentPost from "./content-post";
 
 
@@ -21,7 +20,14 @@ const WrapperPost = () => {
 			}}
 			>
 				
-				<Heading/>
+				<div className="content w3-content">
+					<header className="w3-container w3-content" style={{ padding: "32px 0" }} id="home">
+						<div>
+							<h1 className="zblogtitle strong"><b></b></h1>
+							<p className="zblogexcerpt"></p>
+						</div>
+					</header>
+				</div>
 				<ContentPost/>
 				<Footer/>
 			</div>

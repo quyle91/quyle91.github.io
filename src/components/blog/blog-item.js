@@ -43,13 +43,13 @@ const BlogItem = ({post,cat}) => {
 
     return (
         <>
-        <div id={"post-"+post.id} className="item w3-col s6 web w3-container w3-margin-top">
+        <div id={"post-"+post.id} className="blog-item item w3-col s12 l6 web w3-container w3-margin-top">
             <div className="w3-row w3-card  w3-padding-16">
-                <div className="w3-quarter">
+                <div className="w3-col s4 left">
                     <div className="w3-container w3-padding-small" >
                         {
-                            (typeof post.thumbnail_url !== 'undefined') ?
-                                <img src={post.thumbnail_url} alt="z" className="w3-image zthumbnail" />
+                            (typeof post.custom.thumbnail_url !== 'undefined') ?
+                                <img src={post.custom.thumbnail_url} alt="z" className="w3-image zthumbnail" />
                             :
                             (typeof post.yoast_head_json.og_image !== 'undefined') ?
                                 <img src={post.yoast_head_json.og_image[0].url} alt="z" className="w3-image zthumbnail" />
@@ -61,16 +61,20 @@ const BlogItem = ({post,cat}) => {
                     	
                     </div>
                 </div>
-                <div className="w3-threequarter ">
+                <div className="w3-col s8 right">
                     <div className="w3-container w3-padding-small">
-                    	<h4>{post.title.rendered}</h4>
-                        <span className="w3-tag w3-small w3-white w3-border">
-                            {
-                                cat
-                            }
-                        </span>
-                        <div>
-                            <small>{limitText(post.excerpt.rendered, 80)}</small>
+                    	<h4>{post.title.rendered}</h4>                       
+                        <div className="w3-hide-small">
+                            <div>
+                                <span className="w3-tag w3-small w3-light-grey">
+                                    {
+                                        cat
+                                    }
+                                </span>
+                            </div>
+                            <div>
+                                <small>{limitText(post.excerpt.rendered, 80)}</small>
+                            </div>
                         </div>
                         <Link className="link w3-button w3-border w3-small w3-margin-top" to={"/post/" + post.slug}>{t("Xem")}</Link>
                     </div>

@@ -175,3 +175,13 @@ blockquote{
 
     }
 }
+
+@media (max-width: 600px) {
+    .blog-item .right .w3-container{
+        padding-top: 0px !important;
+    }
+    .blog-item .right .w3-container h4{
+        margin-top: 0px;
+        font-size: 1em;
+    }
+}
