@@ -9,6 +9,7 @@ const ContentBlog = ()=>{
 	const { t } = useTranslation();
 	const { categoryParam } = useParams();
 	const [loaded, setLoaded] = useState(false);
+	const [disableLoadMore, setDisableLoadMore] = useState(false);
 	const [data, setData] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [categories, setCategories] = useState([]);
@@ -34,6 +35,7 @@ const ContentBlog = ()=>{
 			if (Array.isArray(jsonData)) {
 		      	setData((prevData) => [...prevData, ...jsonData]);
 		    } else {
+				setDisableLoadMore(true);            
 		      	console.log(jsonData.message);
 		    }
 		    setLoaded(true);
@@ -70,7 +72,7 @@ const ContentBlog = ()=>{
 
 	
 	useEffect(() => {
-		fetchDataPosts({"per_page": 12, "page": 1});
+		fetchDataPosts({"per_page": 6, "page": 1});
 	}, [fetchDataPosts]);
 
 	useEffect(() => {
@@ -89,7 +91,7 @@ const ContentBlog = ()=>{
 	const loadMore = () => {
 		setLoaded(false);
 		setCurrentPage(currentPage + 1);
-		fetchDataPosts({ "per_page": 12, "page": currentPage + 1 });
+		fetchDataPosts({ "per_page": 6, "page": currentPage + 1 });
 	};
 
 
@@ -160,6 +162,7 @@ const ContentBlog = ()=>{
 					<button
 			            className="w3-button w3-border"
 			            onClick={loadMore}
+						disabled={disableLoadMore}
 			          >
 			            {t("Xem thêm")}
 			          </button>

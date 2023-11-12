@@ -1,11 +1,9 @@
-import Contact from "../contact"
-import Donate from "./donate"
 import Footer from "./footer"
-
-/*Content*/
 import Heading from "./heading";
 import Quote from "./quote";
-
+import ContentAdminz from "./content-adminz";
+// import Contact from "../contact"
+// import Donate from "./donate"
 
 const Wrapper = () => {
 	document.body.classList.remove(...document.body.classList)
@@ -21,16 +19,18 @@ const Wrapper = () => {
 				backgroundSize: "contain",
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: "right top",
-				backgroundAttachment: "fixed"
+				backgroundAttachment: "fixed",
+				paddingBottom: "0px !important"
 			}}
 			>
 				<div className="content w3-content">
 					<Heading/>
 					<Quote/>
-					<h1>Đang cập nhật.</h1>
+					
 				</div>
-				<Contact/>
-				<Donate/>
+				<ContentAdminz />
+				{/* <Contact/> */}
+				{/* <Donate/> */}
 				<Footer/>
 			</div>
 		</>

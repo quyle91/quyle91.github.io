@@ -12,4 +12,5 @@ export const data_me = {
 
 export const data_blog = {
     'test_url': "https://test1.khoancatbetongdanangvn.com",
+    'adminz_term_id': "120"
 }
