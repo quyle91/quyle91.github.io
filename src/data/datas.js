@@ -11,6 +11,6 @@ export const data_me = {
 }
 
 export const data_blog = {
-    'test_url': "https://quyle91.com",
+    'test_url': "https://quyle91.net",
     'adminz_term_id': "120"
 }
