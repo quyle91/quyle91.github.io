@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react"
 import { useTranslation } from "react-i18next"
-import {dataSite} from "../../data/datasite"
+import { fetchDataSite } from "../../data/datasite"
 import BlogItem from "./blog-item"
 import SingleLoading from '../duan/single-loading'
 import { useParams } from 'react-router-dom';
@@ -17,7 +17,7 @@ const ContentBlog = ()=>{
 
 	const fetchDataPosts = useCallback(async (param) => {
 		try {
-			let fetchUrl = dataSite.source+'/wp-json/wp/v2/posts?';
+			let fetchUrl = dataSite.json_url+'/wp-json/wp/v2/posts?';
 			for (const key in param) {
 			  if (param.hasOwnProperty(key)) {
 			    fetchUrl += key + '=' + param[key] + '&';
@@ -47,7 +47,7 @@ const ContentBlog = ()=>{
 
 	const fetchDataCategories = useCallback(async (param) => {
 		try {
-			let fetchUrl = dataSite.source+'/wp-json/wp/v2/categories?';
+			let fetchUrl = dataSite.json_url+'/wp-json/wp/v2/categories?';
 			for (const key in param) {
 			  if (param.hasOwnProperty(key)) {
 			    fetchUrl += key + '=' + param[key] + '&';

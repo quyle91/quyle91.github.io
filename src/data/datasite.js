@@ -13,7 +13,7 @@ const fetchDataSite = () => {
 
     isFetching = true;
 
-    const url = `${dataSite.json_url}/wp-json/options/cv?field=information,vetoi,kynang,sothich,muctieu,kinhnghiemlamviec,hocvan,tinhcach,nguoithamchieu,blog_category`;
+    const url = `${dataSite.json_url}/wp-json/options/cv?field=information,vetoi,kynang,sothich,muctieu,kinhnghiemlamviec,hocvan,tinhcach,nguoithamchieu,setup`;
 
     return fetch(url)
         .then(response => {

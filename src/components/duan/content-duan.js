@@ -29,12 +29,6 @@ const ContentDuan = () => {
     }, []);
 
     const fetchDataFromJSON = async (param, json_url) => {
-        if (!json_url) {
-            console.log('No json_url available');
-            setLoading(false); // Dữ liệu không có, không cần đợi thêm
-            return;
-        }
-
         try {
             const urls = [
                 `${json_url}/wp-json/wp/v2/featured_item?per_page=${param}`,

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next";
 import Fetching from "../templates/fetching";
-import {dataSite} from "../../data/datasite"
+import { fetchDataSite } from "../../data/datasite"
 
 
 const ExperienceCv = ({data}) => {
+    return;
     const { t } = useTranslation();
 
 
@@ -13,9 +14,10 @@ const ExperienceCv = ({data}) => {
     useEffect(() => {
         fetchDataCongty(); // lần load đầu tiên là 9
     }, []);
+    
     const fetchDataCongty = async ()=>{
         try {
-            const request = await fetch(dataSite.source+'/wp-json/wp/v2/congty');
+            const request = await fetch(dataSite.json_url+'/wp-json/wp/v2/congty');
             const response = await request.json();
             setDataCongty(response);
 

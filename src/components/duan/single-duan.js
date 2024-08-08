@@ -1,31 +1,5 @@
 import React from 'react';
-// import { useState, useEffect } from 'react';
-// import {data_blog} from "../../data/datas"
 const SingleDuan = ({post,congty}) => {
-    // const [zthumbnail, setZThumbnail] = useState(null);
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             let fetchUrl = data_blog.test_url + '/wp-json/wp/v2/media/';
-    //             fetchUrl += post.featured_media;
-    //             const response = await fetch(fetchUrl);
-
-    //             if (response.ok) {
-    //                 const jsonData = await response.json();
-    //                 setZThumbnail(jsonData.media_details.sizes.thumbnail.source_url);
-    //                 console.log('Fetched data from:', fetchUrl);
-    //             } else {
-    //                 console.error('Fetch không thành công:', response.status, response.statusText);
-    //             }
-    //         } catch (error) {
-    //             console.error('Lỗi trong quá trình fetch:', error);
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, []);
-
-    
     return (
         <>
         <div className="item w3-col s6 web w3-container w3-margin-top">
@@ -34,7 +8,7 @@ const SingleDuan = ({post,congty}) => {
                     <div className="w3-container w3-padding-small">
                         {
                             (typeof post.custom.thumbnail_url !== 'undefined') ?
-                                <img src={post.custom.thumbnail_url} alt="z" className="w3-image zthumbnail" />
+                                <img src={post.custom.thumbnail_url || ""} alt="z" className="w3-image zthumbnail" />
                             :
                             null
                         }
@@ -59,7 +33,7 @@ const SingleDuan = ({post,congty}) => {
                                                 alt="z"
                                                 style={{}}
                                                 height="15px"
-                                                src={congty_item.acf.thumbnail}
+                                                src={congty_item.acf.thumbnail || ""}
                                             />
                                         </React.Fragment>
                                         ) : null
