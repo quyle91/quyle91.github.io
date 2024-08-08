@@ -1,7 +1,6 @@
 // import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
-// import {data_blog} from "../../data/datas"
 
 const BlogItem = ({post,cat}) => {
     // const [zthumbnail, setZThumbnail] = useState(null);
@@ -19,7 +18,7 @@ const BlogItem = ({post,cat}) => {
     // useEffect(() => {
     //     const fetchData = async () => {
     //         try {
-    //             let fetchUrl = data_blog.test_url + '/wp-json/wp/v2/media/';
+    //             let fetchUrl = dataSite.source + '/wp-json/wp/v2/media/';
     //             fetchUrl += post.featured_media;
     //             const response = await fetch(fetchUrl);
 

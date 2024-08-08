@@ -35,7 +35,6 @@ const Nav = () => {
                 <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/duan">{t("Dự án")}</Link>
                 <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/blog">{t("Blog")}</Link>
                 <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/reactjstest">Reactjs Test</Link>
-                <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/administratorz">AdministratorZ Document</Link>
             </div>
         </nav>
         <span id="nav--bar"

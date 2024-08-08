@@ -12,7 +12,6 @@ import ReactjsTest from "./pages/ReactjsTest"
 import Duan from "./pages/Duan"
 import Blog from "./pages/Blog"
 import Post from "./pages/Post"
-import AdministratorZ from "./pages/AdministratorZ"
 import NoPage from "./pages/NoPage"
 
 
@@ -37,7 +36,6 @@ export default function App() {
                 <Route path="/blog/:categoryParam" element={<MetaTitle title="Blog"><Blog/></MetaTitle>}/> 
                 <Route path="/post/:postName" element={<MetaTitle title=""><Post/></MetaTitle>}/> 
                 <Route path="/reactjstest" element={<MetaTitle title="ReactJS Test"> <ReactjsTest /> </MetaTitle> } /> 
-                <Route path="/administratorz" element={<MetaTitle title="AdministratorZ"> <AdministratorZ /> </MetaTitle> } /> 
                 <Route path="*" element={<MetaTitle title="Không tìm thấy trang"> <NoPage /> </MetaTitle> } /> 
             </Routes>
         </HashRouter> 

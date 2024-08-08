@@ -26,14 +26,12 @@ i18n.use(initReactI18next).init(
 			vn: {
 				translation: {
 					Language: "Ngôn ngữ",
-					/*"Tìm tôi trên mạng xã hội": "Tìm tôi trên mạng xã hội",
-					"Về tôi" : "Về tôi",*/
 				}
 			},
 			en: {
 				translation: {
 					Language: "Language",
-					"Tìm tôi trên mạng xã hội": "I am on Socials",
+					"Mạng xã hội": "I am on Socials",
 					"Về tôi" : "About me",
 					"Kinh nghiệm làm việc từ 2014 đến nay": "From 2014",
 					"Là người có trách nhiệm với công việc và hướng đến sự chuyên nghiệp. Tôi mong muốn nhận được sự tin tưởng của đồng nghiệp & khách hàng.": "Be responsible for work and aim for professionalism. I look forward to gaining the trust of colleagues & customers.",

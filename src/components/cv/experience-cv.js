@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next";
 import Fetching from "../templates/fetching";
-import {data_blog} from "../../data/datas"
+import {dataSite} from "../../data/datasite"
 
 
 const ExperienceCv = ({data}) => {
@@ -15,7 +15,7 @@ const ExperienceCv = ({data}) => {
     }, []);
     const fetchDataCongty = async ()=>{
         try {
-            const request = await fetch(data_blog.test_url+'/wp-json/wp/v2/congty');
+            const request = await fetch(dataSite.source+'/wp-json/wp/v2/congty');
             const response = await request.json();
             setDataCongty(response);
 

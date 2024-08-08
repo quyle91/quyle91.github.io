@@ -12,7 +12,7 @@ import PersonalityCv from "./personality-cv"
 import ReferenceCv from "./reference-cv"
 import FooterCv from "./footer-cv"
 
-import {data_blog} from "../../data/datas"
+import {dataSite} from "../../data/datasite"
 
 
 const WrapperCv = () => {
@@ -31,7 +31,7 @@ const WrapperCv = () => {
 
     const fetchDataFromJSON = async () => {        
         try {
-        	const response = await fetch(data_blog.test_url+'/wp-json/options/cv?field=avatar,info,kynang,sothich,muctieu,kinhnghiemlamviec,hocvan,tinhcach,nguoithamchieu');
+        	const response = await fetch(dataSite.source+'/wp-json/options/cv?field=avatar,info,information,kynang,sothich,muctieu,kinhnghiemlamviec,hocvan,tinhcach,nguoithamchieu');
         	const data = await response.json();
         	setData(data);
 

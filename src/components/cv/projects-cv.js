@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom"
-import {data_blog} from "../../data/datas"
+import {dataSite} from "../../data/datasite"
 import Fetching from "../templates/fetching";
 
 const ProjectsCv = () => {
@@ -20,14 +20,14 @@ const ProjectsCv = () => {
         try {
 
             // du an
-            const response_duan = await fetch(data_blog.test_url+'/wp-json/wp/v2/featured_item?per_page='+param);
+            const response_duan = await fetch(dataSite.source+'/wp-json/wp/v2/featured_item?per_page='+param);
             const jsonData_duan = await response_duan.json();
             // console.log(jsonData_duan);
             setDuan(jsonData_duan);
 
 
             // du an noi bat
-            const response_duannoibat = await fetch(data_blog.test_url+'/wp-json/options/duannoibat');
+            const response_duannoibat = await fetch(dataSite.source+'/wp-json/options/duannoibat');
             const jsonData_duannoibat = await response_duannoibat.json();
             // console.log(jsonData_duannoibat);
             setDuannoibat(jsonData_duannoibat);

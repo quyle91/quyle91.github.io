@@ -1,6 +1,6 @@
 import HeadingDuan from "./heading-duan"
 import ContentDuan from "./content-duan"
-import Footer from "../footer"
+import Footer from "./footer"
 
 const WrapperDuan = () => {
 	document.body.classList.remove(...document.body.classList)

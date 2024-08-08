@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import {data_blog} from "../../data/datas"
+import {dataSite} from "../../data/datasite"
 import PostItem from "../templates/post-item"
 import SingleLoading from '../duan/single-loading'
 import { useParams } from 'react-router-dom';
@@ -16,7 +16,7 @@ const ContentPost = ()=>{
 
 	const fetchDataFromJSON = async (param) => {
 		try {
-			let fetchUrl = data_blog.test_url+'/wp-json/wp/v2/posts?per_page='+param;
+			let fetchUrl = dataSite.source+'/wp-json/wp/v2/posts?per_page='+param;
 			if(postName){
 				fetchUrl += "&slug="+postName;
 			}

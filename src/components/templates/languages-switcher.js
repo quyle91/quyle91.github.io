@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import  {data_lngs} from "../data/i18n"
+import  {data_lngs} from "../../data/i18n"
 import * as React from 'react'
 
 const LanguagesSwitcher = () => {
@@ -10,8 +10,8 @@ const LanguagesSwitcher = () => {
 
     return (
     	<>
-            <div className="w3-small">
-        		<hr/>
+            <div id="language_switcher" className="w3-small">
+                <hr />
                 {t("")}
                 {data_lngs.map((lng, key) => (
                     <React.Fragment key={key}>

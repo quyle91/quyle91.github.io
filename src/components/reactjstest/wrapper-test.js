@@ -1,5 +1,5 @@
 import Gmap from "./gmap"
-import LanguagesSwitcher from "../languages-switcher"
+import LanguagesSwitcher from "../templates/languages-switcher"
 
 const WrapperjsTest = () => {
 	document.body.classList.remove(...document.body.classList)

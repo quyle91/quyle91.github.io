@@ -1,12 +1,12 @@
 import React from 'react';
 // import { useState, useEffect } from 'react';
-// import {data_blog} from "../../data/datas"
+// import {dataSite} from "../../data/datas"
 const SingleDuan = ({post,congty}) => {
     // const [zthumbnail, setZThumbnail] = useState(null);
     // useEffect(() => {
     //     const fetchData = async () => {
     //         try {
-    //             let fetchUrl = data_blog.test_url + '/wp-json/wp/v2/media/';
+    //             let fetchUrl = dataSite.source + '/wp-json/wp/v2/media/';
     //             fetchUrl += post.featured_media;
     //             const response = await fetch(fetchUrl);
 

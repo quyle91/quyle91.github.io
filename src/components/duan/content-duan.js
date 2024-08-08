@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import SingleDuan from './single-duan'
 import SingleLoading from './single-loading'
 // data
-import {data_blog} from "../../data/datas"
+import {dataSite} from "../../data/datasite"
 // import { projectsDataItems, projectsDataItemType} from '../../data/projects'
 
 
@@ -25,10 +25,10 @@ const ContentDuan = () => {
         try {
             // promise
             const urls = [
-                data_blog.test_url+'/wp-json/wp/v2/featured_item?per_page='+param,
-                data_blog.test_url+'/wp-json/wp/v2/congty',
-                data_blog.test_url+'/wp-json/wp/v2/loaiduan',
-                data_blog.test_url+'/wp-json/wp/v2/nam'
+                dataSite.source+'/wp-json/wp/v2/featured_item?per_page='+param,
+                dataSite.source+'/wp-json/wp/v2/congty',
+                dataSite.source+'/wp-json/wp/v2/loaiduan',
+                dataSite.source+'/wp-json/wp/v2/nam'
             ];
             const fetchRequests = urls.map(url => fetch(url));
             const responses = await Promise.all(fetchRequests);
