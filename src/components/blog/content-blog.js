@@ -1,11 +1,10 @@
 import { useEffect, useState, useCallback } from "react"
 import { useTranslation } from "react-i18next"
-import { fetchDataSite } from "../../data/datasite"
 import BlogItem from "./blog-item"
 import SingleLoading from '../duan/single-loading'
 import { useParams } from 'react-router-dom';
 
-const ContentBlog = ()=>{
+const ContentBlog = ({ dataSite })=>{
 	const { t } = useTranslation();
 	const { categoryParam } = useParams();
 	const [loaded, setLoaded] = useState(false);
@@ -16,6 +15,12 @@ const ContentBlog = ()=>{
   	const [categoriesLoaded, setCategoriesLoaded] = useState(false);
 
 	const fetchDataPosts = useCallback(async (param) => {
+
+		if (!dataSite?.json_url) {
+			console.log('No JSON URL provided.');
+			return;
+		}
+
 		try {
 			let fetchUrl = dataSite.json_url+'/wp-json/wp/v2/posts?';
 			for (const key in param) {
@@ -43,9 +48,13 @@ const ContentBlog = ()=>{
 		} catch (error) {
 			console.log('Error fetching data:', error);
 		}
-	}, []);
+	}, [dataSite?.json_url]);
 
 	const fetchDataCategories = useCallback(async (param) => {
+		if (!dataSite?.json_url) {
+			console.log('No JSON URL provided.');
+			return;
+		}
 		try {
 			let fetchUrl = dataSite.json_url+'/wp-json/wp/v2/categories?';
 			for (const key in param) {
@@ -67,12 +76,12 @@ const ContentBlog = ()=>{
 		} catch (error) {
 			console.log('Error fetching data:', error);
 		}
-	}, []);
+	}, [dataSite?.json_url]);
 
 
 	
 	useEffect(() => {
-		fetchDataPosts({"per_page": 6, "page": 1});
+		fetchDataPosts({"per_page": 4, "page": 1});
 	}, [fetchDataPosts]);
 
 	useEffect(() => {
@@ -91,7 +100,7 @@ const ContentBlog = ()=>{
 	const loadMore = () => {
 		setLoaded(false);
 		setCurrentPage(currentPage + 1);
-		fetchDataPosts({ "per_page": 6, "page": currentPage + 1 });
+		fetchDataPosts({ "per_page": 4, "page": currentPage + 1 });
 	};
 
 

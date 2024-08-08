@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+import { fetchDataSite } from '../../data/datasite';
 import Footer from "./footer"
 import Heading from "./heading";
 import ContentBlog from "./content-blog";
@@ -7,6 +9,17 @@ const WrapperBlog = () => {
 	document.body.classList.remove(...document.body.classList)
 	document.body.classList.add("blog")
 	
+	const [dataSite, setDataSite] = useState(null);
+	useEffect(() => {
+		const loadData = async () => {
+			const data = await fetchDataSite();
+			if (data) {
+				setDataSite(data);
+			}
+		};
+		loadData();
+	}, []);
+
 	return (
 		<>
 			<div 
@@ -22,7 +35,7 @@ const WrapperBlog = () => {
 			>
 				
 				<Heading/>
-				<ContentBlog/>
+				<ContentBlog dataSite={dataSite} />
 				<Footer/>
 			</div>
 		</>

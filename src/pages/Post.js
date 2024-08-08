@@ -8,7 +8,6 @@ const Post = ()=> {
         <NavIcon/>
         <BannerRight/>
         <WrapperPost/>
-        
         </>
     )
 }
