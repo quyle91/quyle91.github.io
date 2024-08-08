@@ -36,17 +36,8 @@ const SingleDuan = ({post,congty}) => {
                             (typeof post.custom.thumbnail_url !== 'undefined') ?
                                 <img src={post.custom.thumbnail_url} alt="z" className="w3-image zthumbnail" />
                             :
-                            (typeof post.yoast_head_json.og_image !== 'undefined') ?
-                                <img src={post.yoast_head_json.og_image[0].url} alt="z" className="w3-image zthumbnail" />
-                            :
-                            (typeof post.yoast_head_json.twitter_image) ?
-                                <img src={post.yoast_head_json.twitter_image} alt="z" className="w3-image zthumbnail" />
-                            :
-                            false
+                            null
                         }
-                        {/*{zthumbnail && (
-                            <img src={zthumbnail} alt="Thumbnail" />
-                        )}*/}
                     </div>
                 </div>
                 <div className="w3-threequarter">
