@@ -31,8 +31,8 @@ const Nav = () => {
             </span>
             <div id="spData1" className="w3-bar-block w3-center">
                 <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/">{t("Trang chính")}</Link>
-                <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/cv">CV</Link>
                 <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/duan">{t("Dự án")}</Link>
+                <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/cv">CV</Link>
                 <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/blog">{t("Blog")}</Link>
                 <Link onClick={closeNav} className="w3-bar-item w3-button w3-large" to="/reactjstest">Reactjs Test</Link>
             </div>

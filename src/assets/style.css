@@ -185,3 +185,11 @@ blockquote{
         font-size: 1em;
     }
 }
+
+.call-me a i,.call-me a img{
+    margin-right: 10px;
+}
+
+#language_switcher img:first-of-type{
+    margin-left: 0px !important;
+}
