@@ -1,8 +1,10 @@
 import * as React from 'react'
 import { useTranslation } from "react-i18next";
 import Fetching from "../templates/fetching";
-const InterestsCv = ({data}) => {
+
+const InterestsCv = ({dataSite}) => {
     const { t } = useTranslation();
+    const sothich = dataSite?.sothich || []; 
     return ( 
         <>
         <div id="interests-cv">
@@ -13,8 +15,8 @@ const InterestsCv = ({data}) => {
             <div className="w3-small">
                 <p>
                     {
-                        data?
-                        data.map((item,key)=>(
+                        sothich?
+                        sothich.map((item,key)=>(
                             <React.Fragment key={key}>
                                 <button className="w3-padding-small w3-small w3-button w3-border w3-round" style={{margin: "0 5px 5px 0px"}}>
                                     {item.text}

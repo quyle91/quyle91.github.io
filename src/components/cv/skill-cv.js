@@ -3,11 +3,9 @@ import { useTranslation } from "react-i18next";
 import SingleSkill from "../templates/single-skill"
 import Fetching from "../templates/fetching";
 
-
-
-
-const SkillCv = ({data}) => {
+const SkillCv = ({ dataSite }) => {
     const { t } = useTranslation();
+    const kynang = dataSite?.kynang || []; 
     return ( 
         <>
         <div id="skill-cv">
@@ -15,8 +13,8 @@ const SkillCv = ({data}) => {
             <hr/>
             <div id="kynang">
                 {
-                    data?
-                    data.map((item,key)=>(
+                    kynang?
+                    kynang.map((item,key)=>(
                         <React.Fragment key={key}>
                             <SingleSkill item={item}/>
                         </React.Fragment>

@@ -1,13 +1,14 @@
 import * as React from 'react'
 import Fetching from "../templates/fetching";
-const TargetCv = ({data}) => {        
+const TargetCv = ({dataSite}) => {   
+    const muctieu = dataSite?.muctieu || [];      
     return ( 
         <>
         <div id="target-cv">
             <blockquote>
                 {
-                    data?
-                    data.map((item,key)=>(
+                    muctieu?
+                    muctieu.map((item,key)=>(
                         <React.Fragment key={key}>
                             {item.text}
                             <br/>
