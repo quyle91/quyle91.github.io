@@ -3,7 +3,7 @@ import Nav from "../components/nav"
 import BannerLeft from "../components/banner-left"
 import BannerMobile from "../components/banner-mobile"
 
-// Home page
+// // Home page
 import WrapperMain from "../components/wrapper-main"
 
 
