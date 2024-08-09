@@ -193,3 +193,9 @@ blockquote{
 #language_switcher img:first-of-type{
     margin-left: 0px !important;
 }
+
+pre{
+    background: #f3f3f3;
+    padding: 10px;
+    border: 1px solid lightgray;
+}

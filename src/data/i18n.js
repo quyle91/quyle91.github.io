@@ -31,6 +31,10 @@ i18n.use(initReactI18next).init(
 			en: {
 				translation: {
 					Language: "Language",
+					"Không có dữ liệu": "No data available",
+					"Tất cả loại dự án" : "All types",
+					"Tất cả năm" : "All years",
+					"Tất cả công ty" : "All companies",
 					"Mạng xã hội": "I am on Socials",
 					"Về tôi" : "About me",
 					"Kinh nghiệm làm việc từ 2014 đến nay": "From 2014",

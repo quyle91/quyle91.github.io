@@ -6,8 +6,8 @@ import { useParams, Link } from 'react-router-dom';
 
 const ContentPost = ({ dataSite }) => {
 	const { t } = useTranslation();
-	const [loading, setLoading] = useState(true);
 	const { postName } = useParams();
+	const [loading, setLoading] = useState(true);
 	const [data, setData] = useState([]);
 
 	const fetchDataFromJSON = useCallback(async (param) => {
@@ -24,10 +24,10 @@ const ContentPost = ({ dataSite }) => {
 			const response = await fetch(fetchUrl);
 			const jsonData = await response.json();
 			setData(jsonData);
-			setLoading(false);
-			console.log("Fetched data from json:", fetchUrl, jsonData);
 		} catch (error) {
 			console.log('Error fetching data:', error);
+		} finally {
+			setLoading(false);
 		}
 	}, [dataSite?.json_url, postName]);
 
@@ -38,15 +38,17 @@ const ContentPost = ({ dataSite }) => {
 	return (
 		<div className="w3-content content">
 			<div className="posts col-container">
-				{
-					loading ? (
-						<SingleLoading />
-					) : (
-						data.map((post, index) => (
-							<PostItem key={index} post={post} />
+				{loading ? (
+					<SingleLoading />
+				) : (
+					data.length > 0 ? (
+						data.map(post => (
+							<PostItem key={post.id} post={post} />
 						))
+					) : (
+						<p>{t("No posts available.")}</p>
 					)
-				}
+				)}
 			</div>
 			<div className="more w3-center w3-margin-top">
 				<Link className="w3-button w3-border" to="/blog">

@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { fetchDataSite } from "../../data/datasite";
 import SingleDuan from './single-duan';
 import SingleLoading from './single-loading';
+import NoData from '../templates/nodata';
+import { useTranslation } from "react-i18next";
 
 const ContentDuan = () => {
+    const { t } = useTranslation();
     const [json_url, setJsonUrl] = useState('');
     const [loading, setLoading] = useState(true);
     const [duan, setDuan] = useState([]);
@@ -15,13 +18,20 @@ const ContentDuan = () => {
     const [filterNamduan, setFilterNamduan] = useState("");
     const [filterCongty, setFilterCongty] = useState("");
 
+    const [error, setError] = useState(null); // Thêm trạng thái lỗi
+
     useEffect(() => {
         const loadData = async () => {
-            const data = await fetchDataSite();
-            if (data && data.json_url) {
-                setJsonUrl(data.json_url);
-                fetchDataFromJSON(99, data.json_url);
-            } else {
+            try {
+                const data = await fetchDataSite();
+                if (data && data.json_url) {
+                    setJsonUrl(data.json_url);
+                    fetchDataFromJSON(99, data.json_url);
+                } else {
+                    setLoading(false);
+                }
+            } catch (err) {
+                setError('Failed to fetch data from the server.'); // Thiết lập thông báo lỗi
                 setLoading(false);
             }
         };
@@ -48,19 +58,30 @@ const ContentDuan = () => {
             setLoading(false);
         } catch (error) {
             console.log('Error fetching data:', error);
+            setError('Error fetching data from JSON.'); // Thiết lập thông báo lỗi
             setLoading(false); // Đặt loading = false ngay cả khi có lỗi để tránh vòng lặp tải không ngừng
         }
     };
 
-    const handleChangeLoaiduan = (e) => {
+    const filteredDuan = useMemo(() => {
+        return duan.filter(post =>
+            (filterLoaiduan === '' || post.loaiduan.includes(Number(filterLoaiduan))) &&
+            (filterNamduan === '' || post.nam.includes(Number(filterNamduan))) &&
+            (filterCongty === '' || post.congty.includes(Number(filterCongty)))
+        );
+    }, [duan, filterLoaiduan, filterNamduan, filterCongty]);
+
+    const handleChangeLoaiduan = useCallback((e) => {
         setFilterLoaiduan(e.target.value);
-    };
-    const handleChangeNamduan = (e) => {
+    },[]);
+
+    const handleChangeNamduan = useCallback((e) => {
         setFilterNamduan(e.target.value);
-    };
-    const handleChangeCongty = (e) => {
+    },[]);
+
+    const handleChangeCongty = useCallback((e) => {
         setFilterCongty(e.target.value);
-    };
+    },[]);
 
     return (
         <>
@@ -69,7 +90,7 @@ const ContentDuan = () => {
                     <div className="col-container row-fix-margin">
                         <div className="w3-col l3 s6 w3-padding setLoaiduan">
                             <select className="w3-select w3-white w3-border" onChange={handleChangeLoaiduan}>
-                                <option value="">- Tất cả loại dự án- </option>
+                                <option value="">- {t("Tất cả loại dự án")}- </option>
                                 {loaiduan.map((item, key) => (
                                     <option value={item.id} key={key}>{item.name}</option>
                                 ))}
@@ -77,7 +98,7 @@ const ContentDuan = () => {
                         </div>
                         <div className="w3-col l3 s6 w3-padding nam">
                             <select className="w3-select w3-white w3-border" onChange={handleChangeNamduan}>
-                                <option value="">- Tất cả năm- </option>
+                                <option value="">- {t("Tất cả năm")}- </option>
                                 {namduan.map((item, key) => (
                                     <option value={item.id} key={key}>{item.name}</option>
                                 ))}
@@ -85,7 +106,7 @@ const ContentDuan = () => {
                         </div>
                         <div className="w3-col l3 s6 w3-padding congty">
                             <select className="w3-select w3-white w3-border" onChange={handleChangeCongty}>
-                                <option value="">- Tất cả công ty- </option>
+                                <option value="">- {t("Tất cả công ty")}- </option>
                                 {congty.map((item, key) => (
                                     <option value={item.id} key={key}>{item.name}</option>
                                 ))}
@@ -94,21 +115,15 @@ const ContentDuan = () => {
                     </div>
                     <hr />
                     {loading ? <SingleLoading /> : (
-                        <div className="col-container row-fix-margin">
-                            {duan.map((post, key) => (
-                                (filterLoaiduan === '' && filterNamduan === '' && filterCongty === '') ?
-                                    <SingleDuan key={key} post={post} congty={congty} />
-                                    :
-                                    (
-                                        (filterLoaiduan === '' || post.loaiduan.includes(Number(filterLoaiduan))) &&
-                                        (filterNamduan === '' || post.nam.includes(Number(filterNamduan))) &&
-                                        (filterCongty === '' || post.congty.includes(Number(filterCongty)))
-                                    ) ?
+                        error ? <div>{error}</div> : (
+                            <div className="col-container row-fix-margin">
+                                {filteredDuan.length === 0 ? <NoData /> : (
+                                    filteredDuan.map((post, key) => (
                                         <SingleDuan key={key} post={post} congty={congty} />
-                                        :
-                                        ""
-                            ))}
-                        </div>
+                                    ))
+                                )}
+                            </div>
+                        )
                     )}
                 </div>
             </div>

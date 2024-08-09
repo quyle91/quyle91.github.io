@@ -1,183 +1,137 @@
-import { useEffect, useState, useCallback } from "react"
-import { useTranslation } from "react-i18next"
-import BlogItem from "./blog-item"
-import SingleLoading from '../duan/single-loading'
+import { useEffect, useState, useCallback, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import BlogItem from "./blog-item";
+import SingleLoading from '../duan/single-loading';
+import NoData from '../templates/nodata';
 import { useParams } from 'react-router-dom';
 
-const ContentBlog = ({ dataSite })=>{
+const ContentBlog = ({ dataSite }) => {
 	const { t } = useTranslation();
 	const { categoryParam } = useParams();
-	const [loaded, setLoaded] = useState(false);
+	const [loaded, setLoaded] = useState(true);
 	const [disableLoadMore, setDisableLoadMore] = useState(false);
 	const [data, setData] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [categories, setCategories] = useState([]);
-  	const [categoriesLoaded, setCategoriesLoaded] = useState(false);
+	const [filterCat, setFilterCat] = useState("");
 
-	const fetchDataPosts = useCallback(async (param) => {
-
+	const fetchData = useCallback(async (url, setter) => {
 		if (!dataSite?.json_url) {
 			console.log('No JSON URL provided.');
 			return;
 		}
-
 		try {
-			let fetchUrl = dataSite.json_url+'/wp-json/wp/v2/posts?';
-			for (const key in param) {
-			  if (param.hasOwnProperty(key)) {
-			    fetchUrl += key + '=' + param[key] + '&';
-			  }
-			}
-
-			if (fetchUrl.endsWith('&')) {
-			  fetchUrl = fetchUrl.slice(0, -1);
-			}
-
-			
-			const response = await fetch(fetchUrl);
+			const response = await fetch(`${dataSite.json_url}${url}`);
 			const jsonData = await response.json();
+			setter(jsonData);
+		} catch (error) {
+			console.log('Error fetching data:', error);
+		} finally {
+			setLoaded(true);
+		}
+	}, [dataSite?.json_url]);
 
+	const fetchDataPosts = useCallback(async (params) => {
+		const queryParams = new URLSearchParams(params).toString();
+		const url = `/wp-json/wp/v2/posts?${queryParams}`;
+		setLoaded(false);
+		try {
+			const response = await fetch(`${dataSite.json_url}${url}`);
+			const jsonData = await response.json();
 			if (Array.isArray(jsonData)) {
-		      	setData((prevData) => [...prevData, ...jsonData]);
-		    } else {
-				setDisableLoadMore(true);            
-		      	console.log(jsonData.message);
-		    }
-		    setLoaded(true);
-			console.log("Fetched data from json:", fetchUrl, jsonData);
+				setData(prevData => [...prevData, ...jsonData]);
+			} else {
+				setDisableLoadMore(true);
+				console.log(jsonData.message);
+			}
 		} catch (error) {
 			console.log('Error fetching data:', error);
 		}
 	}, [dataSite?.json_url]);
 
-	const fetchDataCategories = useCallback(async (param) => {
-		if (!dataSite?.json_url) {
-			console.log('No JSON URL provided.');
-			return;
-		}
-		try {
-			let fetchUrl = dataSite.json_url+'/wp-json/wp/v2/categories?';
-			for (const key in param) {
-			  if (param.hasOwnProperty(key)) {
-			    fetchUrl += key + '=' + param[key] + '&';
-			  }
-			}
-
-			if (fetchUrl.endsWith('&')) {
-			  fetchUrl = fetchUrl.slice(0, -1);
-			}
-
-			const response = await fetch(fetchUrl);
-			const jsonData = await response.json();
-			setCategories(jsonData);
-		    setLoaded(true);
-		    setCategoriesLoaded(true); // Categories are loaded
-			console.log("Fetched data Cat from json:", fetchUrl, jsonData);
-		} catch (error) {
-			console.log('Error fetching data:', error);
-		}
-	}, [dataSite?.json_url]);
-
-
-	
 	useEffect(() => {
-		fetchDataPosts({"per_page": 4, "page": 1});
+		fetchData('/wp-json/wp/v2/categories', setCategories);
+	}, [fetchData]);
+
+	useEffect(() => {
+		fetchDataPosts({ "per_page": 4, "page": 1 });
 	}, [fetchDataPosts]);
 
 	useEffect(() => {
-		fetchDataCategories({});
-	}, [fetchDataCategories]);
-
-	useEffect(() => {
-		if (categoriesLoaded) {
-			if (categoryParam) {
-			setFilterCat(parseInt(categoryParam));
+		if (categoryParam) {
+			setFilterCat(parseInt(categoryParam) || "");
 		}
-		}
-	}, [categoryParam, categoriesLoaded]);
-
+	}, [categoryParam]);
 
 	const loadMore = () => {
-		setLoaded(false);
-		setCurrentPage(currentPage + 1);
-		fetchDataPosts({ "per_page": 4, "page": currentPage + 1 });
-	};
-
-
-	/*CAT*/
-	
-
-	const [filterCat, setFilterCat] = useState("");
-	const handleChangeCat = (e)=>{
-        setFilterCat( parseInt(e.target.value));
-    }
-
-    
-	
-	const get_cat_text = (post, categories) => {
-		const postCategories = post.categories.map((categoryId) => {
-		const category = categories.find((cat) => cat.id === categoryId);
-		return category ? category.name : '';
+		setCurrentPage(prevPage => {
+			const nextPage = prevPage + 1;
+			fetchDataPosts({ "per_page": 4, "page": nextPage });
+			return nextPage;
 		});
-		const catText = postCategories.join(', ');
-
-		return catText;
 	};
 
+	const handleChangeCat = (e) => {
+		setFilterCat(parseInt(e.target.value) || "");
+	};
 
-	return(
+	const filteredData = useMemo(() => {
+		return data.filter(post =>
+			post.categories.includes(filterCat) || !filterCat
+		);
+	}, [data, filterCat]);
+
+	const getCatText = (post) => {
+		const postCategories = post.categories.map(categoryId => {
+			const category = categories.find(cat => cat.id === categoryId);
+			return category ? category.name : '';
+		});
+		return postCategories.join(', ');
+	};
+
+	return (
 		<>
 			<div className="w3-content content">
 				<div className="filters">
 					<div className="col-container row-fix-margin">
 						<div className="w3-col l3 s6 w3-padding setLoaiduan">
 							<select className="w3-select w3-white w3-border" onChange={handleChangeCat}>
-		                        <option value="">- {t("Tất cả")}</option>
-		                        {
-                                    categories.map((item,key)=>(
-                                        <option 
-                                        	data-slug={item.slug}
-                                        	value={item.id} 
-                                        	key={key}>
-                                    		{item.name}
-                                		</option>
-                                    ))
-                                }
-		                    </select>
-	                    </div>
-                    </div> 
-				</div> 
+								<option value="">- {t("Tất cả")}</option>
+								{categories.map(item => (
+									<option
+										data-slug={item.slug}
+										value={item.id}
+										key={item.id}
+									>
+										{item.name}
+									</option>
+								))}
+							</select>
+						</div>
+					</div>
+				</div>
 				<div className="posts col-container row-fix-margin">
-					{
-					    data.filter((post) => {
-				        	return post.categories.includes(filterCat) || !filterCat;
-				      	}).map((filteredPost, index) => {
-				      		let _cat = get_cat_text(filteredPost, categories);
-				      		return (
-				        		<BlogItem key={index} post={filteredPost} cat={_cat} />
-			        		);
-				      	})
-				  	}
-						
+					{filteredData.length === 0 ? <NoData /> :
+						filteredData.map(post => (
+							<BlogItem key={post.id} post={post} cat={getCatText(post)} />
+						))
+					}
 				</div>
 				<div className="w3-col">
-				{
-					!loaded? (
-						<SingleLoading />
-					): ""
-				}
+					{!loaded && <SingleLoading />}
 				</div>
 				<div className="more w3-center w3-margin-top">
 					<button
-			            className="w3-button w3-border"
-			            onClick={loadMore}
+						className="w3-button w3-border"
+						onClick={loadMore}
 						disabled={disableLoadMore}
-			          >
-			            {t("Xem thêm")}
-			          </button>
+					>
+						{t("Xem thêm")}
+					</button>
 				</div>
 			</div>
 		</>
-	)
-}
-export default ContentBlog
+	);
+};
+
+export default ContentBlog;
