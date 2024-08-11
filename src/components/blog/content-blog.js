@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 const ContentBlog = ({ dataSite }) => {
 	const { t } = useTranslation();
 	const { categoryParam } = useParams();
-	const [loaded, setLoaded] = useState(true);
+	const [loaded, setLoaded] = useState(false);
 	const [disableLoadMore, setDisableLoadMore] = useState(false);
 	const [data, setData] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
@@ -46,7 +46,9 @@ const ContentBlog = ({ dataSite }) => {
 			}
 		} catch (error) {
 			console.log('Error fetching data:', error);
-		}
+		} finally {
+            setLoaded(true);  // Đặt loaded là true sau khi dữ liệu đã được tải
+        }
 	}, [dataSite?.json_url]);
 
 	useEffect(() => {
@@ -117,9 +119,7 @@ const ContentBlog = ({ dataSite }) => {
 						))
 					}
 				</div>
-				<div className="w3-col">
-					{!loaded && <SingleLoading />}
-				</div>
+				{!loaded && <SingleLoading />}
 				<div className="more w3-center w3-margin-top">
 					<button
 						className="w3-button w3-border"
