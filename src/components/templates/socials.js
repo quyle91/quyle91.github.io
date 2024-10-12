@@ -15,24 +15,20 @@ const Socials = () => {
         };
         loadData();
     }, []);
-    // Tránh lỗi nếu dataSite chưa được load
-    const facebook = dataSite?.information?.facebook || '';
-    const linkedin = dataSite?.information?.linkedin || '';
-    const wordpress = dataSite?.information?.wordpress || '';
-    const github = dataSite?.information?.github || '';
 
+    // Use the socials array from the data
+    const socials = dataSite?.socials || [];
     
     return (
-        <>
-            <div id="socials">
-                <hr />
-                <a className="w3-margin-right" href={facebook}><i className="fa fa-facebook-official w3-hover-opacity"></i></a>
-                <a className="w3-margin-right" href={linkedin}><i className="fa fa-linkedin w3-hover-opacity"></i></a>
-                <a className="w3-margin-right" href={wordpress}><i className="fa fa-wordpress w3-hover-opacity"></i></a>
-                <a className="w3-margin-right" href={github}><i className="fa fa-github w3-hover-opacity"></i></a>
-                <span className="w3-margin-right w3-medium">{t("Mạng xã hội")}</span> 
-            </div>
-        </>
-    )
+        <div id="socials">
+            <hr />
+            {socials.map((social, index) => (
+                <a key={index} className="w3-margin-right" href={social.link}>
+                    <i className={`fa ${social.fontawesome} w3-hover-opacity`}></i>
+                </a>
+            ))}
+            <span className="w3-margin-right w3-medium">{t("Mạng xã hội")}</span>
+        </div>
+    );
 }
 export default Socials
