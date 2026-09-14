@@ -1,0 +1,23 @@
+services:
+  app:
+    container_name: quyle91_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - proxy_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy_network"
+      - "traefik.http.routers.quyle91.entrypoints=web"
+      - "traefik.http.routers.quyle91.rule=Host(`quyle91.localhost`)"
+      - "traefik.http.routers.quyle91.service=quyle91"
+      - "traefik.http.services.quyle91.loadbalancer.server.port=3000"
+
+networks:
+  proxy_network:
+    external: true
