@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: quyle91_app
+    container_name: quyle91_github_io_app
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,10 +13,10 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy_network"
-      - "traefik.http.routers.quyle91.entrypoints=web"
-      - "traefik.http.routers.quyle91.rule=Host(`quyle91.localhost`)"
-      - "traefik.http.routers.quyle91.service=quyle91"
-      - "traefik.http.services.quyle91.loadbalancer.server.port=3000"
+      - "traefik.http.routers.quyle91-cv.entrypoints=web"
+      - "traefik.http.routers.quyle91-cv.rule=Host(`cv.quyle91.localhost`)"
+      - "traefik.http.routers.quyle91-cv.service=quyle91-cv"
+      - "traefik.http.services.quyle91-cv.loadbalancer.server.port=3000"
 
 networks:
   proxy_network:
